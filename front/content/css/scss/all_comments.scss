@@ -1,0 +1,41 @@
+
+#all-comments{
+	@import 'nc-nav_constant';
+	#option-header{
+		padding-top: $nav-height + $nav-padding*2;
+		height: 1.5rem;
+		text-align: right;
+		width: 100%;
+		span{
+			font-size: 1.2rem;
+			width: 2rem;
+			margin-right: 1rem;
+			color: darken(cyan, 20%);
+		}
+	}
+	#comments{
+		padding-bottom: 5rem;		
+	}
+	.comment{
+		.time{
+			float: right;
+			color: #AAA;
+		}
+		.content{
+			margin-top: 0.5rem;
+			color: #999;
+		}
+		.vote{
+			width: 100%;
+		}
+	}
+	$bottom-bar-height: 3rem;
+	#bottom-bar{
+		background-color: white;
+		height: $bottom-bar-height;
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		text-align: center;
+	}
+}

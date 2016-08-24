@@ -1,0 +1,207 @@
+<% if ENV['NANOC_ENV']=='production' %>
+<% @assets_path = "../assets" %>
+<% else %>
+<% @assets_path = "../../assets" %>
+<% end %>
+
+#welcome{
+	.nc-message{
+		text-align: right;
+	}
+	#page-container{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #eee;
+		top: 0px;
+		transition: top 0.5s ease-in-out 0s;
+		$i: 1;
+		@while $i < 4 {
+			&.go-#{$i}{
+				top: percentage(-1*$i);
+				$i: $i + 1;
+			}
+		}
+	}
+	$background-height: 37%;
+	.swipe-card{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		background-color: white;
+		background-size: cover;
+		.content{
+			position: absolute;
+			top: $background-height;
+			padding-top: 1rem;
+			text-align: center;
+			width: 100%;
+		}
+		.description{
+		}
+		.title{
+			text-align: center;
+			font-size: 3rem;
+		}
+		&:not(#welcome-3){
+			background-size: 100% $background-height;
+			background-repeat: no-repeat;
+		}
+	}
+
+	#welcome-0{
+		#subtitle{
+			font-size: 1.2rem;
+			color: #EEE;
+		}
+		background-image: url('<%= @assets_path %>/welcome_0.jpg');
+		.description{
+			padding-top: 1rem;
+			line-height: 2rem;
+		}
+	}
+	#welcome-1{
+		background-image: url('<%= @assets_path %>/welcome_1.jpg');
+		.description{
+			margin-top: -2rem;
+			line-height: 1.2rem;
+			font-size: 0.8rem;
+		}
+	}
+	#welcome-2{
+		background-image: url('<%= @assets_path %>/welcome_2.jpg');
+		.description{
+			font-weight: 800;
+			line-height: 1.5rem;
+		}
+	}
+	#welcome-3{
+		position: absolute;
+		overflow: auto;
+	}
+	$arrow-width: 64px;
+	.expand-arrow{
+		position: absolute;
+		bottom: 5%;
+		width: $arrow-width;
+		left: 50%;
+		padding-top: 100px;
+		margin-left: -$arrow-width/2;
+		// pointer-events:none;
+		-webkit-animation:float 1.2s linear infinite;
+		.md-icon{
+			fill: #AAA;
+		}
+		svg{
+			margin-top: -150px;
+		}
+		&.hide{
+			display: none;
+		}
+	}
+
+	@-webkit-keyframes float { 
+		0% { transform:  translate(0px,0px) } 
+		50% { transform:  translate(0px,20px) } 
+		100% { transform:  translate(0px,0px) } 
+	}
+
+
+	#logo{
+		margin-top: 48px;
+		width: 120px;
+	}
+	#header-img{
+		width: 100%;
+		height: auto;
+		img{
+			width: 100%;
+			height: 200px;
+		}
+		// background-image: url("../../assets/login.jpg");
+		// background-size: cover;
+		// background-repeat: no-repeat;
+		// img{
+		// 	width: 100%;
+		// }
+	}
+	#form{
+		position: relative;
+		background-color: transparent;
+		padding-top: 1rem;
+		width: 80%;
+		margin: 0 auto;
+		label{
+			line-height: 1.8rem;
+			font-size: 1.2rem;
+		}
+		.md-block{
+			margin-top:2rem;
+			height: 3rem;
+			&:not(.md-input-focused) label{
+				color: lighten(black, 15%);
+			}
+		}
+		button.md-primary{
+			// background-color: #3AAFDA;
+			font-size: 1.4rem;
+			padding: 3px 16px;
+		}
+		input{
+			height: 2rem;
+			line-height: 2rem;
+			font-size: 1.4rem;
+		}
+	}
+	.hint {
+	    /* Position the hint */
+	    position: absolute;
+	    left: 2px;
+	    right: auto;
+	    bottom: 2px;
+	    /* Copy styles from ng-messages */
+	    font-size: 0.8rem;
+	    line-height: 0.8rem;
+	    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+	    /* Set our own color */
+	    color: lighten(black, 40%);
+	}
+	#sp-hints{
+		margin-top: -1rem;
+		span{
+			font-size: 1rem;
+			color: lighten(black, 15%);
+		}
+		input{
+			height: 1.6rem;
+		    line-height: 1.6rem;
+			font-size: 1rem;
+			text-align: center;
+		}
+	}
+	#error-msg{
+		color: red;
+		font-size: 1rem;
+	}
+
+	#forget-btn{
+		color: gray;	
+	}
+	#forget_page{
+		-webkit-transition: none !important;
+		transition: none !important;
+		text-align: center;
+		padding: 2rem 4rem;
+		p{
+			text-align: left;
+			text-indent: 2rem;
+		}
+		#jwc-qr{
+			width: 240px;
+			height: 240px;
+		}
+	}
+
+
+}

@@ -1,0 +1,9 @@
+source 'https://ruby.taobao.org'
+
+gem 'guard-nanoc'
+gem 'sass'
+gem 'rainpress'
+gem 'coffee-script'
+gem 'uglifier'
+gem 'adsf'
+gem 'pry'

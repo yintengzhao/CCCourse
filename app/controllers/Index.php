@@ -20,6 +20,12 @@ class IndexController extends Rest
 	public function GET_testAction()
 	{
 		Input::get('data', $data);//获取GET参数
+
+	//$DepartmentModel = new Model('Department');
+
+	$data = Db::query('select * from admin');
+var_dump($data);
+
 		$this->response = ['data' => $data, 'method' => 'GET'];
 	}
 

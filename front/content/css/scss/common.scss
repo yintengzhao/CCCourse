@@ -1,0 +1,17 @@
+#ng-playground{
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	background-color: white;
+}
+
+.md-primary.md-button:not(a){
+	color: white !important;
+}
+
+#load-btn{
+	padding-top: 1rem;
+	text-align: center;
+	max-width: 100%;
+	color: #777;
+}

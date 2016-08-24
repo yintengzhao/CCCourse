@@ -1,0 +1,60 @@
+#advice{
+	h3{
+		font-size: 1.2rem;
+		font-weight: 400;
+	}
+	.left-align{
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+	.form{
+		padding-top: 5%;
+	}
+	#advice-form{
+		.question{
+			margin-bottom: 2rem;
+		}
+		.question-title{
+			margin-bottom: 1rem;
+		}
+		.question-hint{
+			font-size: 0.75rem;
+			color: #666;
+		}
+		.check{
+			margin-left: 1rem;
+		}
+		.ques-1-input{
+			margin: 0;
+		}
+	}
+	.submit{
+		width: 100%;
+		text-align: center;
+	}
+	#info-inputs{
+		width: 80%;
+		margin: 0 auto;
+		md-input-container{
+			width: 100%;
+		}
+	}
+	#info-title{
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	#form-phone-number{
+		.intl-tel-input{
+			width: 100%;
+		}
+		.country-list{
+			position: relative;
+			width: 100% !important;
+			// width: 300px !important;
+		}
+	}
+	#error-msg{
+		text-align: center;
+		color: red;
+	}
+}

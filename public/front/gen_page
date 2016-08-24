@@ -1,0 +1,20 @@
+#!/bin/bash
+
+name=$1
+
+if [[  ! -f ./content/$name.html ]]; then
+	html_file=./content/$name.html
+	printf -- "---\ncontroller: $name\n---\n" > $html_file
+	printf -- "\n<%% content_for :test do %%>\n<%% end %%>" >> $html_file
+	
+	css_file=./content/css/scss/$name.scss
+	printf -- "\n#$name{\n\n}" | sed -e "s/_/-/" > $css_file
+	
+	coffee_file=./content/js/coffee/$name.coffee
+	controller_name=$(ruby -e "print \"$name\".split('_').map {|w| w.capitalize}.join")
+	printf -- "\n@ng_app.controller(\"${controller_name}Ctrl\", ['\$scope', '\$interval', '\$timeout', '\$window', '\$http', '\$sce', 'NetManager',\n" > $coffee_file
+	printf -- "(\$scope, \$interval, \$timeout, \$window, \$http, \$sce, NetManager)->\n])" >> $coffee_file
+	echo $name generated!
+else
+	echo $name exists!
+fi

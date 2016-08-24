@@ -1,0 +1,4 @@
+css/scss-css/
+js/coffee-js/
+*.tmp
+lib/bower_components/
