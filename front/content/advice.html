@@ -1,0 +1,88 @@
+---
+controller: advice
+---
+<form id="advice-form" class="form" name="advice_form" ng-show="on_advice_page()">
+	<h3 class="left-align">留下您对母校公选课建设的宝贵建议</h3>
+	<div layout="row">
+	<span flex="15"></span>
+	<md-input-container id="advice-area" flex="70">
+		<label></label>
+		<textarea ng-model="advice.content" name="content" required></textarea>
+		<nc-message subject="advice_form.content"></nc-message>
+	</md-input-container>
+	<span flex="15"></span>
+	</div>
+	<div  id="question-group" class="left-align" layout="row">
+		<div>
+			<div id="question-0" class="question" >
+				<div class="question-title"> 您觉得公选课对你个人自身发展有帮助么？</div>
+				<md-radio-group ng-model="advice.useful" layout="row"  left-align>
+				<span ng-repeat="i in range(3)" >
+					<md-radio-button value="{{questions[0].value[i]}}" class="check md-primary">{{questions[0].options[i]}}</md-radio-button>
+		        </span>
+		        </md-radio-group>
+	        </div>
+			<div id="question-1" class="question" >
+				<div class="question-title">
+					您建议母校应多开设哪些内容的公选课?
+					<div class="question-hint">示例: 理工类 现代农业技术、生活中的物理常识</div>
+				</div>
+				<div layout="column" layout-wrap layout-gt-sm="row">
+				<span ng-repeat="i in range(6)">
+						<md-input-container class="ques-1-input">
+						<label>{{questions[1].options[i]}}</label>
+						<input type="text" ng-model="advice[questions[1].keys[i]]"/>		
+						</md-input-container>
+		        </span>
+		        </div>
+	        </div>
+		</div>
+	</div>
+	<div id="advice-submit" class="submit">
+		<md-button class="md-raised md-primary" ng-hide="submiting" ng-click="submit_handler()">提交</md-button>
+	    <md-button class="md-raised md-primary" disabled ng-show="submiting">提交中</md-button> 
+	</div>
+</form>
+
+<form id="user-info-form" class="form" name="contact_form" ng-show="!on_advice_page()">
+	<div id="info-title">
+		感谢您对母校发展的支持<br>
+		欢迎留下您的联系方式<br>
+		以便母校与您长期保持情感沟通
+	</div>
+	<div id="info-inputs" layout="column" layout-align="center center">
+		<md-input-container id="form-phone-number" class="md-input-has-placeholder" md-no-float>
+			<label>电话</label>
+			<input type="text" ng-model="contact.phone" name="phone" international-phone-number>
+			<div ng-messages="contact_form.phone.$error" class="nc-message">
+              <div ng-message="internationalPhoneNumber">请填写正确格式的号码</div>
+            </div>
+		</md-input-container>
+		<md-input-container>
+			<label>电子邮箱</label>
+			<input type="email" ng-model="contact.email" name="mail">
+			<div ng-messages="contact_form.mail.$error" class="nc-message">
+              <div ng-message="email">请填写正确格式的邮箱</div>
+            </div>
+		</md-input-container>
+		<md-input-container>
+			<label>职业</label>
+			<input type="text" ng-model="contact.career" ng-trim="true">
+		</md-input-container>
+		<md-input-container>
+			<label>工作单位</label>
+			<input type="text" ng-model="contact.industry" ng-trim="true">
+		</md-input-container>
+	</div>
+    <div id="error-msg">
+        {{error_msg}} 
+    </div>
+	<div id="info-submit" class="submit">
+		<md-button class="md-raised" ng-click="user_info_skip()">跳过</md-button>
+		<md-button class="md-raised md-primary" ng-hide="submiting" ng-click="user_info_submit()">提交</md-button>
+	    <md-button class="md-raised md-primary" disabled ng-show="submiting">提交中</md-button> 
+	</div>
+</form>
+
+<% content_for :test do %>
+<% end %>

@@ -1,0 +1,23 @@
+[2016-08-10T21:25:09+08:00] [SQL000] SELECT *FROM`department`AS`department`WHERE(`id`= 1)LIMIT :0 OFFSET :1 
+[2016-08-10T21:25:09+08:00] [params] {":0":1,":1":0}
+[2016-08-10T21:25:09+08:00] [result] [{"id":1,"code":"0100","name":"数学科学学院"}]
+[2016-08-10T21:25:09+08:00] [inform] 2.7639865875244 ms (query) 
+
+[2016-08-10T21:25:37+08:00] [SQL000] SELECT *FROM`department`AS`department`WHERE(`id`= 1)LIMIT :0 OFFSET :1 
+[2016-08-10T21:25:37+08:00] [params] {":0":1,":1":0}
+[2016-08-10T21:25:37+08:00] [result] [{"id":1,"code":"0100","name":"数学科学学院"}]
+[2016-08-10T21:25:37+08:00] [inform] 0.76913833618164 ms (query) 
+
+[2016-08-10T21:27:14+08:00] [SQL000] SELECT *FROM`department`AS`department`WHERE(`id`= 1)LIMIT :0 OFFSET :1 
+[2016-08-10T21:27:14+08:00] [params] {":0":1,":1":0}
+[2016-08-10T21:27:14+08:00] [result] [{"id":1,"code":"0100","name":"数学科学学院"}]
+[2016-08-10T21:27:14+08:00] [inform] 0.73385238647461 ms (query) 
+
+[2016-08-10T21:28:54+08:00] [SQL000] select * from admin
+[2016-08-10T21:28:54+08:00] [result] [{"id":1,"account":"admin","password":"hahaha","name":"超级管理员","privilege":1,"time":"2016-08-10 20:24:52","lastlogin":null}]
+[2016-08-10T21:28:54+08:00] [inform] 0.65493583679199 ms (query) 
+
+[2016-08-12T14:54:42+08:00] [SQL000] select * from admin
+[2016-08-12T14:54:42+08:00] [result] [{"id":1,"account":"admin","password":"hahaha","name":"超级管理员","privilege":1,"time":"2016-08-10 20:24:52","lastlogin":null}]
+[2016-08-12T14:54:42+08:00] [inform] 184.25798416138 ms (query) 
+

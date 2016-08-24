@@ -1,0 +1,80 @@
+---
+controller: welcome
+body_class: go_parm
+---
+<div id="pre-loading">
+<div id="page-container" ng-class="go_parm" ng-hide="in_forget">
+
+<div id="welcome-3" class="swipe-card page">
+    <!-- <img id="logo" src="assets/Nankai_University_logo.svg" alt=""> -->
+    <div id="header-img">
+        <img src="assets/login.jpg" alt="">
+    </div>
+    <form id="form" name="login_form">
+    <div layout-gt-sm="column">
+        <md-input-container class="md-block">
+            <label>姓名</label>
+            <input ng-model="login.name" name="name" required>
+            <nc-message subject="login_form.name"></nc-message>
+        </md-input-container>
+    </div>
+    <div layout-gt-sm="column">
+
+        <md-input-container class="md-block">
+            <label>学号</label>
+            <input  ng-model="login.number" name="number" required>
+            <nc-message subject="login_form.number"></nc-message>
+            <div class="hint" ng-hide="login_form.number.$valid">教师可填写一卡通号</div>
+        </md-input-container>
+    </div>
+    <div layout-gt-sm="column"  id="sp-hints">
+        <md-input-container class="md-block">
+            <span>还记得总理像下的名言么？</span>
+            <input ng-model="login.captcha" aria-label="false" name="sp" required>
+            <nc-message subject="login_form.sp">不填不让进哦</nc-message>
+        </md-input-container>
+    </div>
+    <md-button class="md-raised md-primary" ng-if="!submiting" ng-click="submit()">
+        评课去！
+    </md-button>    
+    <md-button class="md-raised md-primary" disabled ng-if="submiting">登录中</md-button> 
+    <div>
+    <md-button id="forget-btn" class="md-warn" ng-click="toggle_forget()">
+        忘记学号?
+    </md-button>
+    </div>
+    </div>
+    </form> 
+</div>
+</div>
+<% if ENV['NANOC_ENV']=='production' %>
+<% @assets_path = "../assets" %>
+<% else %>
+<% @assets_path = "../../assets" %>
+<% end %>
+
+<div id="forget_page" ng-if="in_forget">
+<h4>亲爱的校友</h4>
+<p>
+    或许您已离开太久，忘记了本科学号。
+    不要急，只要您通过微信或邮件将您的姓名、性别、专业、入学年份及毕业年份告知我们，我们会尽快帮您找回学号。
+</p>     
+<p>
+    感谢您对母校发展的关心。南开一路有你，未来携手共进。
+</p>     
+    邮箱：jwcqj@nankai.edu.cn<br><br> 
+    南开大学教务处微信公众号<br> 
+</p>
+<div>
+    <img id="jwc-qr" src="<%= @assets_path%>/jwc_qr.jpg" alt="">
+</div>
+    <md-button class="md-raised md-primary"  ng-click="toggle_forget()">返回</md-button>
+</div>
+
+</div>
+
+
+
+
+<% content_for :test do %>
+<% end %>

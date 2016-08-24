@@ -1,0 +1,81 @@
+#!/usr/bin/env ruby
+
+compile '/*.html' do
+	filter :erb
+	layout '/default.*'
+	write item.identifier.to_s
+end
+
+# This is an example rule that matches Markdown (.md) files, and filters them
+# using the :kramdown filter. It is commented out by default, because kramdown
+# is not bundled with Nanoc or Ruby.
+#
+#compile '/**/*.md' do
+#  filter :kramdown
+#  layout '/default.*'
+#end
+
+# route '/**/*.{html,md}' do
+#   if item.identifier =~ '/index.*'
+#     '/index.html'
+#   else
+#     item.identifier.without_ext + '/index.html'
+#   end
+# end
+
+
+
+compile '/css/scss/*.scss' do
+	filter :erb
+	filter :sass, syntax: :scss unless File.basename(item[:content_filename], ".*") == 'application_all'
+	filter :rainpress if File.basename(item[:content_filename], ".*") == 'application_all'
+	# write '/css/scss-css/'+File.basename(item.identifier.to_s, ".scss")+".css"
+end
+
+compile '/js/coffee/*.coffee' do
+	filter :erb
+	filter :coffeescript unless File.basename(item[:content_filename], ".*").match('application_')
+	if File.basename(item[:content_filename], ".*") == 'application_all'
+		filter :uglify_js 
+	end
+	# write '/js/coffee-js/'+File.basename(item.identifier.to_s, ".coffee")+".js"
+end
+
+route '/js/coffee/*.coffee' do
+  # if not debug mode, only let all.js through
+  if ENV['NANOC_ENV']=='production'
+    '/js/'+File.basename(item[:content_filename], ".*")+'.js' if File.basename(item[:content_filename], ".*").match('application_')
+  else
+    '/js/coffee-js/'+File.basename(item.identifier.to_s, ".coffee")+".js"
+  end
+end
+
+
+route '/css/scss/*.scss' do
+  # if not debug mode, only let all.css through
+  if ENV['NANOC_ENV']=='production' 
+    '/css/'+File.basename(item[:content_filename], ".*")+'.css' if File.basename(item[:content_filename], ".*") == 'application_all' 
+  else
+    '/css/scss-css/'+File.basename(item.identifier.to_s, ".scss")+".css"
+  end
+end
+
+if ENV['NANOC_ENV']=='production'
+	compile '/lib/**/*' do
+		if item.identifier =~ /intlTelInput\.css/
+			write item.identifier.to_s
+		end
+		if item.identifier =~ /flags\.png/
+			write item.identifier.to_s
+		end
+		if item.identifier =~ /angular-material\.min\.css/
+			write item.identifier.to_s
+		end
+	end
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+layout '/**/*', :erb

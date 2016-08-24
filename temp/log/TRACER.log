@@ -1,0 +1,1200 @@
+[2016-08-10T11:05:51+08:00]  
+[2016-08-10T11:05:51+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 5.719970703125 ms)
+  定位启动耗时：0.535888671875 ms
+  加载插件耗时：4.18505859375 ms
+  路由分发耗时：0.015869140625 ms
+  处理过程耗时: 0.983154296875 ms
+  执行总共耗时：5.18408203125 ms
+[内存消耗估计] (峰值: 547.203125 Kb)
+  启动消耗内存: 519.78125 Kb
+  路由消耗内存: 158.0625 Kb
+  处理消耗内存: 169.09375 Kb
+  最大消耗内存: 547.203125 Kb
+
+[2016-08-10T11:08:59+08:00]  
+[2016-08-10T11:08:59+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+[时间消耗统计] (总计: 1.119873046875 ms)
+  定位启动耗时：0.0556640625 ms
+  加载插件耗时：0.282958984375 ms
+  路由分发耗时：0.017333984375 ms
+  处理过程耗时: 0.763916015625 ms
+  执行总共耗时：1.064208984375 ms
+[内存消耗估计] (峰值: 549.0234375 Kb)
+  启动消耗内存: 359.515625 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 169.71875 Kb
+  最大消耗内存: 549.0234375 Kb
+
+[2016-08-10T11:44:58+08:00]  
+[2016-08-10T11:44:58+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+[时间消耗统计] (总计: 0.509765625 ms)
+  定位启动耗时：0.050048828125 ms
+  加载插件耗时：0.276611328125 ms
+  路由分发耗时：0.00830078125 ms
+  处理过程耗时: 0.1748046875 ms
+  执行总共耗时：0.459716796875 ms
+[内存消耗估计] (峰值: 398.1015625 Kb)
+  启动消耗内存: 356.7421875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.2578125 Kb
+  最大消耗内存: 398.1015625 Kb
+
+[2016-08-10T11:45:44+08:00]  
+[2016-08-10T11:45:44+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+[时间消耗统计] (总计: 0.652099609375 ms)
+  定位启动耗时：0.069091796875 ms
+  加载插件耗时：0.337890625 ms
+  路由分发耗时：0.01123046875 ms
+  处理过程耗时: 0.23388671875 ms
+  执行总共耗时：0.5830078125 ms
+[内存消耗估计] (峰值: 401.6875 Kb)
+  启动消耗内存: 359.671875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 22.2265625 Kb
+  最大消耗内存: 401.6875 Kb
+
+[2016-08-10T16:58:26+08:00]  
+[2016-08-10T16:58:26+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 17.32177734375 ms)
+  定位启动耗时：0.989013671875 ms
+  加载插件耗时：10.14990234375 ms
+  路由分发耗时：0.024169921875 ms
+  处理过程耗时: 6.15869140625 ms
+  执行总共耗时：16.332763671875 ms
+[内存消耗估计] (峰值: 547.203125 Kb)
+  启动消耗内存: 519.78125 Kb
+  路由消耗内存: 158.0625 Kb
+  处理消耗内存: 169.09375 Kb
+  最大消耗内存: 547.203125 Kb
+
+[2016-08-10T16:58:31+08:00]  
+[2016-08-10T16:58:31+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+[时间消耗统计] (总计: 0.416015625 ms)
+  定位启动耗时：0.0380859375 ms
+  加载插件耗时：0.205810546875 ms
+  路由分发耗时：0.01611328125 ms
+  处理过程耗时: 0.156005859375 ms
+  执行总共耗时：0.3779296875 ms
+[内存消耗估计] (峰值: 398.1015625 Kb)
+  启动消耗内存: 356.7421875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.2578125 Kb
+  最大消耗内存: 398.1015625 Kb
+
+[2016-08-10T21:09:26+08:00]  
+[2016-08-10T21:09:26+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 0.623046875 ms)
+  定位启动耗时：0.041015625 ms
+  加载插件耗时：0.23095703125 ms
+  路由分发耗时：0.006103515625 ms
+  处理过程耗时: 0.344970703125 ms
+  执行总共耗时：0.58203125 ms
+[内存消耗估计] (峰值: 523.609375 Kb)
+  启动消耗内存: 356.5546875 Kb
+  路由消耗内存: 0.609375 Kb
+  处理消耗内存: 147.015625 Kb
+  最大消耗内存: 523.609375 Kb
+
+[2016-08-10T21:09:27+08:00]  
+[2016-08-10T21:09:27+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 0.473876953125 ms)
+  定位启动耗时：0.0400390625 ms
+  加载插件耗时：0.279052734375 ms
+  路由分发耗时：0.0068359375 ms
+  处理过程耗时: 0.14794921875 ms
+  执行总共耗时：0.433837890625 ms
+[内存消耗估计] (峰值: 398.828125 Kb)
+  启动消耗内存: 356.5546875 Kb
+  路由消耗内存: 0.609375 Kb
+  处理消耗内存: 22.234375 Kb
+  最大消耗内存: 398.828125 Kb
+
+[2016-08-10T21:09:29+08:00]  
+[2016-08-10T21:11:54+08:00]  
+[2016-08-10T21:11:54+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 0.625732421875 ms)
+  定位启动耗时：0.0419921875 ms
+  加载插件耗时：0.22607421875 ms
+  路由分发耗时：0.0068359375 ms
+  处理过程耗时: 0.350830078125 ms
+  执行总共耗时：0.583740234375 ms
+[内存消耗估计] (峰值: 523.8046875 Kb)
+  启动消耗内存: 356.5546875 Kb
+  路由消耗内存: 0.609375 Kb
+  处理消耗内存: 147.2109375 Kb
+  最大消耗内存: 523.8046875 Kb
+
+[2016-08-10T21:11:56+08:00]  
+[2016-08-10T21:11:56+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 14.468017578125 ms)
+  定位启动耗时：0.048095703125 ms
+  加载插件耗时：0.275146484375 ms
+  路由分发耗时：0.0078125 ms
+  处理过程耗时: 14.136962890625 ms
+  执行总共耗时：14.419921875 ms
+[内存消耗估计] (峰值: 751.609375 Kb)
+  启动消耗内存: 357.671875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 373.8359375 Kb
+  最大消耗内存: 751.609375 Kb
+
+[2016-08-10T21:13:13+08:00]  
+[2016-08-10T21:13:13+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 0.774169921875 ms)
+  定位启动耗时：0.069091796875 ms
+  加载插件耗时：0.287109375 ms
+  路由分发耗时：0.0078125 ms
+  处理过程耗时: 0.41015625 ms
+  执行总共耗时：0.705078125 ms
+[内存消耗估计] (峰值: 523.8046875 Kb)
+  启动消耗内存: 356.5546875 Kb
+  路由消耗内存: 0.609375 Kb
+  处理消耗内存: 147.2109375 Kb
+  最大消耗内存: 523.8046875 Kb
+
+[2016-08-10T21:13:14+08:00]  
+[2016-08-10T21:13:14+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.535888671875 ms)
+  定位启动耗时：0.035888671875 ms
+  加载插件耗时：0.220947265625 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.27099609375 ms
+  执行总共耗时：0.5 ms
+[内存消耗估计] (峰值: 412.2265625 Kb)
+  启动消耗内存: 357.671875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.2265625 Kb
+
+[2016-08-10T21:13:41+08:00]  
+[2016-08-10T21:13:41+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.726806640625 ms)
+  定位启动耗时：0.046875 ms
+  加载插件耗时：0.26904296875 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.40185546875 ms
+  执行总共耗时：0.679931640625 ms
+[内存消耗估计] (峰值: 423.2734375 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 45.328125 Kb
+  最大消耗内存: 423.2734375 Kb
+
+[2016-08-10T21:13:44+08:00]  
+[2016-08-10T21:13:44+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 0.690185546875 ms)
+  定位启动耗时：0.050048828125 ms
+  加载插件耗时：0.245849609375 ms
+  路由分发耗时：0.00732421875 ms
+  处理过程耗时: 0.386962890625 ms
+  执行总共耗时：0.64013671875 ms
+[内存消耗估计] (峰值: 523.7734375 Kb)
+  启动消耗内存: 356.5546875 Kb
+  路由消耗内存: 0.609375 Kb
+  处理消耗内存: 147.1796875 Kb
+  最大消耗内存: 523.7734375 Kb
+
+[2016-08-10T21:13:46+08:00]  
+[2016-08-10T21:13:46+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.466796875 ms)
+  定位启动耗时：0.03369140625 ms
+  加载插件耗时：0.195068359375 ms
+  路由分发耗时：0.007080078125 ms
+  处理过程耗时: 0.23095703125 ms
+  执行总共耗时：0.43310546875 ms
+[内存消耗估计] (峰值: 412.2265625 Kb)
+  启动消耗内存: 357.671875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.2265625 Kb
+
+[2016-08-10T21:14:22+08:00]  
+[2016-08-10T21:14:22+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.73291015625 ms)
+  定位启动耗时：0.041015625 ms
+  加载插件耗时：0.22998046875 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.453857421875 ms
+  执行总共耗时：0.69189453125 ms
+[内存消耗估计] (峰值: 525.25 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.3046875 Kb
+  最大消耗内存: 525.25 Kb
+
+[2016-08-10T21:14:27+08:00]  
+[2016-08-10T21:14:27+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 0.47412109375 ms)
+  定位启动耗时：0.047119140625 ms
+  加载插件耗时：0.2578125 ms
+  路由分发耗时：0.007080078125 ms
+  处理过程耗时: 0.162109375 ms
+  执行总共耗时：0.427001953125 ms
+[内存消耗估计] (峰值: 398.828125 Kb)
+  启动消耗内存: 356.5546875 Kb
+  路由消耗内存: 0.609375 Kb
+  处理消耗内存: 22.234375 Kb
+  最大消耗内存: 398.828125 Kb
+
+[2016-08-10T21:14:28+08:00]  
+[2016-08-10T21:14:28+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.56689453125 ms)
+  定位启动耗时：0.0419921875 ms
+  加载插件耗时：0.236083984375 ms
+  路由分发耗时：0.0078125 ms
+  处理过程耗时: 0.281005859375 ms
+  执行总共耗时：0.52490234375 ms
+[内存消耗估计] (峰值: 412.2265625 Kb)
+  启动消耗内存: 357.671875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.2265625 Kb
+
+[2016-08-10T21:15:07+08:00]  
+[2016-08-10T21:15:07+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.693115234375 ms)
+  定位启动耗时：0.0419921875 ms
+  加载插件耗时：0.237060546875 ms
+  路由分发耗时：0.010009765625 ms
+  处理过程耗时: 0.404052734375 ms
+  执行总共耗时：0.651123046875 ms
+[内存消耗估计] (峰值: 423.4296875 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 45.484375 Kb
+  最大消耗内存: 423.4296875 Kb
+
+[2016-08-10T21:15:10+08:00]  
+[2016-08-10T21:15:10+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.97900390625 ms)
+  定位启动耗时：0.057861328125 ms
+  加载插件耗时：0.293212890625 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.618896484375 ms
+  执行总共耗时：0.921142578125 ms
+[内存消耗估计] (峰值: 525.125 Kb)
+  启动消耗内存: 357.671875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.3515625 Kb
+  最大消耗内存: 525.125 Kb
+
+[2016-08-10T21:16:53+08:00]  
+[2016-08-10T21:16:53+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.610107421875 ms)
+  定位启动耗时：0.051025390625 ms
+  加载插件耗时：0.27099609375 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.280029296875 ms
+  执行总共耗时：0.55908203125 ms
+[内存消耗估计] (峰值: 412.2265625 Kb)
+  启动消耗内存: 357.671875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.2265625 Kb
+
+[2016-08-10T21:18:52+08:00]  
+[2016-08-10T21:18:52+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.843017578125 ms)
+  定位启动耗时：0.045166015625 ms
+  加载插件耗时：0.2578125 ms
+  路由分发耗时：0.00830078125 ms
+  处理过程耗时: 0.53173828125 ms
+  执行总共耗时：0.7978515625 ms
+[内存消耗估计] (峰值: 525.03125 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.0859375 Kb
+  最大消耗内存: 525.03125 Kb
+
+[2016-08-10T21:18:54+08:00]  
+[2016-08-10T21:18:54+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.629150390625 ms)
+  定位启动耗时：0.04931640625 ms
+  加载插件耗时：0.263916015625 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.307861328125 ms
+  执行总共耗时：0.579833984375 ms
+[内存消耗估计] (峰值: 412.3984375 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.3984375 Kb
+
+[2016-08-10T21:19:08+08:00]  
+[2016-08-10T21:19:08+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.622802734375 ms)
+  定位启动耗时：0.0537109375 ms
+  加载插件耗时：0.217041015625 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.343994140625 ms
+  执行总共耗时：0.569091796875 ms
+[内存消耗估计] (峰值: 423.1171875 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 45.171875 Kb
+  最大消耗内存: 423.1171875 Kb
+
+[2016-08-10T21:19:09+08:00]  
+[2016-08-10T21:19:09+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.6552734375 ms)
+  定位启动耗时：0.03515625 ms
+  加载插件耗时：0.193115234375 ms
+  路由分发耗时：0.0078125 ms
+  处理过程耗时: 0.419189453125 ms
+  执行总共耗时：0.6201171875 ms
+[内存消耗估计] (峰值: 524.96875 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.0234375 Kb
+  最大消耗内存: 524.96875 Kb
+
+[2016-08-10T21:19:21+08:00]  
+[2016-08-10T21:19:21+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.866943359375 ms)
+  定位启动耗时：0.048828125 ms
+  加载插件耗时：0.27392578125 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.53515625 ms
+  执行总共耗时：0.818115234375 ms
+[内存消耗估计] (峰值: 524.875 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 146.9296875 Kb
+  最大消耗内存: 524.875 Kb
+
+[2016-08-10T21:19:48+08:00]  
+[2016-08-10T21:19:48+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.82763671875 ms)
+  定位启动耗时：0.046875 ms
+  加载插件耗时：0.245849609375 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.52587890625 ms
+  执行总共耗时：0.78076171875 ms
+[内存消耗估计] (峰值: 525.1015625 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.15625 Kb
+  最大消耗内存: 525.1015625 Kb
+
+[2016-08-10T21:19:51+08:00]  
+[2016-08-10T21:19:51+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.5029296875 ms)
+  定位启动耗时：0.0390625 ms
+  加载插件耗时：0.2138671875 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.241943359375 ms
+  执行总共耗时：0.4638671875 ms
+[内存消耗估计] (峰值: 412.3984375 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.3984375 Kb
+
+[2016-08-10T21:19:58+08:00]  
+[2016-08-10T21:19:58+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.8330078125 ms)
+  定位启动耗时：0.050048828125 ms
+  加载插件耗时：0.256103515625 ms
+  路由分发耗时：0.0078125 ms
+  处理过程耗时: 0.51904296875 ms
+  执行总共耗时：0.782958984375 ms
+[内存消耗估计] (峰值: 525.1015625 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.15625 Kb
+  最大消耗内存: 525.1015625 Kb
+
+[2016-08-10T21:20:00+08:00]  
+[2016-08-10T21:20:00+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.4619140625 ms)
+  定位启动耗时：0.035888671875 ms
+  加载插件耗时：0.1962890625 ms
+  路由分发耗时：0.0087890625 ms
+  处理过程耗时: 0.220947265625 ms
+  执行总共耗时：0.426025390625 ms
+[内存消耗估计] (峰值: 412.3984375 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.3984375 Kb
+
+[2016-08-10T21:20:01+08:00]  
+[2016-08-10T21:20:01+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.57470703125 ms)
+  定位启动耗时：0.048828125 ms
+  加载插件耗时：0.25 ms
+  路由分发耗时：0.00927734375 ms
+  处理过程耗时: 0.2666015625 ms
+  执行总共耗时：0.52587890625 ms
+[内存消耗估计] (峰值: 412.3984375 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.3984375 Kb
+
+[2016-08-10T21:20:01+08:00]  
+[2016-08-10T21:20:01+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.498046875 ms)
+  定位启动耗时：0.0361328125 ms
+  加载插件耗时：0.23095703125 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.221923828125 ms
+  执行总共耗时：0.4619140625 ms
+[内存消耗估计] (峰值: 412.3984375 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.3984375 Kb
+
+[2016-08-10T21:20:01+08:00]  
+[2016-08-10T21:20:01+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.56787109375 ms)
+  定位启动耗时：0.044921875 ms
+  加载插件耗时：0.248046875 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.265869140625 ms
+  执行总共耗时：0.52294921875 ms
+[内存消耗估计] (峰值: 412.3984375 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.3984375 Kb
+
+[2016-08-10T21:20:27+08:00]  
+[2016-08-10T21:20:27+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.7421875 ms)
+  定位启动耗时：0.0400390625 ms
+  加载插件耗时：0.22021484375 ms
+  路由分发耗时：0.0078125 ms
+  处理过程耗时: 0.47412109375 ms
+  执行总共耗时：0.7021484375 ms
+[内存消耗估计] (峰值: 525.1328125 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.1875 Kb
+  最大消耗内存: 525.1328125 Kb
+
+[2016-08-10T21:20:30+08:00]  
+[2016-08-10T21:20:30+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.52978515625 ms)
+  定位启动耗时：0.041748046875 ms
+  加载插件耗时：0.22607421875 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 0.239990234375 ms
+  执行总共耗时：0.488037109375 ms
+[内存消耗估计] (峰值: 412.2265625 Kb)
+  启动消耗内存: 357.671875 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.2265625 Kb
+
+[2016-08-10T21:20:41+08:00]  
+[2016-08-10T21:20:41+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.689208984375 ms)
+  定位启动耗时：0.04833984375 ms
+  加载插件耗时：0.247802734375 ms
+  路由分发耗时：0.0087890625 ms
+  处理过程耗时: 0.38427734375 ms
+  执行总共耗时：0.640869140625 ms
+[内存消耗估计] (峰值: 423.3125 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 45.3671875 Kb
+  最大消耗内存: 423.3125 Kb
+
+[2016-08-10T21:21:06+08:00]  
+[2016-08-10T21:21:06+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.875 ms)
+  定位启动耗时：0.05615234375 ms
+  加载插件耗时：0.263916015625 ms
+  路由分发耗时：0.010009765625 ms
+  处理过程耗时: 0.544921875 ms
+  执行总共耗时：0.81884765625 ms
+[内存消耗估计] (峰值: 525.1328125 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.1875 Kb
+  最大消耗内存: 525.1328125 Kb
+
+[2016-08-10T21:21:09+08:00]  
+[2016-08-10T21:21:09+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.49609375 ms)
+  定位启动耗时：0.0390625 ms
+  加载插件耗时：0.2080078125 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.240966796875 ms
+  执行总共耗时：0.45703125 ms
+[内存消耗估计] (峰值: 412.3984375 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 34.453125 Kb
+  最大消耗内存: 412.3984375 Kb
+
+[2016-08-10T21:21:27+08:00]  
+[2016-08-10T21:21:27+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.716064453125 ms)
+  定位启动耗时：0.045166015625 ms
+  加载插件耗时：0.262939453125 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.39990234375 ms
+  执行总共耗时：0.6708984375 ms
+[内存消耗估计] (峰值: 423.3125 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 45.3671875 Kb
+  最大消耗内存: 423.3125 Kb
+
+[2016-08-10T21:21:29+08:00]  
+[2016-08-10T21:21:29+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Model.php
+  [10] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.704833984375 ms)
+  定位启动耗时：0.035888671875 ms
+  加载插件耗时：0.2001953125 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.460693359375 ms
+  执行总共耗时：0.6689453125 ms
+[内存消耗估计] (峰值: 525.1328125 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.1875 Kb
+  最大消耗内存: 525.1328125 Kb
+
+[2016-08-10T21:22:40+08:00]  
+[2016-08-10T21:24:32+08:00]  
+[2016-08-10T21:24:33+08:00]  
+[2016-08-10T21:25:09+08:00]  
+[2016-08-10T21:25:37+08:00]  
+[2016-08-10T21:25:37+08:00] 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/app/models/Department.php
+  [10] => /home/foreve_/workspace/YYF/library/Model.php
+  [11] => /home/foreve_/workspace/YYF/library/Orm.php
+  [12] => /home/foreve_/workspace/YYF/library/Db.php
+[时间消耗统计] (总计: 2.48681640625 ms)
+  定位启动耗时：0.048828125 ms
+  加载插件耗时：0.254150390625 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 2.1748046875 ms
+  执行总共耗时：2.43798828125 ms
+[内存消耗估计] (峰值: 525.0078125 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 147.0625 Kb
+  最大消耗内存: 525.0078125 Kb
+
+[2016-08-10T21:27:14+08:00]  
+[2016-08-10T21:27:14+08:00] 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/app/models/Department.php
+  [10] => /home/foreve_/workspace/YYF/library/Model.php
+  [11] => /home/foreve_/workspace/YYF/library/Orm.php
+  [12] => /home/foreve_/workspace/YYF/library/Db.php
+[时间消耗统计] (总计: 2.636962890625 ms)
+  定位启动耗时：0.048095703125 ms
+  加载插件耗时：0.26806640625 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 2.311767578125 ms
+  执行总共耗时：2.5888671875 ms
+[内存消耗估计] (峰值: 524.71875 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 146.7734375 Kb
+  最大消耗内存: 524.71875 Kb
+
+[2016-08-10T21:28:14+08:00]  
+[2016-08-10T21:28:14+08:00] 资源消耗统计:
+[文件加载顺序] (总计：12)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/app/models/Department.php
+  [10] => /home/foreve_/workspace/YYF/library/Model.php
+  [11] => /home/foreve_/workspace/YYF/library/Orm.php
+[时间消耗统计] (总计: 0.891845703125 ms)
+  定位启动耗时：0.0478515625 ms
+  加载插件耗时：0.254150390625 ms
+  路由分发耗时：0.0087890625 ms
+  处理过程耗时: 0.5810546875 ms
+  执行总共耗时：0.843994140625 ms
+[内存消耗估计] (峰值: 524.765625 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 146.8203125 Kb
+  最大消耗内存: 524.765625 Kb
+
+[2016-08-10T21:28:54+08:00]  
+[2016-08-10T21:28:54+08:00] 资源消耗统计:
+[文件加载顺序] (总计：10)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Db.php
+[时间消耗统计] (总计: 1.830078125 ms)
+  定位启动耗时：0.0390625 ms
+  加载插件耗时：0.2138671875 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 1.569091796875 ms
+  执行总共耗时：1.791015625 ms
+[内存消耗估计] (峰值: 524.75 Kb)
+  启动消耗内存: 357.84375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 146.8046875 Kb
+  最大消耗内存: 524.75 Kb
+
+[2016-08-12T10:29:53+08:00]  
+[2016-08-12T10:29:53+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 42.737060546875 ms)
+  定位启动耗时：1.091064453125 ms
+  加载插件耗时：24.243896484375 ms
+  路由分发耗时：0.025146484375 ms
+  处理过程耗时: 17.376953125 ms
+  执行总共耗时：41.64599609375 ms
+[内存消耗估计] (峰值: 547.203125 Kb)
+  启动消耗内存: 519.78125 Kb
+  路由消耗内存: 158.0625 Kb
+  处理消耗内存: 169.09375 Kb
+  最大消耗内存: 547.203125 Kb
+
+[2016-08-12T14:52:30+08:00]  
+[2016-08-12T14:52:30+08:00] 资源消耗统计:
+[文件加载顺序] (总计：9)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/app/views/index/index.phtml
+[时间消耗统计] (总计: 167.2041015625 ms)
+  定位启动耗时：17.59423828125 ms
+  加载插件耗时：121.02978515625 ms
+  路由分发耗时：0.023193359375 ms
+  处理过程耗时: 28.556884765625 ms
+  执行总共耗时：149.60986328125 ms
+[内存消耗估计] (峰值: 547.03125 Kb)
+  启动消耗内存: 519.609375 Kb
+  路由消耗内存: 158.0625 Kb
+  处理消耗内存: 169.09375 Kb
+  最大消耗内存: 547.03125 Kb
+
+[2016-08-12T14:54:42+08:00]  
+[2016-08-12T14:54:42+08:00] 资源消耗统计:
+[文件加载顺序] (总计：10)
+  [0] => /home/foreve_/workspace/YYF/public/index.php
+  [1] => /home/foreve_/workspace/YYF/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/YYF/library/Config.php
+  [3] => /home/foreve_/workspace/YYF/library/Service/Database.php
+  [4] => /home/foreve_/workspace/YYF/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/YYF/library/Logger.php
+  [6] => /home/foreve_/workspace/YYF/app/controllers/Index.php
+  [7] => /home/foreve_/workspace/YYF/library/Rest.php
+  [8] => /home/foreve_/workspace/YYF/library/Input.php
+  [9] => /home/foreve_/workspace/YYF/library/Db.php
+[时间消耗统计] (总计: 275.9990234375 ms)
+  定位启动耗时：0.0478515625 ms
+  加载插件耗时：0.30322265625 ms
+  路由分发耗时：0.015869140625 ms
+  处理过程耗时: 275.63208007812 ms
+  执行总共耗时：275.951171875 ms
+[内存消耗估计] (峰值: 545.6328125 Kb)
+  启动消耗内存: 356.5703125 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 168.9609375 Kb
+  最大消耗内存: 545.6328125 Kb
+

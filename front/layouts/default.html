@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<% @controller = @item[:controller] %>
+<html ng-app="NKUCourse">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content=""/>
+    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <% unless ENV['NANOC_ENV']=='production' %>
+    <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.css"> 
+    <% else %>
+    <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.min.css"> 
+    <% end %>
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/intl-tel-input/build/css/intlTelInput.css" />
+
+    <% unless ENV['NANOC_ENV']=='production' %>
+    <%= CSSPipeline.generate %>
+    <% else %>
+    <link rel="stylesheet" type="text/css" href="css/application_all.css"/>
+    <% end %>
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <% unless ENV['NANOC_ENV']=='production' %>
+    <script src="lib/bower_components/jquery/dist/jquery.js"></script>
+    <script src="lib/bower_components/angular/angular.js"></script>
+
+    <script src="lib/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="lib/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="lib/bower_components/angular-material/angular-material.js"></script>
+    <script src="lib/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+    <script src="lib/bower_components/intl-tel-input/build/js/intlTelInput.js"></script>
+    <script src="lib/bower_components/intl-tel-input/lib/libphonenumber/build/utils.js"></script>
+    <script src="lib/bower_components/international-phone-number/releases/international-phone-number.js"></script>
+    <script src="lib/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="lib/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="lib/bower_components/binnng/slip.js/dist/min.slip.js"></script>
+    <% else %>
+    <script src="js/application_lib.js"></script>
+    <% end %>
+    <% unless ENV['NANOC_ENV']=='production' %>
+    <%= JSPipeline.generate %>
+    <% else %>
+    <script src="js/application_all.js"></script>
+    <% end %>
+</head>
+<body <%= BodyParmGenHelper.gen_with(@item) %> ng-class="<%= @item[:body_class]%>" ng-cloak>
+<%= yield %>
+
+<%# http://www.rubydoc.info/github/nanoc/nanoc/Nanoc/Helpers/Capturing %>
+<div id="ng-playground">
+    <%= content_for(@item, :test) %>
+</div>
+</body>
+</html>

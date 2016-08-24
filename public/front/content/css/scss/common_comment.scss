@@ -1,0 +1,31 @@
+#comments{
+	width: 100%;
+	.comment{
+		padding: 2rem 1rem 0rem;
+		.info-bar{
+			padding-top: 0.3rem;
+			vertical-align: bottom;
+			width: 100%;
+		}
+		.vote{
+			font-size: 0.8rem;
+			vertical-align: middle;
+			text-align: right;
+			color: #AAA;
+			.md-icon{
+				fill:#AAA;
+				vertical-align: sub;
+				&:nth-child(1){
+					padding-right: 1rem;
+				}
+			}
+			$actived-color: darken(red, 10%);
+			.actived{
+				color: $actived-color;
+				.md-icon{
+					fill: $actived-color;
+				}
+			}
+		}
+	}
+}

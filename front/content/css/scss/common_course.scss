@@ -1,0 +1,27 @@
+#course-list{
+	h3{
+		font-size: 1.4rem;
+	}
+	h4{
+		margin-top: 0.5rem;
+		font-size: 0.9rem;
+	}
+	padding-bottom: 2rem;
+	.course{
+		margin-top: 1em;
+		padding-bottom: 0.5rem;
+		border-bottom: solid 1px #CCC;
+	}
+	.info-bar{
+		margin-top: 0.6rem;
+		position: relative;
+		width: 100%;
+	}
+	.comments{
+		position: absolute;
+		vertical-align: top;
+		right: 0rem;
+		width: 50%;
+		color: #AAA
+	}
+}

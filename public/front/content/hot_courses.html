@@ -1,0 +1,29 @@
+---
+controller: hot_courses
+---
+
+<nc-nav back-handler="back_handler">热门课程</nc-nav>
+
+<div id="course-list">
+  <md-content>
+	<md-list>
+		<md-subheader class="md-no-sticky">找到{{courses.length}}门课程</md-subheader>
+		<md-list-item class="md-3-line" ng-repeat="course in courses">
+		<div class="md-list-item-text course" layout="column" ng-click="course_handler(course.id)">
+			<h3>{{ course.course }}</h3>
+			<h4>{{ course.teacher }}</h4>
+			<div class="info-bar">
+			<nc-star ng-model="course.score" size="24"></nc-star>
+			<span class="comments">评论（{{course.comments}}）</span>
+			</div>
+		</div>
+		</md-list-item>
+	</md-list>
+	<div id="load-btn" ng-click="load_more()" ng-hide="no_more">
+		查看更多
+	</div>
+  </md-content>
+</div>
+
+<% content_for :test do %>
+<% end %>
