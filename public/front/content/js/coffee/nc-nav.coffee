@@ -4,12 +4,14 @@
 		transclude: true
 		scope: {
 			click_callback: '=backHandler'
+			type: '=type'
 		}
 		link: ($scope, $element, $attrs, $ctrl, $transclude)->
 			$scope.click_callback ||= ->
-			$transclude($scope, (clone)->
-				$scope.title = clone.html()
-			)
+			#$transclude($scope, (clone)->
+			#	$scope.title = clone.html()
+			#	console.log $scope.title, clone
+			#)
 		template: 
 			"<div id=\"nc-nav\">
 				<div id=\"back-btn\" ng-click=\"click_callback()\">
@@ -18,8 +20,7 @@
 						<span>返回</span>
 					</span>
 				</div>
-				<div id=\"title\">
-					{{title}}
+				<div id=\"title\" ng-transclude>
 				</div>
 			</div>"
 	};

@@ -8,7 +8,8 @@
 		link: ($scope, $element, $attrs, $ctrl, $transclude)->
 			$scope.click_callback ||= ->
 			$transclude($scope, (clone)->
-				$scope.title = clone.html()
+				$scope.title = $compile(clone.html())
+				console.log $scope.title
 			)
 		template: 
 			"<div id=\"nc-nav\">

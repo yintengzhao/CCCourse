@@ -21,7 +21,7 @@
 		}
 	}
 	.course{
-		padding-left: 1rem;
+		padding: .5rem;
 		background-color: white;
 		h3{
 			font-size: 1.5rem;
@@ -40,10 +40,11 @@
 		}
 	}
 	#top-content{
-		position: fixed;
-		top: $nav-height+$nav-padding;
-		padding-top: 10px;
-		height: $header-height - $nav-height;
+		//position: fixed;
+		position: relative;
+		//top: $nav-height+$nav-padding;
+		padding-top: 1.5rem;
+		//height: $header-height - $nav-height;
 		border-bottom: solid 1px gray;
 		width: 100%;
 		background-color: white;
@@ -53,9 +54,9 @@
 		}
 		#button{
 			width: 100%;
-			position: absolute;
+			//position: absolute;
 			text-align: center;
-			bottom: 20px;
+			//bottom: 20px;
 		}
 	}
 	#bottom-content{
@@ -64,7 +65,7 @@
 		width: 100%;
 		background-color: #DDD;
 		#comments{
-			padding-top:240px;
+			//padding-top:1rem;
 		}
 		.content{
 			color: #666;

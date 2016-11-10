@@ -1,14 +1,16 @@
 
-@ng_app.controller("HotCoursesCtrl", ['$controller',  '$scope', '$interval', '$timeout', '$window', '$http', '$sce', 'NetManager',
-($controller, $scope, $interval, $timeout, $window, $http, $sce, NetManager)->
-	$controller('ApplicationCtrl', {$scope: $scope});
+@ng_app.controller("HotCoursesCtrl", ['$controller',  '$scope', '$interval', '$timeout', '$window', '$location', '$http', '$sce', 'NetManager',
+($controller, $scope, $interval, $timeout, $window, $location, $http, $sce, NetManager)->
+	#$controller('ApplicationCtrl', {$scope: $scope});
 	
 	current_page = 1
+	$scope.type = $.QueryString(window.location.search).type
+	# $scope.type = $location.search().type;
 
-	NetManager.get('/Course').then (data) ->
+	NetManager.get('/Course?type=' + $scope.type).then (data) ->
 		return if data.status != 1
 		$scope.courses = data.info
-		if $scope.courses < 10
+		if $scope.courses.length < 10
 			$scope.no_more = true
 			return
 
@@ -17,7 +19,7 @@
 
 
 	$scope.back_handler = ->
-		$window.location = "./index.html"
+		$window.location = "./welcome.html#weclome-3"
 
 	$scope.load_more = ->
 		current_page += 1

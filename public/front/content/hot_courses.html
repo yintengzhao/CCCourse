@@ -2,7 +2,9 @@
 controller: hot_courses
 ---
 
-<nc-nav back-handler="back_handler">热门课程</nc-nav>
+
+
+<nc-nav back-handler="back_handler"> {{type == "computer" ? "计算机" : "控制"}}专业课程</nc-nav>
 
 <div id="course-list">
   <md-content>
@@ -11,7 +13,6 @@ controller: hot_courses
 		<md-list-item class="md-3-line" ng-repeat="course in courses">
 		<div class="md-list-item-text course" layout="column" ng-click="course_handler(course.id)">
 			<h3>{{ course.course }}</h3>
-			<h4>{{ course.teacher }}</h4>
 			<div class="info-bar">
 			<nc-star ng-model="course.score" size="24"></nc-star>
 			<span class="comments">评论（{{course.comments}}）</span>
