@@ -1,5 +1,6 @@
 source 'https://ruby.taobao.org'
-
+gem 'therubyracer'
+gem 'execjs'
 gem 'guard-nanoc'
 gem 'sass'
 gem 'rainpress'
