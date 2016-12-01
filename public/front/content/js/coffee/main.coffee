@@ -5,8 +5,12 @@
 # The main contoller logic
 @mainCtrl.controller("MainCtrl", ['$controller', '$scope', '$interval', '$timeout', '$window', '$location', '$http', '$sce', 'NetManager',
 ($controller, $scope, $interval, $timeout, $window, $location, $http, $sce, NetManager)->
-	$controller('ApplicationCtrl', {$scope: $scope});
-	
+	$scope.comment_cbk = ->
+		if $scope.current_user.type == "teacher"
+			$window.location = './teac.html'
+
+	appCtrl = $controller('ApplicationCtrl', {$scope: $scope});
+
 	$scope.show_result = false
 	$scope.courses = []
 

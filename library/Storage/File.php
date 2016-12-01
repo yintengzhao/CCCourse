@@ -1,8 +1,4 @@
 <?php
-namespace Storage;
-
-use \Logger as Log;
-
 /**
  *文件存取类
  * Function list:
@@ -11,6 +7,7 @@ use \Logger as Log;
  * - delete()
  * - flush()
  */
+namespace Storage;
 class File
 {
 
@@ -27,7 +24,8 @@ class File
      */
     public function set($name, $value)
     {
-        if ($this->_serialized) {
+        if ($this->_serialized)
+        {
             //序列化写入文件
             $expire = func_num_args() == 4 ? (func_get_arg(3) + time()) : 0;
             $cache  = array('e' => $expire, 'c' => $value);
@@ -47,18 +45,25 @@ class File
      */
     public function get($name)
     {
+
         $filename = $this->_dir . $name . '.php';
-        if (is_file($filename)) {
+        if (is_file($filename))
+        {
             $content = file_get_contents($filename);
-        } else {
+        }
+        else
+        {
             return null; /*不存在返回null*/
         }
 
-        if ($this->_serialized) {
+        if ($this->_serialized)
+        {
             /*反序列化的文件*/
             $cache = unserialize($content);
             return ($cache['e'] && $_SERVER['REQUEST_TIME'] > $cache['e']) ? null : $cache['c'];
-        } else {
+        }
+        else
+        {
             return $content;
         }
     }
@@ -89,7 +94,8 @@ class File
         $files = scandir($dir);
         unset($files[0]);
         unset($files[1]);
-        foreach ($files as $f) {
+        foreach ($files as $f)
+        {
             @unlink($dir . $f);
         }
     }
@@ -102,26 +108,27 @@ class File
     public function __construct($dir, $serialized = false)
     {
         $dir .= DIRECTORY_SEPARATOR;
-        if (is_dir($dir)||mkdir($dir, 0700, true)) {
+        if (self::mkdir($dir))
+        {
             $this->_dir = $dir;
-        } else {
-            $msg='无法创建目录:'.$dir;
-            Log::write($msg, 'EEROR');
-            throw new \Exception($msg);
+        }
+        else
+        {
+            throw new \Exception('目录无法创建：' . $dir);
         }
         $this->_serialized = $serialized;
     }
 
-    // /**
-    //  * 循环创建目录
-    //  * @method mkdir
-    //  * @param  [type]  $dir [目录名]
-    //  * @param  integer $mod [创建模式]
-    //  * @return [bool]       [是否创建成功]
-    //  * @author NewFuture
-    //  */
-    // public static function mkdir($dir, $mod = 0755)
-    // {
-    // 	return is_dir($dir) || (self::mkdir(dirname($dir), $mod) && mkdir($dir, $mod));
-    // }
+    /**
+     * 循环创建目录
+     * @method mkdir
+     * @param  [type]  $dir [目录名]
+     * @param  integer $mod [创建模式]
+     * @return [bool]       [是否创建成功]
+     * @author NewFuture
+     */
+    public static function mkdir($dir, $mod = 0755)
+    {
+        return is_dir($dir) || (self::mkdir(dirname($dir), $mod) && mkdir($dir, $mod));
+    }
 }

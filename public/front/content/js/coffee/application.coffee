@@ -8,6 +8,8 @@
 					$window.location = './welcome.html'
 
 				$scope.able_to_comment = $scope.current_user.type == "student"
+				if($scope.comment_cbk)
+					$scope.comment_cbk()
 				if(clb = $scope.after_check_state)
 					clb()
 

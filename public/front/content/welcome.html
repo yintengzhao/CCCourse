@@ -78,54 +78,41 @@ body_class: go_parm
 
 <div id="welcome-3" class="swipe-card page">
     <!-- <img id="logo" src="assets/Nankai_University_logo.svg" alt=""> -->
-    <div class="content">
-        <div class="CCTitle">
-            <p>计控评课</p>
-        </div>
-        <div class="major">
-            <div class="computer">
-                <md-button class="md-primary" ng-href="./hot_courses.html?type=computer">
-                    我是计算机的！<br>
-                    点我进入课程列表>>
-                </md-button>
-            </div>
-            <div class="control">
-                <md-button class="md-primary" ng-href="./hot_courses.html?type=control">
-                    我是控制的！<br>
-                    点我进入课程列表>>
-                </md-button>
-            </div>
-        </div>
-        <div class="hot">
-            <div class="hotDiv">
-                <div class="hotIcon">
-                    <div class="hotTitle">热门课程</div>
-                    <div class="hotMore">more>></div>
-                </div>
-                <div class="hotContent">
-                    <div class="hotItem" ng-repeat="course in hotCourses">
-                        <div class="courseName">{{course.course}}&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                        <div class="hotItemInfo">评论（{{course.comments}}）</div>   
-                    </div>
-                </div>
-            </div>
-            <div class="hotDiv">
-                <div class="hotIcon">
-                    <div class="hotTitle">热门评论</div>
-                    <div class="hotMore">more>></div>
-                </div>
-                <div class="hotContent">
-                    <div class="hotItem" ng-repeat="advice in hotAdvices">
-                        <div class="adviceText">{{advice.advice}}&nbsp;&nbsp;&nbsp;&nbsp;（{{advice.date}}）</div>
-                        <div class="hotItemInfo"></div>   
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <p>你的研究生生涯，来吐槽一下吧！</p>
-        </div>
+    <div id="header-img">
+        <img src="assets/login.jpg" alt="">
     </div>
+    <form id="form" name="login_form">
+    <div layout-gt-sm="column">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>姓名</label>
+            <input ng-model="login.name" name="name" required>
+            <nc-message subject="login_form.name"></nc-message>
+        </md-input-container>
+    </div>
+    <div layout-gt-sm="column">
+
+        <md-input-container class="md-block">
+            <label>学号</label>
+            <input  ng-model="login.number" name="number" required>
+            <nc-message subject="login_form.number"></nc-message>
+            <div class="hint" ng-hide="login_form.number.$valid">教师请点击专家评测</div>
+        </md-input-container>
+    </div>
+    
+    <md-button class="md-raised md-primary" ng-if="!submiting" ng-click="submit()">
+        学生评课
+    </md-button>
+    <md-button class="md-raised md-primary" ng-if="!submiting" ng-click="teac_submit()">
+        专家评测
+    </md-button>     
+    <md-button class="md-raised md-primary" disabled ng-if="submiting">登录中</md-button> 
+    <div>
+    <!-- <md-button id="forget-btn" class="md-warn" ng-click="toggle_forget()">
+        忘记学号?
+    </md-button> -->
+    </div>
+    </div>
+    </form> 
 </div>
 </div>
 <% if ENV['NANOC_ENV']=='production' %>

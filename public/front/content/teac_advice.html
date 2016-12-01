@@ -1,0 +1,68 @@
+---
+controller: teacadvice
+---
+<form id="advice-form" class="form" name="advice_form" ng-show="on_advice_page()">
+	<h3 class="left-align">给该培养方案打个分：</h3>
+	<div class="hint">针对以下评价指标</div>
+
+	<div layout="column" flex="100">
+		<div class = "scheme_course_list">
+			<md-list>
+				<!-- <md-subheader class="md-no-sticky">
+					<div layout="row">
+						<div layout="column" flex="70">评价指标</div>
+						<div layout="column" flex="30">请打分</div>
+					</div>
+				</md-subheader> -->
+				<md-list-item ng-repeat="eval_item in eval_items">
+				<div class="eval-item" flex="100" layout="column">
+					<h5>{{ eval_item.content }}</h5>
+					<div class="take-score" layout="column" layout-align="center center">
+						<div id="comment-stars">
+							<nc-star ng-init="eval_item.score=2" ng-model="eval_item.score" size="30" min="1" no-half></nc-star>
+						</div>
+						<div id="fake-star-slider">
+							<md-slider aria-label="star" flex min="0" max="10" ng-model="eval_item.score" id="star-slider" class></md-slider>
+						</div>
+					</div>
+				</div>
+				</md-list-item>
+			</md-list>
+		</div>
+	</div>
+	<h5 class="ques-title">提出您对于学院课程和教学工作的宝贵意见：</h5>
+	<div layout="row">
+	<span flex="15"></span>
+	<md-input-container id="advice-area" flex="70">
+		<label></label>
+		<textarea ng-model="advice.content" name="content" required></textarea>
+		<nc-message subject="advice_form.content"></nc-message>
+	</md-input-container>
+	<span flex="15"></span>
+	</div>
+	<!-- <div  id="question-group" class="left-align" layout="row">
+		<div>
+			<div id="question-1" class="question" >
+				<div class="question-title">
+					您建议学院应多开设哪些内容的课程?
+					<div class="question-hint">示例: 理工类</div>
+				</div>
+				<div layout="column" layout-wrap layout-gt-sm="row">
+				<span ng-repeat="i in range(6)">
+						<md-input-container class="ques-1-input">
+						<label>{{questions[1].options[i]}}</label>
+						<input type="text" ng-model="advice[questions[1].keys[i]]"/>		
+						</md-input-container>
+		        </span>
+		        </div>
+	        </div>
+		</div>
+	</div> -->
+	<div id="advice-submit" class="submit">
+		<md-button class="md-raised md-primary" ng-hide="submiting" ng-click="submit_handler()">提交</md-button>
+	    <md-button class="md-raised md-primary" disabled ng-show="submiting">提交中</md-button> 
+	</div>
+</form>
+
+<% content_for :test do %>
+<% end %>

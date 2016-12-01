@@ -4,7 +4,7 @@
 	$controller('ApplicationCtrl', {$scope: $scope});
 
 	$scope.go_main = ->
-		$window.location = "./index.html"
+		$window.location = "./teac.html"
 
 	$scope.show_share_hint = ->
 		$scope.show_hint = true

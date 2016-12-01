@@ -1,0 +1,95 @@
+#teacadvice{
+	/* ---------- */
+	h3{
+		font-size: 1.2rem;
+		font-weight: 400;
+	}
+	h5{
+		margin-top: .5rem;
+		margin-bottom: .5rem;
+	}
+	.take-score{
+		position: relative;
+	}
+	#fake-star-slider{
+		opacity: 0;
+		width: 10rem;
+		margin-top: -2.5rem;
+	}
+
+	#comment-stars{
+		.md-icon{
+			fill: rgb(255,82,82);
+		}
+	}
+	
+	.ques-title{
+		padding: 0 1rem;
+		text-align: center;
+	}
+
+	.hint{
+		font-size: 0.75rem;
+		color: #666;
+		margin-left: 1rem;
+	}
+	/* ---------- */
+
+	.left-align{
+		// margin-left: 1rem;
+		// margin-right: 2rem;
+		margin: .5rem 2rem .5rem 1rem;
+	}
+	.form{
+		padding-top: 5%;
+	}
+	#advice-form{
+		.question{
+			margin-bottom: 2rem;
+		}
+		.question-title{
+			margin-bottom: 1rem;
+			padding: 0;
+		}
+		.question-hint{
+			font-size: 0.75rem;
+			color: #666;
+			margin-left: 0rem;
+		}
+		.check{
+			margin-left: 1rem;
+		}
+		.ques-1-input{
+			margin: 0;
+		}
+	}
+	.submit{
+		width: 100%;
+		text-align: center;
+	}
+	#info-inputs{
+		width: 80%;
+		margin: 0 auto;
+		md-input-container{
+			width: 100%;
+		}
+	}
+	#info-title{
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	#form-phone-number{
+		.intl-tel-input{
+			width: 100%;
+		}
+		.country-list{
+			position: relative;
+			width: 100% !important;
+			// width: 300px !important;
+		}
+	}
+	#error-msg{
+		text-align: center;
+		color: red;
+	}
+}

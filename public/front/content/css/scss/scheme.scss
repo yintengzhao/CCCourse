@@ -1,0 +1,147 @@
+#scheme{
+	margin-top: 50px;
+	.course-item {
+		border-bottom: solid 1px #ccc;
+	}
+	h5 {
+		margin-top: 5px; 
+		margin-bottom: 5px; 
+	}
+	md-list {
+		padding: 0;
+	}
+	.md-no-sticky {
+		text-align: center;
+	}
+	$bottom-bar-height: 3rem;
+	#bottom-bar{
+		background-color: white;
+		height: $bottom-bar-height;
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		text-align: center;
+		z-index: 999;
+	}
+	@import 'nc-nav_constant';
+	#course-info{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		transition: transform 0.5s ease-in-out 0s;
+		&.switch{
+			transform: translateX(-100%);
+		}
+	}
+	#comment-course{
+		width: 100%;
+		position: absolute;
+		top: $nav-height+$nav-padding;
+		left: 100%;
+		height: 100%;
+		transition: transform 0.5s ease-in-out 0s;
+		&.switch{
+			transform: translateX(-100%);
+		}
+	}
+	.course{
+		padding: .5rem;
+		background-color: white;
+		h3{
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+		}
+		#teacher{
+			font-size: 1rem;
+			margin-bottom: 0;
+		}
+		#star{
+		}
+		#score{
+			vertical-align: top;
+			margin-left: 1rem;
+			line-height: 1.5rem;
+		}
+	}
+	#top-content{
+		//position: fixed;
+		position: relative;
+		//top: $nav-height+$nav-padding;
+		//padding-top: 1.5rem;
+		//height: $header-height - $nav-height;
+		//padding-bottom: 3rem;
+		border-bottom: solid 1px gray;
+		width: 100%;
+		background-color: white;
+		z-index: 998;
+		.course{
+			min-height: 180px;
+		}
+		#button{
+			width: 100%;
+			//position: absolute;
+			text-align: center;
+			//bottom: 20px;
+		}
+		.scheme_score{
+			color: rgb(255,82,82);
+			.md-icon{
+				fill: rgb(255,82,82);
+			}
+		}
+	}
+	#bottom-content{
+		position: relative;
+		min-height: 100%;
+		width: 100%;
+		background-color: #DDD;
+		padding-bottom: 5rem;
+		#comments{
+			//padding-top:1rem;
+		}
+		.content{
+			color: #666;
+		}
+	}
+
+	#take-score{
+		position: relative;
+	}
+	#fake-star-slider{
+		opacity: 0;
+		width: 10rem;
+		margin-top: -2.5rem;
+	}
+
+	#comment-stars{
+		.md-icon{
+			fill: gray;
+		}
+	}
+
+	#comment-form{
+		padding-top: 1rem;
+		padding-left: 1rem;
+	}
+
+	#checkbox-group{
+		margin-left: 3rem;
+		margin-top: 1rem;
+		margin-right: 1rem;
+	}
+
+	#comment-submit{
+		text-align: center;
+	}
+
+	#ques-1-input{
+		margin: 0;
+		display: block;
+		vertical-align: text-bottom;
+	}
+	#error-msg{
+		color: red;
+		text-align: center;
+		font-size: 1rem;
+	}
+}

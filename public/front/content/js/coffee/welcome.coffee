@@ -1,22 +1,30 @@
 @welcomeCtrl = angular.module('welcomeController', []);
 
-@welcomeCtrl.controller("WelcomeCtrl", [ '$controller', '$scope', '$interval', '$timeout', '$window', '$http', '$sce', '$animate', 'NetManager',
-($controller, $scope, $interval, $timeout, $window, $http, $sce, $animate, NetManager)->	
-	$scope.skip_login_check = true
-	#$controller('ApplicationCtrl', {$scope: $scope});
 
-	touch_trace = {start: 0, end: 0}
+
+@welcomeCtrl.controller("WelcomeCtrl", ['$controller',  '$scope', '$interval', '$timeout', '$window', '$http', '$sce', '$animate', 'NetManager',
+($controller, $scope, $interval, $timeout, $window, $http, $sce, $animate, NetManager)->
+	$scope.skip_login_check = true
+	$controller('ApplicationCtrl', {$scope: $scope});
+
+	touch_trace  = {start:0, end:0}
 
 	$scope.hide_arrow = false
 	$scope.swiping = false
 
 	$scope.login = {}
+	
 
-	ele = $("#page-container")[0]
-	slip = Slip(ele, 'y').webapp()
+
+	ele = $("#page-container")[0];
+
+	slip = Slip(ele, "y").webapp();
+
+	# slip.jump(3)
+	# $scope.in_forget = true
 
 	slip.start (event)->
-		# $scope.swiping = true
+		$scope.swiping = true
 		$scope.$apply()
 
 		if event.target.tagName == "svg"
@@ -40,22 +48,50 @@
 			400)
 		$scope.$apply()
 
-	#--------welcome-3---------
-
-	NetManager.get('/Course/hot').then (data) ->
-		return if(data.status != 1)
-		console.log(data)
-		$scope.hotCourses = data.info
-
-	NetManager.get('/Advice/hot').then (data) ->
-		return if(data.status != 1)
-		console.log(data)
-		$scope.hotAdvices = data.info
-
-	$scope.course_handler = (type) ->
-		$window.location = "./hot_courses.html?type=#{type}"
+	$scope.submit = ->
+		form = $scope.login_form
+		form.$setSubmitted()
+		
+		if form.$invalid
+			$scope.popup_toast()
+			return
 
 
+		$scope.submiting = true
+		NetManager.post('/User', $scope.login).then (data)->
+			$scope.submiting = false
+			if +data.status > 0
+				localStorage.setItem("loginSession", data.info.token)
+				$window.location = "./index.html"
+			else
+				$scope.popup_toast(data.info)
+
+	$scope.teac_submit = ->
+		data = {
+			type: 1
+		}
+		NetManager.post('/User', data).then (data)->
+			$scope.submiting = false
+			if +data.status > 0
+				localStorage.setItem("loginSession", data.info.token)
+				$window.location = "./teac.html"
+			else
+				$scope.popup_toast(data.info)
+
+	$scope.toggle_forget = ->
+		$scope.in_forget = !$scope.in_forget
+
+	# http://davidchin.me/blog/disable-nganimate-for-selected-elements/
+	$animate.enabled(false, $('#jwc-qr'));
+	# trigger_swiping()
 	null
+]);
 
-])
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+#teac {
+	.course_item {
+		width: 100%;	
+	}
+	
+	#advice-list{
+		height: 100%;
+		#empty{
+			height: 8%;
+		}
+		md-list-item{
+			height: 15%;
+		}
+	}
+}

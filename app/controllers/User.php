@@ -28,15 +28,16 @@ class UserController extends Rest
 
     	Input::post('type', $type);
 
-    	if( $type === 0){
+    	if( $type == 0){
     		//学生登录
 
     		if( Input::post('number', $number, 'ctype_digit') && Input::post('name', $name) ){
 
     			$info = ['number' => $number, 'name' => $name];
+ 			
     			$UserModel = new Model('user');
-
-    			if( $user = $UserModel->where($info)->field('id, type, status')->find() ){
+ 
+    			if( $user = $UserModel->where($info)->field('id,type,status')->find() ){
     				//用户存在
     				//$user {id:, status, type, }
 
@@ -64,11 +65,11 @@ class UserController extends Rest
 
     		}
 
-    	}elseif($type === 1){
+    	}elseif($type == 1){
     		//教师登录
 
     		$number = Random::number(6);
-    		$type = Random::char(6);
+    		$type = 'teacher';
 
     		$user = ['id' => $number, 'type' => $type, 'status' => 1];
 

@@ -1,161 +1,177 @@
-<?PHP
+<?php
+/**
+ * 课程信息
+ */
+class CourseController extends Rest
+{
 
-class CourseController extends Rest{
-	
-	//get Courses: computer control
-	//Get /Course/computer
+	/**
+	 * @method GET_indexAction
+	 * 课程查询
+	 * 这一部分开放查询
+	 * @param [page=1] 页码
+	 * @param key 关键字
+	 * @author NewFuture
+	 * @todo 查询缓存
+	 */
+	public function GET_indexAction()
+	{
 
-	public function GET_indexAction(){
-		Input::get('type', $type);
+		Input::get('key', $keywords, 'trim', '');
+		Input::get('page', $page, 'intval', 1);
 
-		if($type == 'computer'){
-			$res = [
-				[
-					"course" => "computer-当思念飞过夜空",
-					"comments" => "27",
-					"id" => "1000"
-				],
-				[
-					"course" => "computer-缠绕指尖停留",
-					"comments" => "28",
-					"id" => "1001"
-				],
-				[
-					"course" => "computer-只剩下一场梦",
-					"comments" => "29",
-					"id" => "1002"
-				],
-				[
-					"course" => "computer-在你背影转身后",
-					"comments" => "30",
-					"id" => "1002"
-				],
-				[
-					"course" => "computer-吞噬在人海中",
-					"comments" => "31",
-					"id" => "1003"
-				],
-				[
-					"course" => "computer-擦不干的寂寞",
-					"comments" => "32",
-					"id" => "1004"
-				],
-				[
-					"course" => "computer-never try never say",
-					"comments" => "33",
-					"id" => "1005"
-				]
-			];
-		} elseif($type == 'control'){
-			$res = [
-				[
-					"course" => "control-当思念飞过夜空",
-					"comments" => "27",
-					"id" => "1000"
-				],
-				[
-					"course" => "control-缠绕指尖停留",
-					"comments" => "28",
-					"id" => "1001"
-				],
-				[
-					"course" => "control-只剩下一场梦",
-					"comments" => "29",
-					"id" => "1002"
-				],
-				[
-					"course" => "control-在你背影转身后",
-					"comments" => "30",
-					"id" => "1002"
-				],
-				[
-					"course" => "control-吞噬在人海中",
-					"comments" => "31",
-					"id" => "1003"
-				],
-				[
-					"course" => "control-擦不干的寂寞",
-					"comments" => "32",
-					"id" => "1004"
-				],
-				[
-					"course" => "control-never try never say",
-					"comments" => "33",
-					"id" => "1005"
-				]
-			];
+		//+_&相当于联合条件[注加号需要转义]
+		//[空格],|相当于满足一条即可
+		$keywords  = strtr($keywords, '+_&,|', '%%%  ');
+		$cache_key = 'courses_' . $page . '_' . md5($keywords);
+		if ($courses = Cache::get($cache_key))
+		{
+			/*直接返回缓存数据*/
+			$this->response(1, $courses);
 		}
+		else
+		{
+			$CouresModel = new Model('class');
+			$CouresModel
+				->belongs('teacher', 'teacher_id')
+				->belongs('course', 'course_id')
+				->has('evaluation')
+				->field([
+					'class.id',
+					'teacher_id',
+					'course_id',
+					'years',
+					'course.name'          => 'course',
+					'teacher.name'         => 'teacher',
+					'COUNT(evaluation.id)' => 'comments',
+					'AVG(evaluation.rank)' => 'score',
+				])
+				->group('id')
+				->page($page);
 
-		//$this->response = ['type' => $type, 'method' => 'GET'];
-		$this->response(1, $res);
-	}
+			if ($keywords)
+			{
+				$CouresModel->order('score', true)->order('comments', true);
+				$key = strtok($keywords, ' ');
+				while ($key)
+				{
+					$key = '%' . $key . '%';
+					$CouresModel
+						->orwhere('course.name', 'LIKE BINARY', $key)
+						->orwhere('class.years', 'LIKE BINARY', $key)
+						->orWhere('teacher.name', 'LIKE BINARY', $key);
+					$key = strtok(' ');
+				}
+			}
+			else
+			{
+				//无关键字时评论优先
+				$CouresModel->order('comments', true)->order('score', true);
+			}
 
-	//get hotCourse
-	public function GET_hotAction(){
+			$courses = $CouresModel->select();
+			if (!empty($courses))
+			{
+				Cache::set($cache_key, $courses, Config::get('cache.expire'));
+				$this->response(1, $courses);
+			}
+			else
+			{
+				$this->response(0, null);
+			}
 
-		Input::get('type', $type);
-		
-		$res = [
-			[
-				"course" => "当思念飞过夜空",
-				"comments" => "28"
-			],
-			[
-				"course" => "当思念飞过夜空",
-				"comments" => "28"
-			]
-		];
-		//$this->response = ['type' => $type, 'method' => 'GET'];
-		$this->response(1, $res);
-	}
-
-	public function GET_infoAction($id){
-		if(intval($id) == 1000){
-			$res = [
-				"id" => $id,
-				"name" => "computer-当思念飞过夜空",
-				"score" => 5,
-				"description" => "是落櫻繽紛時候,一縷愁悵掠過 ,我記得那感受 ,那麼傷 那麼怨 那麼那麼痛 ,那麼愛 那麼恨 那麼那麼濃..."
-			];
-			$this -> response(1, $res);
-		}else{
-			$res = [
-				"id" => $id,
-				"name" => "control-在你背影转身后",
-				"score" => 5,
-				"description" => "誰的愛 太瘋 任性的 揮霍  每場 爭執 合好之後  我們 擁抱 狂吻陷落  誰的愛 不瘋 不配談 愛過  不求 明天 永恆 以後  眼神 燃燒 此刻 有我，就足夠 ..."
-			];
-			$this -> response(1, $res);
 		}
 	}
 
-	public function GET_commentsAction($id){
-		if(intval($id) == 1000){
-			$res = [
-				[
-					"number" => "c100000",
-					"content" => "「白子畫，我以神的名義詛咒你，今生今世，永生永世，不老不死，不傷不滅。白子畫，今生我從未後悔過，可是，若能重來一次，我再也不要愛上你。」",
-					"score" => "4"
-				],
-				[
-					"number" => "c100001",
-					"content" => "一方面她也在賭，從前白子畫最在乎的是天下是長留，而今花千骨是妖神不容於世，一方面也有怨吧! 明明就是愛的,卻不肯承認.....愛也好 怨也罷 背負的太多 到後來.....只是累了﻿",
-					"score" => "3"
-				]
-			];
-			$this -> response(1, $res);
+	/**
+	 * @method GET_infoAction
+	 * @param  [type]         $id [description]
+	 * @author NewFuture
+	 * @todo 详细信息
+	 */
+	public function GET_infoAction($id)
+	{
+		$user        = $this->getUser('user', True);
+		$CouresModel = new Model('class');
+		$course      = $CouresModel
+			->belongs('teacher', 'teacher_id')
+			->belongs('course', 'course_id')
+			->has('evaluation')
+			->field([
+				'class.id',
+				'course_id',
+				'teacher_id',
+				'course.name',
+				'teacher.name'         => 'teacher',
+				'COUNT(evaluation.id)' => 'comments',
+				'AVG(evaluation.rank)' => 'score',
+			])
+			->where('class.id',$id)
+			->find();
+		if ($course)
+		{
+			if ($user['type'] === 'student')
+			{
+				/*学生才有自己的评论*/
+				$course['evaluation'] = (new Model('evaluation'))
+					->where(['class_id' => $id, 'user_id' => $user['id']])
+					->find();
+			}
+			$this->response(1, $course);
+		}
+		else
+		{
+			$this->response(0, '无此课程T_T');
 		}
 	}
+
+	/**
+	 * @method GET_comments
+	 * 获取评论列表
+	 * @param  int       $id [课程ID]
+	 * @author NewFuture
+	 */
+	public function GET_commentsAction($id)
+	{
+		$user = $this->getUser('user', True);
+		Input::get('page', $page, 'int', 1);
+		$EvalModel = new Model('evaluation');
+
+		// 'COUNT(CASE WHEN advicevote.student_id=' . intval($this->user['id']) . ' THEN 1 ELSE NULL END)' => 'vote',
+		$evaluations = $EvalModel
+			->has('evaluationvote')
+			->belongs('user')
+			->where('class_id', intval($id))
+			->where('evaluation.status', 1)
+			->page($page)
+			->field([
+				'evaluation.id',
+				'comment', //评论
+				'rank',
+				'evaluation.time',
+				'user.number'                                   => 'number',
+				'COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END)'  => 'up',
+				'COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END)' => 'down',
+			])
+			->group('id')
+			->order('up', true)
+			->order('id', true)
+			->select();
+		if (!empty($evaluations) && $user['type'] === 'student')
+		{
+			/*学生才显示自己是否可以赞踩*/
+			$VoteModel = new Model('evaluationvote');
+			foreach ($evaluations as &$e)
+			{
+				$e['vote'] = $VoteModel
+					->where('evaluation_id', $e['id'])
+					->where('user_id', $user['id'])
+					->get('vote');
+				$VoteModel->clear();
+			}
+		}
+		$this->response(1, $evaluations);
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
 ?>

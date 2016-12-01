@@ -4,9 +4,11 @@
  */
 abstract class Rest extends Yaf_Controller_Abstract
 {
-	// private $response_type = 'json'; //返回数据格式
+	/*允许的请求*/
+	// protected $request = array('GET', 'POST', 'PUT', 'DELETE');
 
-	protected $response = false; //自动返回数据
+	private $response_type = 'json'; //返回数据格式
+	protected $response    = false;  //自动返回数据
 
 	/**
 	 * @method corsHeader
@@ -16,7 +18,6 @@ abstract class Rest extends Yaf_Controller_Abstract
 	public static function corsHeader()
 	{
 		$from = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null);
-
 		if ($from)
 		{
 			$cors    = Config::get('cors');
@@ -64,7 +65,7 @@ abstract class Rest extends Yaf_Controller_Abstract
 		Yaf_Dispatcher::getInstance()->disableView(); //立即输出响应，并关闭视图模板引擎
 		$request = $this->_request;
 
-		/*请求来源，跨站cors响应*/
+		/*请求来源，跨站CORS头响应*/
 		if (Config::get('cors.Access-Control-Allow-Origin'))
 		{
 			self::corsHeader();
@@ -75,12 +76,12 @@ abstract class Rest extends Yaf_Controller_Abstract
 		$type   = $request->getServer('CONTENT_TYPE');
 		if ($method === 'OPTIONS')
 		{
-			/*cors 跨域header应答,只需响应头即可*/
+			/*cors 跨域header应答*/
 			exit();
 		}
 		elseif (strpos($type, 'application/json') === 0)
 		{
-			/*json 数据格式*/
+			//json格式
 			if ($inputs = file_get_contents('php://input'))
 			{
 				$input_data = json_decode($inputs, true);
@@ -92,9 +93,10 @@ abstract class Rest extends Yaf_Controller_Abstract
 				{
 					parse_str($inputs, $GLOBALS['_' . $method]);
 				}
+
 			}
 		}
-		elseif ($method === 'PUT' && ($inputs = file_get_contents('php://input')))
+		elseif ($method === 'PUT' && $inputs = file_get_contents('php://input'))
 		{
 			/*直接解析*/
 			parse_str($inputs, $GLOBALS['_PUT']);
@@ -104,12 +106,10 @@ abstract class Rest extends Yaf_Controller_Abstract
 		$action = $request->getActionName();
 		if (is_numeric($action))
 		{
-			/*数字id绑定参数*/
-			$request->setParam(Config::get('application.num_param'), intval($action));
-			//$_SERVER['PATH_INFO']不存在使用REQUEST_URI
-			$path   = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : strstr($_SERVER['REQUEST_URI'] . '?', '?', true);
-			$path   = substr(strstr($path, $action), strlen($action) + 1);
-			$action = $path ? strstr($path . '/', '/', true) : Config::get('application.num_action');
+			/*数字id映射带infoAction*/
+			$request->setParam('id', intval($action));
+			$path   = substr(strstr($_SERVER['PATH_INFO'], $action), strlen($action) + 1);
+			$action = $path ? strstr($path . '/', '/', true) : 'info';
 		}
 
 		$rest_action = $method . '_' . $action; //对应REST_Action
@@ -126,21 +126,87 @@ abstract class Rest extends Yaf_Controller_Abstract
 			$this->response(-8, array(
 				'error'      => '未定义操作',
 				'method'     => $method,
-				'action'     => $action,
+				'action'     => $action . 'Action',
 				'controller' => $request->getControllerName(),
 				'module'     => $request->getmoduleName(),
 			));
 			exit;
 		}
-		elseif ($action !== $request->getActionName())
-		{
-			/*绑定参数默认控制器*/
-			$request->setActionName($action);
-		}
 	}
 
 	/**
-	 * 设置返回信息，立即返回
+	 * @method getUser
+	 * 获取当前请求的用户信息
+	 * @param  string  $type 字段
+	 * @param  boolean $stop    [未登录立即停止]
+	 * @return [type]  [description]
+	 * @author NewFuture
+	 */
+	protected function getUser($type = 'user', $stop = false)
+	{
+		$type = strtolower($type);
+		if ($type !== 'user')
+		{
+			$user = Session::get($type);
+		}
+		elseif (($token = $this->_request->getServer('HTTP_TOKEN'))
+			&& ($secret = Kv::get('USER_TOKEN_aes_key')))
+		{
+			$user = Encrypt::aesDecode($token, $secret, true);
+			$user = @json_decode($user, true);
+			if (!$user || $_SERVER['REQUEST_TIME'] > $user['_e'])
+			{
+				$user = false;
+			}
+			else
+			{
+				unset($user['_e']);
+			}
+		}
+		else
+		{
+			$user = false;
+		}
+
+		if (!$user && $stop)
+		{
+			$this->response(-1, '当前尚未登录');
+			exit();
+		}
+		return $user;
+
+	}
+
+	/**
+	 * @method setUser
+	 * 记录当前登录用户
+	 * @param  [type]  $key  [description]
+	 * @param  [type]  $vale [description]
+	 * @author NewFuture
+	 */
+	protected function setUser($key, $data)
+	{
+		$key = strtolower($key);
+		if ($key === 'user')
+		{
+			if (!$secret = Kv::get('USER_TOKEN_aes_key'))
+			{
+				/*重新生成加密密钥*/
+				$secret = Random::word(32);
+				Kv::set('USER_TOKEN_aes_key', $secret);
+			}
+			$data['_e'] = $_SERVER['REQUEST_TIME'] + Config::get('cookie.expire');
+			return Encrypt::aesEncode(json_encode($data), $secret, true);
+		}
+		else
+		{
+			Session::set($key, $data);
+		}
+
+	}
+
+	/**
+	 * 设置返回信息
 	 * @method response
 	 * @param  [type]   $status [请求结果]
 	 * @param  string   $info   [请求信息]
@@ -150,7 +216,6 @@ abstract class Rest extends Yaf_Controller_Abstract
 	protected function response($status, $info = '')
 	{
 		$this->response = ['status' => $status, 'info' => $info];
-		exit;
 	}
 
 	/**
@@ -163,7 +228,7 @@ abstract class Rest extends Yaf_Controller_Abstract
 	{
 		if ($this->response !== false)
 		{
-			header('Content-Type: application/json; charset=utf-8');
+			header('Content-type: application/json;charset=utf-8');
 			echo (json_encode($this->response, JSON_UNESCAPED_UNICODE)); //unicode不转码
 		}
 	}

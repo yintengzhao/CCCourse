@@ -969,6 +969,7 @@ class Orm implements JsonSerializable, ArrayAccess
      */
     public static function backQoute($key)
     {
+        #var_dump('`' . $key . '`');
         assert('ctype_alnum(strtr($key, "_", "A"))', '[Orm::backQoute] 字段中含有非法字符(字母_数字之外的字符):' . $key);
         return '`' . $key . '`';
     }
@@ -1465,6 +1466,7 @@ class Orm implements JsonSerializable, ArrayAccess
      */
     protected function parseCondition(array $condition, $addition = null, $bind_value=true)
     {
+
         assert('is_array($condition)',
             '[Orm::parseCondition]条件解析数据必须是数组');
         assert('is_string($condition[0])',
