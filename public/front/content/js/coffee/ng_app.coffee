@@ -1,5 +1,5 @@
 @ng_app = angular.module(
-		'NKUCourse', 
+		'CCCourse', 
 		[
 			'ngMaterial',
 			'ngMdIcons',
@@ -28,6 +28,8 @@
 	.run ['$rootScope', '$mdToast', ($rootScope, $mdToast)->
 		$rootScope.range = (n)->
 			[0...n]
+
+		console.log 'module loading,,'
 
 		$rootScope.popup_toast = (hint)->
 			hint ||= "请正确填写表单"

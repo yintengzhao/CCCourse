@@ -1,0 +1,732 @@
+[06-Dec-2016 10:06:35 Asia/Shanghai] (/Course/43) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":43,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:06:35 Asia/Shanghai] (/Course/43) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":43,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 10:06:35 Asia/Shanghai] (/Course/43/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":43,":1":1,":2":10,":3":0}
+[06-Dec-2016 10:06:35 Asia/Shanghai] (/Course/43/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":80,":5":1,":6":1,":7":0}
+[06-Dec-2016 10:50:59 Asia/Shanghai] (/Evaluation/5/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":5,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:50:59 Asia/Shanghai] (/Evaluation/5/up) [SQL](1) exec called
+INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) }
+{":4":5,":5":1,":6":1}
+[06-Dec-2016 10:51:04 Asia/Shanghai] (/Evaluation/5/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":5,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:51:15 Asia/Shanghai] (/Evaluation/5/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":5,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:51:44 Asia/Shanghai] (/Evaluation/600/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":600,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:51:44 Asia/Shanghai] (/Evaluation/600/up) [SQL](1) exec called
+INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) }
+{":4":600,":5":1,":6":1}
+[06-Dec-2016 10:53:44 Asia/Shanghai] (/Evaluation/600/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":600,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:53:44 Asia/Shanghai] (/Evaluation/600/up) [SQL](1) exec called
+INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) }
+{":4":600,":5":1,":6":1}
+[06-Dec-2016 10:54:16 Asia/Shanghai] (/Evaluation/6000/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":6000,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:54:16 Asia/Shanghai] (/Evaluation/6000/up) [SQL](1) exec called
+INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) }
+{":4":6000,":5":1,":6":1}
+[06-Dec-2016 10:57:40 Asia/Shanghai] (/Evaluation/5/down) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":5,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:57:40 Asia/Shanghai] (/Evaluation/5/down) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":5,":5":1,":6":-1}
+[06-Dec-2016 10:57:51 Asia/Shanghai] (/Evaluation/5/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":5,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:57:51 Asia/Shanghai] (/Evaluation/5/up) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":5,":5":1,":6":1}
+[06-Dec-2016 10:57:56 Asia/Shanghai] (/Evaluation/2/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":2,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:57:56 Asia/Shanghai] (/Evaluation/2/up) [SQL](1) exec called
+INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) }
+{":4":2,":5":1,":6":1}
+[06-Dec-2016 10:57:59 Asia/Shanghai] (/Evaluation/5/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":5,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:58:03 Asia/Shanghai] (/Evaluation/6/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":6,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:58:03 Asia/Shanghai] (/Evaluation/6/up) [SQL](1) exec called
+INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) }
+{":4":6,":5":1,":6":1}
+[06-Dec-2016 10:58:10 Asia/Shanghai] (/Evaluation/6/down) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":6,":1":1,":2":1,":3":0}
+[06-Dec-2016 10:58:10 Asia/Shanghai] (/Evaluation/6/down) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":6,":5":1,":6":-1}
+[06-Dec-2016 11:05:12 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`course_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)}
+{":0":6,":1":1,":2":1}
+[06-Dec-2016 11:05:30 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)}
+{":0":6,":1":1,":2":1}
+[06-Dec-2016 11:05:54 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)}
+{":0":6,":1":1,":2":1}
+[06-Dec-2016 11:05:54 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)AND(`evaluation_id`= :3)AND(`user_id`= :4)AND(`vote`= :5)}
+{":0":6,":1":1,":2":1,":3":6,":4":1,":5":-1}
+[06-Dec-2016 11:05:55 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)}
+{":0":6,":1":1,":2":1}
+[06-Dec-2016 11:05:55 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)AND(`evaluation_id`= :3)AND(`user_id`= :4)AND(`vote`= :5)}
+{":0":6,":1":1,":2":1,":3":6,":4":1,":5":-1}
+[06-Dec-2016 11:05:55 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)}
+{":0":6,":1":1,":2":1}
+[06-Dec-2016 11:05:55 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)AND(`evaluation_id`= :3)AND(`user_id`= :4)AND(`vote`= :5)}
+{":0":6,":1":1,":2":1,":3":6,":4":1,":5":-1}
+[06-Dec-2016 11:06:03 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)}
+{":0":6,":1":1,":2":1}
+[06-Dec-2016 11:06:03 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)AND(`evaluation_id`= :3)AND(`user_id`= :4)AND(`vote`= :5)}
+{":0":6,":1":1,":2":1,":3":6,":4":1,":5":-1}
+[06-Dec-2016 11:06:27 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:06:27 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)}
+{":0":6,":1":1,":2":6,":3":-1}
+[06-Dec-2016 11:06:29 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:06:29 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)}
+{":0":6,":1":1,":2":6,":3":-1}
+[06-Dec-2016 11:06:52 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:06:52 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)}
+{":0":6,":1":1,":2":6,":3":-1}
+[06-Dec-2016 11:06:53 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:06:53 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)}
+{":0":6,":1":1,":2":6,":3":-1}
+[06-Dec-2016 11:06:53 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:06:53 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)}
+{":0":6,":1":1,":2":6,":3":-1}
+[06-Dec-2016 11:07:00 Asia/Shanghai] (/Evaluation/5) [SQL](0) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":5,":1":1}
+[06-Dec-2016 11:07:00 Asia/Shanghai] (/Evaluation/5) [SQL](1) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)}
+{":0":5,":1":1,":2":5,":3":-1}
+[06-Dec-2016 11:07:58 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:07:58 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)}
+{":0":6,":1":1,":2":6,":3":-1}
+[06-Dec-2016 11:11:46 Asia/Shanghai] (/Evaluation/6/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":6,":1":1,":2":1,":3":0}
+[06-Dec-2016 11:11:46 Asia/Shanghai] (/Evaluation/6/up) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":6,":5":1,":6":1}
+[06-Dec-2016 11:11:55 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:11:55 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)}
+{":0":6,":1":1,":2":6,":3":-1}
+[06-Dec-2016 11:12:03 Asia/Shanghai] (/Evaluation/6/down) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":6,":1":1,":2":1,":3":0}
+[06-Dec-2016 11:12:03 Asia/Shanghai] (/Evaluation/6/down) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":6,":5":1,":6":-1}
+[06-Dec-2016 11:12:09 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:12:09 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)}
+{":0":6,":1":1,":2":6,":3":-1}
+[06-Dec-2016 11:15:18 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:15:18 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":6,":3":-1}
+[06-Dec-2016 11:15:19 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:15:19 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":6,":3":-1}
+[06-Dec-2016 11:22:42 Asia/Shanghai] (/Evaluation/6/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":6,":1":1,":2":1,":3":0}
+[06-Dec-2016 11:22:42 Asia/Shanghai] (/Evaluation/6/up) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":6,":5":1,":6":1}
+[06-Dec-2016 11:22:48 Asia/Shanghai] (/Evaluation/6/down) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":6,":1":1,":2":1,":3":0}
+[06-Dec-2016 11:22:48 Asia/Shanghai] (/Evaluation/6/down) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":6,":5":1,":6":-1}
+[06-Dec-2016 11:23:28 Asia/Shanghai] (/Evaluation/6/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":6,":1":1,":2":1,":3":0}
+[06-Dec-2016 11:23:28 Asia/Shanghai] (/Evaluation/6/up) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":6,":5":1,":6":1}
+[06-Dec-2016 11:25:34 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:25:34 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":6,":3":-1}
+[06-Dec-2016 11:25:37 Asia/Shanghai] (/Evaluation/5) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":5,":1":1}
+[06-Dec-2016 11:25:37 Asia/Shanghai] (/Evaluation/5) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":5,":3":-1}
+[06-Dec-2016 11:25:40 Asia/Shanghai] (/Evaluation/4) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":4,":1":1}
+[06-Dec-2016 11:25:40 Asia/Shanghai] (/Evaluation/4) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":4,":3":-1}
+[06-Dec-2016 11:25:42 Asia/Shanghai] (/Evaluation/3) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":3,":1":1}
+[06-Dec-2016 11:25:42 Asia/Shanghai] (/Evaluation/3) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":3,":3":-1}
+[06-Dec-2016 11:25:44 Asia/Shanghai] (/Evaluation/2) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":2,":1":1}
+[06-Dec-2016 11:25:44 Asia/Shanghai] (/Evaluation/2) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":2,":3":-1}
+[06-Dec-2016 11:25:46 Asia/Shanghai] (/Evaluation/1) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":1,":1":1}
+[06-Dec-2016 11:25:46 Asia/Shanghai] (/Evaluation/1) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":1,":3":-1}
+[06-Dec-2016 11:25:54 Asia/Shanghai] (/Evaluation/1/down) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":1,":1":1,":2":1,":3":0}
+[06-Dec-2016 11:25:54 Asia/Shanghai] (/Evaluation/1/down) [SQL](1) exec called
+INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) }
+{":4":1,":5":1,":6":-1}
+[06-Dec-2016 11:26:02 Asia/Shanghai] (/Evaluation/2/down) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":2,":1":1,":2":1,":3":0}
+[06-Dec-2016 11:26:02 Asia/Shanghai] (/Evaluation/2/down) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":2,":5":1,":6":-1}
+[06-Dec-2016 11:26:10 Asia/Shanghai] (/Evaluation/3/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":3,":1":1,":2":1,":3":0}
+[06-Dec-2016 11:26:10 Asia/Shanghai] (/Evaluation/3/up) [SQL](1) exec called
+INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) }
+{":4":3,":5":1,":6":1}
+[06-Dec-2016 11:26:16 Asia/Shanghai] (/Evaluation/1) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":1,":1":1}
+[06-Dec-2016 11:26:16 Asia/Shanghai] (/Evaluation/1) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":1,":3":-1}
+[06-Dec-2016 11:26:19 Asia/Shanghai] (/Evaluation/2) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":2,":1":1}
+[06-Dec-2016 11:26:19 Asia/Shanghai] (/Evaluation/2) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":2,":3":-1}
+[06-Dec-2016 11:26:20 Asia/Shanghai] (/Evaluation/3) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":3,":1":1}
+[06-Dec-2016 11:26:20 Asia/Shanghai] (/Evaluation/3) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":3,":3":-1}
+[06-Dec-2016 11:26:21 Asia/Shanghai] (/Evaluation/4) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":4,":1":1}
+[06-Dec-2016 11:26:21 Asia/Shanghai] (/Evaluation/4) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":4,":3":-1}
+[06-Dec-2016 11:26:23 Asia/Shanghai] (/Evaluation/5) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":5,":1":1}
+[06-Dec-2016 11:26:23 Asia/Shanghai] (/Evaluation/5) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":5,":3":-1}
+[06-Dec-2016 11:26:24 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:26:24 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":6,":3":-1}
+[06-Dec-2016 11:29:48 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:29:48 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":6,":3":-1}
+[06-Dec-2016 11:29:48 Asia/Shanghai] (/Evaluation/6) [SQL](2) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":6,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:30:00 Asia/Shanghai] (/Evaluation/5) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":5,":1":1}
+[06-Dec-2016 11:30:00 Asia/Shanghai] (/Evaluation/5) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":5,":3":-1}
+[06-Dec-2016 11:30:00 Asia/Shanghai] (/Evaluation/5) [SQL](2) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":5,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:30:02 Asia/Shanghai] (/Evaluation/7) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":7,":1":1}
+[06-Dec-2016 11:30:02 Asia/Shanghai] (/Evaluation/7) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":7,":3":-1}
+[06-Dec-2016 11:30:02 Asia/Shanghai] (/Evaluation/7) [SQL](2) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":7,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:31:25 Asia/Shanghai] (/Evaluation/7) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":7,":1":1}
+[06-Dec-2016 11:31:25 Asia/Shanghai] (/Evaluation/7) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":7,":3":-1}
+[06-Dec-2016 11:31:25 Asia/Shanghai] (/Evaluation/7) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":7,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:31:28 Asia/Shanghai] (/Evaluation/6) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":6,":1":1}
+[06-Dec-2016 11:31:28 Asia/Shanghai] (/Evaluation/6) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":6,":3":-1}
+[06-Dec-2016 11:31:28 Asia/Shanghai] (/Evaluation/6) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":6,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:31:30 Asia/Shanghai] (/Evaluation/1) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":1,":1":1}
+[06-Dec-2016 11:31:30 Asia/Shanghai] (/Evaluation/1) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":1,":3":-1}
+[06-Dec-2016 11:31:30 Asia/Shanghai] (/Evaluation/1) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":1,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:31:33 Asia/Shanghai] (/Evaluation/2) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":2,":1":1}
+[06-Dec-2016 11:31:33 Asia/Shanghai] (/Evaluation/2) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":2,":3":-1}
+[06-Dec-2016 11:31:33 Asia/Shanghai] (/Evaluation/2) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":2,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:31:36 Asia/Shanghai] (/Evaluation/3) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":3,":1":1}
+[06-Dec-2016 11:31:36 Asia/Shanghai] (/Evaluation/3) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":3,":3":-1}
+[06-Dec-2016 11:31:36 Asia/Shanghai] (/Evaluation/3) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":3,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:31:37 Asia/Shanghai] (/Evaluation/4) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":4,":1":1}
+[06-Dec-2016 11:31:37 Asia/Shanghai] (/Evaluation/4) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":4,":3":-1}
+[06-Dec-2016 11:31:37 Asia/Shanghai] (/Evaluation/4) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":4,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:31:51 Asia/Shanghai] (/Evaluation/4) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":4,":1":1}
+[06-Dec-2016 11:31:51 Asia/Shanghai] (/Evaluation/4) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":4,":3":-1}
+[06-Dec-2016 11:31:51 Asia/Shanghai] (/Evaluation/4) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":4,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:31:53 Asia/Shanghai] (/Evaluation/1) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":1,":1":1}
+[06-Dec-2016 11:31:53 Asia/Shanghai] (/Evaluation/1) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":1,":3":-1}
+[06-Dec-2016 11:31:53 Asia/Shanghai] (/Evaluation/1) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":1,":5":1,":6":1,":7":0}
+[06-Dec-2016 11:31:55 Asia/Shanghai] (/Evaluation/2) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":2,":1":1}
+[06-Dec-2016 11:31:55 Asia/Shanghai] (/Evaluation/2) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":2,":3":-1}
+[06-Dec-2016 11:31:55 Asia/Shanghai] (/Evaluation/2) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":2,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":72,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":72,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":72,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":94,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11}
+{":8":93,":9":1,":10":1,":11":0}
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) [SQL](3) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15}
+{":12":34,":13":1,":14":1,":15":0}
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) [SQL](4) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :16)AND(`user_id`= :17) LIMIT :18 OFFSET :19}
+{":16":19,":17":1,":18":1,":19":0}
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":72,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":72,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":72,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":94,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11}
+{":8":93,":9":1,":10":1,":11":0}
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) [SQL](3) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15}
+{":12":34,":13":1,":14":1,":15":0}
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) [SQL](4) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :16)AND(`user_id`= :17) LIMIT :18 OFFSET :19}
+{":16":19,":17":1,":18":1,":19":0}
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":72,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":72,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":72,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":94,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11}
+{":8":93,":9":1,":10":1,":11":0}
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) [SQL](3) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15}
+{":12":34,":13":1,":14":1,":15":0}
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) [SQL](4) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :16)AND(`user_id`= :17) LIMIT :18 OFFSET :19}
+{":16":19,":17":1,":18":1,":19":0}
+[06-Dec-2016 12:34:55 Asia/Shanghai] (/Course/1) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":1,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:34:55 Asia/Shanghai] (/Course/1) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":1,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:34:55 Asia/Shanghai] (/Course/1/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":1,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:34:55 Asia/Shanghai] (/Course/1/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":84,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:37:06 Asia/Shanghai] (/Course/21) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":21,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:37:06 Asia/Shanghai] (/Course/21) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":21,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:37:06 Asia/Shanghai] (/Course/21/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":21,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:37:06 Asia/Shanghai] (/Course/21/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":1,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:37:19 Asia/Shanghai] (/Evaluation/1/down) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":1,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":1,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1/up) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":1,":5":1,":6":1}
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":1,":1":1}
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":1,":3":-1}
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":1,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1/down) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":1,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1/down) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":1,":5":1,":6":-1}
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":1,":1":1}
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":1,":3":-1}
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":1,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1/up) [SQL](0) query called
+SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3}
+{":0":1,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1/up) [SQL](1) exec called
+UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)}
+{":4":1,":5":1,":6":1}
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1) [SQL](0) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)}
+{":0":1,":1":1}
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1) [SQL](1) column called
+SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)}
+{":2":1,":3":-1}
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1) [SQL](2) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":1,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:41:39 Asia/Shanghai] (/Course/?key=%E6%95%B0%E6%8D%AE&page=1) [SQL](0) query called
+SELECT `course`.`id`,`course`.`number`,`course`.`name_en`,`course`.`name` AS`course`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`name`LIKE BINARY :2)GROUP BY `id`ORDER BY`score`DESC,`comments`DESC  LIMIT :0 OFFSET :1}
+{":0":10,":1":0,":2":"%数据%"}
+[06-Dec-2016 12:41:47 Asia/Shanghai] (/Course/?key=%E6%95%B0%E6%8D%AE&page=2) [SQL](0) query called
+SELECT `course`.`id`,`course`.`number`,`course`.`name_en`,`course`.`name` AS`course`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`name`LIKE BINARY :2)GROUP BY `id`ORDER BY`score`DESC,`comments`DESC  LIMIT :0 OFFSET :1}
+{":0":10,":1":10,":2":"%数据%"}
+[06-Dec-2016 12:42:02 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:42:02 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:42:02 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:42:02 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:52:03 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:52:03 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:52:03 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:52:03 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:57:16 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:57:16 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:57:16 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:57:16 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:58:47 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:58:47 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:58:47 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:58:47 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 12:59:20 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 12:59:20 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 12:59:20 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 12:59:20 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:00:38 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:00:38 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:00:38 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:00:38 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:03:40 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:03:40 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:03:40 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:03:40 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:04:19 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:04:19 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:04:19 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:04:19 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:07:23 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:07:23 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:07:23 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:07:23 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:07:28 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:07:28 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:07:28 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:07:28 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:07:58 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:07:58 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:07:58 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:07:58 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:10:39 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:10:39 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:10:39 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:10:39 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:11:31 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:11:31 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:11:31 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:11:31 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:13:03 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:13:03 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:13:03 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:13:03 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 13:16:28 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 13:16:28 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 13:16:28 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 13:16:28 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}
+[06-Dec-2016 16:30:53 Asia/Shanghai] (/Course/94) [SQL](0) query called
+SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":1,":3":0}
+[06-Dec-2016 16:30:53 Asia/Shanghai] (/Course/94) [SQL](1) query called
+SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8}
+{":4":94,":5":1,":6":1,":7":1,":8":0}
+[06-Dec-2016 16:30:53 Asia/Shanghai] (/Course/94/comments) [SQL](0) query called
+SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3}
+{":0":94,":1":1,":2":10,":3":0}
+[06-Dec-2016 16:30:53 Asia/Shanghai] (/Course/94/comments) [SQL](1) column called
+SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7}
+{":4":53,":5":1,":6":1,":7":0}

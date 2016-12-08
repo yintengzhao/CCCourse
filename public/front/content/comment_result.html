@@ -5,14 +5,27 @@ controller: comment_result
 <div>
 	<div id="conclusion" layout-align="center center">
 		<p>
-			亲爱的南开人
+			亲爱的计控学子
 			<br>
-			您已回顾了{{count}}门公选课
+			您已回顾了{{count}}门学院课程
 		</p>
 		<div id="btn-group" layout="column">
-			<!-- <md-button class="btn md-raised md-primary" ng-click="back_search()">分享</md-button> -->
+			<md-button class="btn md-raised md-primary" ng-click="show_share_hint()">分享</md-button>
 			<md-button class="btn md-raised md-primary" ng-click="back_search()">再评一门</md-button>
-			<md-button class="btn md-raised md-primary" ng-click="go_advice()">下一步</md-button>
+		</div>
+	</div>
+	<div ng-show="show_hint" ng-click="cancel_share_hint()">
+	<div id="share-hint-mask" class="share-hint" ng-show="show_hint">
+	</div>
+	<div id="share-hint" class="share-hint">
+		<div id="shre-pointer">
+		<ng-md-icon class="nc-star-icon md-icon" icon="trending_up" size="72"></ng-md-icon>
+		</span>
+		</div>
+		<div id="hint-text">
+			请点击右上角<br>
+			分享给你的朋友<br>
+			或者晒到朋友圈吧！
 		</div>
 	</div>
 </div>

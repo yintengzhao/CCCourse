@@ -9,10 +9,13 @@
 	NetManager.get("/Evaluation/count").then (data)->
 		$scope.count = +data.info
 
-	$scope.go_advice = ->
-		$window.location = "./advice.html"
-
 	$scope.back_search = ->
 		$window.location = "./index.html"
+
+	$scope.show_share_hint = ->
+		$scope.show_hint = true
+
+	$scope.cancel_share_hint = ->
+		$scope.show_hint = false
 	null
 ])

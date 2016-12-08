@@ -58,7 +58,7 @@ class << self
 			"international-phone-number/releases/international-phone-number",
 			"angular-resource/angular-resource",
 			"angular-messages/angular-messages",
-			"binnng/slip.js/dist/min.slip",
+			"slip.js/dist/slip",
 		]
 
 		js_arr = []

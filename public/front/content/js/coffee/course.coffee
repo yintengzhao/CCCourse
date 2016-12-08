@@ -28,14 +28,73 @@
 		}
 	]
 
+	$scope.comment_items = [
+		{
+			id: 1,
+			score: 2,
+			content: "课程大纲知识体系完整，内容丰富"
+		},
+		{
+			id: 2,
+			score: 2,
+			content: "教学目标清晰，明确"
+		},
+		{
+			id: 3,
+			score: 2,
+			content: "教学内容结构合理，难易适度，详略得当"
+		},
+		{
+			id: 4,
+			score: 2,
+			content: "教学案例实用、典型、新颖，可操作性强"
+		},
+		{
+			id: 5,
+			score: 2,
+			content: "教学内容能反映或联系学科发展的新思想，新概念，新成果"
+		},
+		{
+			id: 6,
+			score: 2,
+			content: "课程要求教师具有较高的学术水平"
+		},
+		{
+			id: 7,
+			score: 2,
+			content: "课程要求教师具有较高的实践经验"
+		},
+		{
+			id: 8,
+			score: 2,
+			content: "备课充分，授课熟练，语言表达流畅，富有感染力"
+		},
+		{
+			id: 9,
+			score: 2,
+			content: "及时答疑，耐心辅导"
+		},
+		{
+			id: 10,
+			score: 2,
+			content: "通过课程，有利于对专业知识领域的掌握"
+		},
+		{
+			id: 11,
+			score: 2,
+			content: "通过课程，可促进本行业的实践能力"
+		},
+		{
+			id: 12,
+			score: 2,
+			content: "通过课程，可引导学生拓展知识面，提高自学能力"
+		}
+	]
+
 	
 	NetManager.get("/Course/#{cid}/comments").then (data)->
 		console.log data
-		# $scope.comments = data.info
-		for comment in data.info
-			comment.score = comment.rank
-			comment.content = comment.comment
-		
+		# $scope.comments = data.info		
 		$scope.comments = data.info
 		if $scope.comments.length < 10
 			$scope.no_more = true
@@ -80,18 +139,17 @@
 		c.score = if c.score>1 then c.score else 2
 		params = {
 			cid: cid,
-			rank: c.score,
-			comment: c.content
-			why: []
+			advice: c.content
 		}
-		ques = $scope.questions[0]
-		for i in $scope.range(6)
-			if ques.anwser[i]
-				unless i==5
-					params.why.push ques.options[i]
-				else
-					params.why.push ques.other
-
+		sum = 0
+		for i in $scope.range(12)
+			c = $scope.comment_items[i]
+			c.score += c.score%2
+			c.score = if c.score>1 then c.score else 2
+			sum += c.score
+			params['score' + (i + 1)] = c.score
+		params['averge'] = sum / 12
+		console.log params
 		$scope.submiting = true
 		NetManager.post("/Evaluation", params).then (data)->
 			if +data.status==1

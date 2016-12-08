@@ -1,6 +1,6 @@
 #comment-result{
 	#conclusion{
-		margin-top: 35%;
+		padding-top: 35%;
 		text-align: center;
 		font-size: 1.5rem;
 	}
@@ -11,5 +11,32 @@
 		.btn{
 			margin-bottom: 1rem;
 		}
+	}
+	.share-hint{
+		position: fixed;
+		top: 0;
+	}
+	#share-hint-mask{
+		height: 100%;
+		width: 100%;
+		background-color: black;
+		opacity: 0.7;
+	}
+	#share-hint{
+		color: white;
+		right: 0;
+		width: 200px;
+		margin-right: 0px;
+		text-align: right;
+	}
+	#hint-text{
+		text-align: left;
+	}
+	.md-icon{
+		// position: absolute;
+		// right: 1rem;
+		// top: 1rem;
+		margin-right: 32px;
+		fill: white;
 	}
 }

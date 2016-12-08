@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html ng-app="CCCourse">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="generator" content="Nanoc 4.3.7">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    
+        <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.min.css">
+    
+
+    <link rel="stylesheet" href="lib/bower_components/intl-tel-input/build/css/intlTelInput.css">
+
+    
+        <link rel="stylesheet" href="css/application_all.css">
+    
+    
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    
+        <script src="js/application_lib.js"></script>
+    
+
+    
+        <script src="js/application_all.js"></script>
+    
+
+</head>
+<body ng-controller="HotCoursesCtrl" id="hot-courses" ng-class="" ng-cloak>
+
+
+
+<nc-nav back-handler="back_handler"> {{type == "computer" ? "计算机" : "控制"}}专业课程</nc-nav>
+
+<div id="course-list">
+  <md-content>
+	<md-list>
+		<md-subheader class="md-no-sticky">找到{{courses.length}}门课程</md-subheader>
+		<md-list-item class="md-3-line" ng-repeat="course in courses">
+		<div class="md-list-item-text course" layout="column" ng-click="course_handler(course.id)">
+			<h3>{{ course.course }}</h3>
+			<div class="info-bar">
+			<nc-star ng-model="course.score" size="24"></nc-star>
+			<span class="comments">评论（{{course.comments}}）</span>
+			</div>
+		</div>
+		</md-list-item>
+	</md-list>
+	<div id="load-btn" ng-click="load_more()" ng-hide="no_more">
+		查看更多
+	</div>
+  </md-content>
+</div>
+
+
+
+
+<div id="ng-playground">
+    
+
+</div>
+</body>
+</html>

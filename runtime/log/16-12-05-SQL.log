@@ -1,0 +1,600 @@
+[05-Dec-2016 19:09:59 Asia/Shanghai] (/Course/2) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)GROUP BY `id` LIMIT :1 OFFSET :2
+  [PARAMS] {":0":2,":1":1,":2":0}
+  [RESULT] {"id":2,"name":"控制科学专题研究报告（2）","name_en":"The Research Report on Control Science Special（2）","description":"\"该课程为2学分，在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":3}
+  [INFORM] 65.922975540161 ms (query)
+
+[05-Dec-2016 19:09:59 Asia/Shanghai] (/Course/2) 
+  [SQL002] SELECT *FROM`evaluation`WHERE(`course_id`= :3)AND(`user_id`= :4) LIMIT :5 OFFSET :6
+  [PARAMS] {":3":2,":4":1,":5":1,":6":0}
+  [RESULT] false
+  [INFORM] 1.3659000396729 ms (query)
+
+[05-Dec-2016 19:10:57 Asia/Shanghai] (/Course/3) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)GROUP BY `id` LIMIT :1 OFFSET :2
+  [PARAMS] {":0":3,":1":1,":2":0}
+  [RESULT] {"id":3,"name":"鲁棒控制理论基础","name_en":"Introduction to  theory of robust control","description":"主要讲授基于线性矩阵不等式的概念及相关算法设计,处理(不确定)线性时不变系统的鲁棒控制、分析及综合问题。","comments":0,"score":null}
+  [INFORM] 0.9617805480957 ms (query)
+
+[05-Dec-2016 19:10:57 Asia/Shanghai] (/Course/3) 
+  [SQL002] SELECT *FROM`evaluation`WHERE(`course_id`= :3)AND(`user_id`= :4) LIMIT :5 OFFSET :6
+  [PARAMS] {":3":3,":4":1,":5":1,":6":0}
+  [RESULT] false
+  [INFORM] 1.3561248779297 ms (query)
+
+[05-Dec-2016 19:11:02 Asia/Shanghai] (/Course/4) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)GROUP BY `id` LIMIT :1 OFFSET :2
+  [PARAMS] {":0":4,":1":1,":2":0}
+  [RESULT] {"id":4,"name":"计算机科学专题研究报告1","name_en":null,"description":null,"comments":1,"score":3}
+  [INFORM] 1.0640621185303 ms (query)
+
+[05-Dec-2016 19:11:02 Asia/Shanghai] (/Course/4) 
+  [SQL002] SELECT *FROM`evaluation`WHERE(`course_id`= :3)AND(`user_id`= :4) LIMIT :5 OFFSET :6
+  [PARAMS] {":3":4,":4":1,":5":1,":6":0}
+  [RESULT] {"id":2,"course_id":4,"admin_id":null,"user_id":1,"status":1,"time":"2016-12-05 16:49:01","addcourse":null,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed","score1":null,"score2":null,"score3":null,"score4":null,"score5":null,"score6":null,"score7":null,"score8":null,"score9":null,"score10":null,"score11":null,"score12":null,"averge":3}
+  [INFORM] 1.6789436340332 ms (query)
+
+[05-Dec-2016 19:14:13 Asia/Shanghai] (/Course/4) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":4,":1":1,":2":1,":3":0}
+  [RESULT] {"id":4,"name":"计算机科学专题研究报告1","name_en":null,"description":null,"comments":1,"score":3}
+  [INFORM] 1.3339519500732 ms (query)
+
+[05-Dec-2016 19:14:13 Asia/Shanghai] (/Course/4) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":4,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] {"id":2,"course_id":4,"user_id":1,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed","averge":3}
+  [INFORM] 0.94103813171387 ms (query)
+
+[05-Dec-2016 19:41:25 Asia/Shanghai] (/Course/72) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":1,":3":0}
+  [RESULT] {"id":72,"name":"泛函分析基础","name_en":"Introduction to Functional Analysis","description":null,"comments":4,"score":2.75}
+  [INFORM] 1.1031627655029 ms (query)
+
+[05-Dec-2016 19:41:25 Asia/Shanghai] (/Course/72) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":72,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.1088848114014 ms (query)
+
+[05-Dec-2016 19:42:19 Asia/Shanghai] (/Course/72) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":1,":3":0}
+  [RESULT] {"id":72,"name":"泛函分析基础","name_en":"Introduction to Functional Analysis","description":null,"comments":4,"score":2.75}
+  [INFORM] 1.2149810791016 ms (query)
+
+[05-Dec-2016 19:42:19 Asia/Shanghai] (/Course/72) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":72,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.78701972961426 ms (query)
+
+[05-Dec-2016 19:42:34 Asia/Shanghai] (/Course/4) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":4,":1":1,":2":1,":3":0}
+  [RESULT] {"id":4,"name":"计算机科学专题研究报告1","name_en":null,"description":null,"comments":1,"score":3}
+  [INFORM] 1.101016998291 ms (query)
+
+[05-Dec-2016 19:42:34 Asia/Shanghai] (/Course/4) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":4,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] {"id":2,"course_id":4,"user_id":1,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed","averge":3}
+  [INFORM] 1.0159015655518 ms (query)
+
+[05-Dec-2016 19:44:11 Asia/Shanghai] (/Course/2) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] {"id":2,"name":"控制科学专题研究报告（2）","name_en":"The Research Report on Control Science Special（2）","description":"\"该课程为2学分，在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":3}
+  [INFORM] 0.94413757324219 ms (query)
+
+[05-Dec-2016 19:44:11 Asia/Shanghai] (/Course/2) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":2,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.78105926513672 ms (query)
+
+[05-Dec-2016 21:23:45 Asia/Shanghai] (/Course/2) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] {"id":2,"name":"控制科学专题研究报告（2）","name_en":"The Research Report on Control Science Special（2）","description":"\"该课程为2学分，在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":3}
+  [INFORM] 1.1320114135742 ms (query)
+
+[05-Dec-2016 21:23:45 Asia/Shanghai] (/Course/2) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":2,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.72288513183594 ms (query)
+
+[05-Dec-2016 21:24:30 Asia/Shanghai] (/Course/2) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] {"id":2,"name":"控制科学专题研究报告（2）","name_en":"The Research Report on Control Science Special（2）","description":"\"该课程为2学分，在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":3}
+  [INFORM] 1.18088722229 ms (query)
+
+[05-Dec-2016 21:24:30 Asia/Shanghai] (/Course/2) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":2,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.6411075592041 ms (query)
+
+[05-Dec-2016 21:25:26 Asia/Shanghai] (/Course/2) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] {"id":2,"name":"控制科学专题研究报告（2）","name_en":"The Research Report on Control Science Special（2）","description":"\"该课程为2学分，在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":3}
+  [INFORM] 1.0988712310791 ms (query)
+
+[05-Dec-2016 21:25:26 Asia/Shanghai] (/Course/2) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":2,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.99301338195801 ms (query)
+
+[05-Dec-2016 21:25:45 Asia/Shanghai] (/Course/2) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] {"id":2,"name":"控制科学专题研究报告（2）","name_en":"The Research Report on Control Science Special（2）","description":"\"该课程为2学分，在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":3}
+  [INFORM] 1.007080078125 ms (query)
+
+[05-Dec-2016 21:25:45 Asia/Shanghai] (/Course/2) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":2,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.91409683227539 ms (query)
+
+[05-Dec-2016 21:34:51 Asia/Shanghai] (/Course/2) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] {"id":2,"name":"控制科学专题研究报告（2）","name_en":"The Research Report on Control Science Special（2）","description":"\"该课程为2学分，在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":3}
+  [INFORM] 1.1091232299805 ms (query)
+
+[05-Dec-2016 21:34:51 Asia/Shanghai] (/Course/2) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":2,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.78892707824707 ms (query)
+
+[05-Dec-2016 21:34:53 Asia/Shanghai] (/Course/2) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] {"id":2,"name":"控制科学专题研究报告（2）","name_en":"The Research Report on Control Science Special（2）","description":"\"该课程为2学分，在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":3}
+  [INFORM] 1.0819435119629 ms (query)
+
+[05-Dec-2016 21:34:53 Asia/Shanghai] (/Course/2) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":2,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.63610076904297 ms (query)
+
+[05-Dec-2016 21:35:36 Asia/Shanghai] (/Course/2) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] {"id":2,"name":"控制科学专题研究报告（2）","name_en":"The Research Report on Control Science Special（2）","description":"\"该课程为2学分，在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":3}
+  [INFORM] 1.0941028594971 ms (query)
+
+[05-Dec-2016 21:35:37 Asia/Shanghai] (/Course/2) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":2,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.94103813171387 ms (query)
+
+[05-Dec-2016 21:36:12 Asia/Shanghai] (/Course/70) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":70,":1":1,":2":1,":3":0}
+  [RESULT] {"id":70,"name":"形式语言与自动机","name_en":"Formal Languanges and Automata","description":null,"comments":2,"score":8}
+  [INFORM] 30.627965927124 ms (query)
+
+[05-Dec-2016 21:36:12 Asia/Shanghai] (/Course/70) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":70,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.95391273498535 ms (query)
+
+[05-Dec-2016 21:44:03 Asia/Shanghai] (/Course/4/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,`user`.`number` AS`number` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":4,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":2,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed","averge":3,"time":"2016-12-05 16:49:01","number":"1000000"}]
+  [INFORM] 1.3940334320068 ms (query)
+
+[05-Dec-2016 21:44:03 Asia/Shanghai] (/Course/4/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":2,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.6709098815918 ms (column)
+
+[05-Dec-2016 21:44:20 Asia/Shanghai] (/Course/4/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,`user`.`number` AS`number` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":4,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":2,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed","averge":3,"time":"2016-12-05 16:49:01","number":"1000000"}]
+  [INFORM] 0.92601776123047 ms (query)
+
+[05-Dec-2016 21:44:20 Asia/Shanghai] (/Course/4/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":2,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.71597099304199 ms (column)
+
+[05-Dec-2016 21:56:53 Asia/Shanghai] (/Course/5/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":5,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":23,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam","averge":8,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0}]
+  [INFORM] 200.24299621582 ms (query)
+
+[05-Dec-2016 21:56:53 Asia/Shanghai] (/Course/5/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":23,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 1.0690689086914 ms (column)
+
+[05-Dec-2016 21:58:13 Asia/Shanghai] (/Course/70) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":70,":1":1,":2":1,":3":0}
+  [RESULT] {"id":70,"name":"形式语言与自动机","name_en":"Formal Languanges and Automata","description":null,"comments":2,"score":8}
+  [INFORM] 1.0778903961182 ms (query)
+
+[05-Dec-2016 21:58:13 Asia/Shanghai] (/Course/70) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":70,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.1498928070068 ms (query)
+
+[05-Dec-2016 21:58:13 Asia/Shanghai] (/Course/70/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":70,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":51,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur","averge":6,"time":"2016-12-05 16:49:01","number":"1000009","up":0,"down":0},{"id":18,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.","averge":10,"time":"2016-12-05 16:49:01","number":"1000002","up":0,"down":0}]
+  [INFORM] 1.4359951019287 ms (query)
+
+[05-Dec-2016 21:58:13 Asia/Shanghai] (/Course/70/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":51,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.84304809570312 ms (column)
+
+[05-Dec-2016 21:58:13 Asia/Shanghai] (/Course/70/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":18,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.81110000610352 ms (column)
+
+[05-Dec-2016 21:58:25 Asia/Shanghai] (/Course/20) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":1,":3":0}
+  [RESULT] {"id":20,"name":"机器人视觉控制","name_en":"Vision-Based Robot Control","description":"\"本课程从测量与控制的角度出发来讲授机器人视觉控制的基本方法与关键技术，具体包括视觉系统的构成与标定，机器人视觉测量，机器人视觉控制，机器人视觉控制系统的作用。本课程的主要作用是让相关专业的研究生了解机器人视觉控制的基本方法，为他们从事机器视觉，视觉伺服，基于视觉传感器的SLAM技术等方面的研究奠定理论基础。机器人视觉控制系统的基本结构摄像机与视觉系统标定视觉测量视觉控制机器人视觉控制的应用\"","comments":3,"score":7}
+  [INFORM] 1.0168552398682 ms (query)
+
+[05-Dec-2016 21:58:25 Asia/Shanghai] (/Course/20) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":20,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.3799667358398 ms (query)
+
+[05-Dec-2016 21:58:25 Asia/Shanghai] (/Course/20/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":96,"advice":"Lorem","averge":9,"time":"2016-12-05 16:49:02","number":"1000003","up":0,"down":0},{"id":52,"advice":"Lorem ipsum dolor sit","averge":8,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0},{"id":37,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing","averge":4,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0}]
+  [INFORM] 1.2929439544678 ms (query)
+
+[05-Dec-2016 21:58:25 Asia/Shanghai] (/Course/20/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":96,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.58507919311523 ms (column)
+
+[05-Dec-2016 21:58:25 Asia/Shanghai] (/Course/20/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":52,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.75697898864746 ms (column)
+
+[05-Dec-2016 21:58:25 Asia/Shanghai] (/Course/20/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":37,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.86593627929688 ms (column)
+
+[05-Dec-2016 21:59:37 Asia/Shanghai] (/Course/20) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":1,":3":0}
+  [RESULT] {"id":20,"name":"机器人视觉控制","name_en":"Vision-Based Robot Control","description":"\"本课程从测量与控制的角度出发来讲授机器人视觉控制的基本方法与关键技术，具体包括视觉系统的构成与标定，机器人视觉测量，机器人视觉控制，机器人视觉控制系统的作用。本课程的主要作用是让相关专业的研究生了解机器人视觉控制的基本方法，为他们从事机器视觉，视觉伺服，基于视觉传感器的SLAM技术等方面的研究奠定理论基础。机器人视觉控制系统的基本结构摄像机与视觉系统标定视觉测量视觉控制机器人视觉控制的应用\"","comments":3,"score":7}
+  [INFORM] 21.672010421753 ms (query)
+
+[05-Dec-2016 21:59:37 Asia/Shanghai] (/Course/20) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":20,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.64396858215332 ms (query)
+
+[05-Dec-2016 21:59:37 Asia/Shanghai] (/Course/20/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":96,"advice":"Lorem","averge":9,"time":"2016-12-05 16:49:02","number":"1000003","up":0,"down":0},{"id":52,"advice":"Lorem ipsum dolor sit","averge":8,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0},{"id":37,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing","averge":4,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0}]
+  [INFORM] 1.7368793487549 ms (query)
+
+[05-Dec-2016 21:59:37 Asia/Shanghai] (/Course/20/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":96,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.89001655578613 ms (column)
+
+[05-Dec-2016 21:59:37 Asia/Shanghai] (/Course/20/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":52,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.77700614929199 ms (column)
+
+[05-Dec-2016 21:59:37 Asia/Shanghai] (/Course/20/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":37,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.95605850219727 ms (column)
+
+[05-Dec-2016 22:00:50 Asia/Shanghai] (/Course/20) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":1,":3":0}
+  [RESULT] {"id":20,"name":"机器人视觉控制","name_en":"Vision-Based Robot Control","description":"\"本课程从测量与控制的角度出发来讲授机器人视觉控制的基本方法与关键技术，具体包括视觉系统的构成与标定，机器人视觉测量，机器人视觉控制，机器人视觉控制系统的作用。本课程的主要作用是让相关专业的研究生了解机器人视觉控制的基本方法，为他们从事机器视觉，视觉伺服，基于视觉传感器的SLAM技术等方面的研究奠定理论基础。机器人视觉控制系统的基本结构摄像机与视觉系统标定视觉测量视觉控制机器人视觉控制的应用\"","comments":3,"score":7}
+  [INFORM] 0.92387199401855 ms (query)
+
+[05-Dec-2016 22:00:50 Asia/Shanghai] (/Course/20) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":20,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.91099739074707 ms (query)
+
+[05-Dec-2016 22:00:50 Asia/Shanghai] (/Course/20/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":96,"advice":"Lorem","averge":9,"time":"2016-12-05 16:49:02","number":"1000003","up":0,"down":0},{"id":52,"advice":"Lorem ipsum dolor sit","averge":8,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0},{"id":37,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing","averge":4,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0}]
+  [INFORM] 1.3110637664795 ms (query)
+
+[05-Dec-2016 22:00:50 Asia/Shanghai] (/Course/20/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":96,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.67901611328125 ms (column)
+
+[05-Dec-2016 22:00:50 Asia/Shanghai] (/Course/20/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":52,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.92411041259766 ms (column)
+
+[05-Dec-2016 22:00:50 Asia/Shanghai] (/Course/20/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":37,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.93293190002441 ms (column)
+
+[05-Dec-2016 22:02:30 Asia/Shanghai] (/Course/20) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":1,":3":0}
+  [RESULT] {"id":20,"name":"机器人视觉控制","name_en":"Vision-Based Robot Control","description":"\"本课程从测量与控制的角度出发来讲授机器人视觉控制的基本方法与关键技术，具体包括视觉系统的构成与标定，机器人视觉测量，机器人视觉控制，机器人视觉控制系统的作用。本课程的主要作用是让相关专业的研究生了解机器人视觉控制的基本方法，为他们从事机器视觉，视觉伺服，基于视觉传感器的SLAM技术等方面的研究奠定理论基础。机器人视觉控制系统的基本结构摄像机与视觉系统标定视觉测量视觉控制机器人视觉控制的应用\"","comments":3,"score":7}
+  [INFORM] 0.98299980163574 ms (query)
+
+[05-Dec-2016 22:02:30 Asia/Shanghai] (/Course/20) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":20,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.84590911865234 ms (query)
+
+[05-Dec-2016 22:02:30 Asia/Shanghai] (/Course/20/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":96,"advice":"Lorem","averge":9,"time":"2016-12-05 16:49:02","number":"1000003","up":0,"down":0},{"id":52,"advice":"Lorem ipsum dolor sit","averge":8,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0},{"id":37,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing","averge":4,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0}]
+  [INFORM] 1.7061233520508 ms (query)
+
+[05-Dec-2016 22:02:30 Asia/Shanghai] (/Course/20/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":96,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.4730224609375 ms (column)
+
+[05-Dec-2016 22:02:30 Asia/Shanghai] (/Course/20/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":52,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.55503845214844 ms (column)
+
+[05-Dec-2016 22:02:30 Asia/Shanghai] (/Course/20/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":37,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.65207481384277 ms (column)
+
+[05-Dec-2016 22:03:32 Asia/Shanghai] (/Course/20) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":1,":3":0}
+  [RESULT] {"id":20,"name":"机器人视觉控制","name_en":"Vision-Based Robot Control","description":"\"本课程从测量与控制的角度出发来讲授机器人视觉控制的基本方法与关键技术，具体包括视觉系统的构成与标定，机器人视觉测量，机器人视觉控制，机器人视觉控制系统的作用。本课程的主要作用是让相关专业的研究生了解机器人视觉控制的基本方法，为他们从事机器视觉，视觉伺服，基于视觉传感器的SLAM技术等方面的研究奠定理论基础。机器人视觉控制系统的基本结构摄像机与视觉系统标定视觉测量视觉控制机器人视觉控制的应用\"","comments":3,"score":7}
+  [INFORM] 1.133918762207 ms (query)
+
+[05-Dec-2016 22:03:32 Asia/Shanghai] (/Course/20) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":20,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.88405609130859 ms (query)
+
+[05-Dec-2016 22:03:32 Asia/Shanghai] (/Course/20/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":96,"advice":"Lorem","averge":9,"time":"2016-12-05 16:49:02","number":"1000003","up":0,"down":0},{"id":52,"advice":"Lorem ipsum dolor sit","averge":8,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0},{"id":37,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing","averge":4,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0}]
+  [INFORM] 1.2860298156738 ms (query)
+
+[05-Dec-2016 22:03:32 Asia/Shanghai] (/Course/20/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":96,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.61202049255371 ms (column)
+
+[05-Dec-2016 22:03:32 Asia/Shanghai] (/Course/20/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":52,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.50902366638184 ms (column)
+
+[05-Dec-2016 22:03:32 Asia/Shanghai] (/Course/20/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":37,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.5500316619873 ms (column)
+
+[05-Dec-2016 22:04:48 Asia/Shanghai] (/Course/20) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":1,":3":0}
+  [RESULT] {"id":20,"name":"机器人视觉控制","name_en":"Vision-Based Robot Control","description":"\"本课程从测量与控制的角度出发来讲授机器人视觉控制的基本方法与关键技术，具体包括视觉系统的构成与标定，机器人视觉测量，机器人视觉控制，机器人视觉控制系统的作用。本课程的主要作用是让相关专业的研究生了解机器人视觉控制的基本方法，为他们从事机器视觉，视觉伺服，基于视觉传感器的SLAM技术等方面的研究奠定理论基础。机器人视觉控制系统的基本结构摄像机与视觉系统标定视觉测量视觉控制机器人视觉控制的应用\"","comments":3,"score":7}
+  [INFORM] 0.86712837219238 ms (query)
+
+[05-Dec-2016 22:04:48 Asia/Shanghai] (/Course/20) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":20,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.98681449890137 ms (query)
+
+[05-Dec-2016 22:04:48 Asia/Shanghai] (/Course/20/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":96,"advice":"Lorem","averge":9,"time":"2016-12-05 16:49:02","number":"1000003","up":0,"down":0},{"id":52,"advice":"Lorem ipsum dolor sit","averge":8,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0},{"id":37,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing","averge":4,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0}]
+  [INFORM] 1.0509490966797 ms (query)
+
+[05-Dec-2016 22:04:48 Asia/Shanghai] (/Course/20/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":96,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.60892105102539 ms (column)
+
+[05-Dec-2016 22:04:48 Asia/Shanghai] (/Course/20/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":52,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.45299530029297 ms (column)
+
+[05-Dec-2016 22:04:48 Asia/Shanghai] (/Course/20/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":37,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.43201446533203 ms (column)
+
+[05-Dec-2016 22:13:55 Asia/Shanghai] (/Course/66) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":66,":1":1,":2":1,":3":0}
+  [RESULT] {"id":66,"name":"自然语言处理","name_en":null,"description":null,"comments":2,"score":8.5}
+  [INFORM] 14.571189880371 ms (query)
+
+[05-Dec-2016 22:13:55 Asia/Shanghai] (/Course/66) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":66,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] {"id":54,"course_id":66,"user_id":1,"advice":"Lorem ipsum dolor","averge":9}
+  [INFORM] 0.98490715026855 ms (query)
+
+[05-Dec-2016 22:13:55 Asia/Shanghai] (/Course/66/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":66,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":87,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur","averge":8,"time":"2016-12-05 16:49:02","number":"1000009","up":0,"down":0},{"id":54,"advice":"Lorem ipsum dolor","averge":9,"time":"2016-12-05 16:49:01","number":"1000000","up":0,"down":0}]
+  [INFORM] 1.1739730834961 ms (query)
+
+[05-Dec-2016 22:13:55 Asia/Shanghai] (/Course/66/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":87,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.67305564880371 ms (column)
+
+[05-Dec-2016 22:13:55 Asia/Shanghai] (/Course/66/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":54,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.64277648925781 ms (column)
+
+[05-Dec-2016 22:19:12 Asia/Shanghai] (/Course/66) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":66,":1":1,":2":1,":3":0}
+  [RESULT] {"id":66,"name":"自然语言处理","name_en":null,"description":null,"comments":2,"score":8.5}
+  [INFORM] 20.772933959961 ms (query)
+
+[05-Dec-2016 22:19:12 Asia/Shanghai] (/Course/66) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":66,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] {"id":54,"course_id":66,"user_id":1,"advice":"Lorem ipsum dolor","averge":9}
+  [INFORM] 1.0027885437012 ms (query)
+
+[05-Dec-2016 22:19:12 Asia/Shanghai] (/Course/66/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":66,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":87,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur","averge":8,"time":"2016-12-05 16:49:02","number":"1000009","up":0,"down":0},{"id":54,"advice":"Lorem ipsum dolor","averge":9,"time":"2016-12-05 16:49:01","number":"1000000","up":0,"down":0}]
+  [INFORM] 1.492977142334 ms (query)
+
+[05-Dec-2016 22:19:12 Asia/Shanghai] (/Course/66/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":87,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.54097175598145 ms (column)
+
+[05-Dec-2016 22:19:12 Asia/Shanghai] (/Course/66/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":54,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.41794776916504 ms (column)
+
+[05-Dec-2016 22:19:22 Asia/Shanghai] (/Course/66) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":66,":1":1,":2":1,":3":0}
+  [RESULT] {"id":66,"name":"自然语言处理","name_en":null,"description":null,"comments":2,"score":8.5}
+  [INFORM] 0.83708763122559 ms (query)
+
+[05-Dec-2016 22:19:22 Asia/Shanghai] (/Course/66) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":66,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] {"id":54,"course_id":66,"user_id":1,"advice":"Lorem ipsum dolor","averge":9}
+  [INFORM] 0.93793869018555 ms (query)
+
+[05-Dec-2016 22:19:22 Asia/Shanghai] (/Course/66/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":66,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":87,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur","averge":8,"time":"2016-12-05 16:49:02","number":"1000009","up":0,"down":0},{"id":54,"advice":"Lorem ipsum dolor","averge":9,"time":"2016-12-05 16:49:01","number":"1000000","up":0,"down":0}]
+  [INFORM] 1.619815826416 ms (query)
+
+[05-Dec-2016 22:19:22 Asia/Shanghai] (/Course/66/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":87,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.73504447937012 ms (column)
+
+[05-Dec-2016 22:19:22 Asia/Shanghai] (/Course/66/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":54,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.6258487701416 ms (column)
+
+[05-Dec-2016 23:03:21 Asia/Shanghai] (/Course/20) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":1,":3":0}
+  [RESULT] {"id":20,"name":"机器人视觉控制","name_en":"Vision-Based Robot Control","description":"\"本课程从测量与控制的角度出发来讲授机器人视觉控制的基本方法与关键技术，具体包括视觉系统的构成与标定，机器人视觉测量，机器人视觉控制，机器人视觉控制系统的作用。本课程的主要作用是让相关专业的研究生了解机器人视觉控制的基本方法，为他们从事机器视觉，视觉伺服，基于视觉传感器的SLAM技术等方面的研究奠定理论基础。机器人视觉控制系统的基本结构摄像机与视觉系统标定视觉测量视觉控制机器人视觉控制的应用\"","comments":3,"score":7}
+  [INFORM] 12.078046798706 ms (query)
+
+[05-Dec-2016 23:03:21 Asia/Shanghai] (/Course/20) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":20,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.71191787719727 ms (query)
+
+[05-Dec-2016 23:03:21 Asia/Shanghai] (/Course/20/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":20,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":96,"advice":"Lorem","averge":9,"time":"2016-12-05 16:49:02","number":"1000003","up":0,"down":0},{"id":52,"advice":"Lorem ipsum dolor sit","averge":8,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0},{"id":37,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing","averge":4,"time":"2016-12-05 16:49:01","number":"1000004","up":0,"down":0}]
+  [INFORM] 13.540983200073 ms (query)
+
+[05-Dec-2016 23:03:21 Asia/Shanghai] (/Course/20/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":96,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.50616264343262 ms (column)
+
+[05-Dec-2016 23:03:21 Asia/Shanghai] (/Course/20/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":52,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.44894218444824 ms (column)
+
+[05-Dec-2016 23:03:21 Asia/Shanghai] (/Course/20/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":37,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.39505958557129 ms (column)
+

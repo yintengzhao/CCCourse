@@ -1,0 +1,1 @@
+[04-Dec-2016 22:15:56 Asia/Shanghai] (/User) [Db::connect]数据库[_](mysql:host=localhost;port=3306;dbname=yyf;charset=utf8)无法连接:SQLSTATE[HY000] [1049] Unknown database 'yyf'

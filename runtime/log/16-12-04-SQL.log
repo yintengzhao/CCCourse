@@ -1,0 +1,168 @@
+[04-Dec-2016 22:16:16 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 39.345979690552 ms (query)
+
+[04-Dec-2016 22:16:16 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:16:16"}
+  [RESULT] 82
+  [INFORM] 41.26501083374 ms (exec)
+
+[04-Dec-2016 22:17:06 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 7.6940059661865 ms (query)
+
+[04-Dec-2016 22:17:06 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:17:06"}
+  [RESULT] 82
+  [INFORM] 46.967029571533 ms (exec)
+
+[04-Dec-2016 22:19:00 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 11.998891830444 ms (query)
+
+[04-Dec-2016 22:19:01 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:19:00"}
+  [RESULT] 82
+  [INFORM] 182.87491798401 ms (exec)
+
+[04-Dec-2016 22:19:01 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 17.138957977295 ms (query)
+
+[04-Dec-2016 22:19:01 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:19:01"}
+  [RESULT] 82
+  [INFORM] 37.422895431519 ms (exec)
+
+[04-Dec-2016 22:19:02 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 0.6711483001709 ms (query)
+
+[04-Dec-2016 22:19:02 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:19:02"}
+  [RESULT] 82
+  [INFORM] 28.289794921875 ms (exec)
+
+[04-Dec-2016 22:19:04 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 0.86593627929688 ms (query)
+
+[04-Dec-2016 22:19:04 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:19:04"}
+  [RESULT] 82
+  [INFORM] 44.9378490448 ms (exec)
+
+[04-Dec-2016 22:19:06 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 13.109922409058 ms (query)
+
+[04-Dec-2016 22:19:06 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:19:06"}
+  [RESULT] 82
+  [INFORM] 36.865949630737 ms (exec)
+
+[04-Dec-2016 22:19:08 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 1.3511180877686 ms (query)
+
+[04-Dec-2016 22:19:08 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:19:08"}
+  [RESULT] 82
+  [INFORM] 36.350011825562 ms (exec)
+
+[04-Dec-2016 22:20:57 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 12.799978256226 ms (query)
+
+[04-Dec-2016 22:20:57 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:20:57"}
+  [RESULT] 82
+  [INFORM] 43.037176132202 ms (exec)
+
+[04-Dec-2016 22:31:25 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 16.091108322144 ms (query)
+
+[04-Dec-2016 22:31:25 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:31:25"}
+  [RESULT] 82
+  [INFORM] 43.658018112183 ms (exec)
+
+[04-Dec-2016 22:31:54 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 7.4620246887207 ms (query)
+
+[04-Dec-2016 22:31:54 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:31:54"}
+  [RESULT] 82
+  [INFORM] 43.201923370361 ms (exec)
+
+[04-Dec-2016 22:32:07 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 23.544073104858 ms (query)
+
+[04-Dec-2016 22:32:07 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:32:07"}
+  [RESULT] 82
+  [INFORM] 40.837049484253 ms (exec)
+
+[04-Dec-2016 22:32:22 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 14.287948608398 ms (query)
+
+[04-Dec-2016 22:32:22 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:32:22"}
+  [RESULT] 82
+  [INFORM] 75.06799697876 ms (exec)
+
+[04-Dec-2016 22:36:58 Asia/Shanghai] (/User) 
+  [SQL001] SELECT `id`,`type`,`status` FROM`user`WHERE(`number`= :0)AND(`name`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"2120150449",":1":"赵文建",":2":1,":3":0}
+  [RESULT] {"id":1,"type":"student","status":1}
+  [INFORM] 13.605833053589 ms (query)
+
+[04-Dec-2016 22:36:58 Asia/Shanghai] (/User) 
+  [SQL002] UPDATE`user`SET `lastlogin`=:4 
+  [PARAMS] {":4":"2016-12-04 22:36:58"}
+  [RESULT] 82
+  [INFORM] 44.420003890991 ms (exec)
+

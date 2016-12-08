@@ -4,14 +4,15 @@
 			NetManager.get('/User').then (data)->
 				console.log(data)
 				$scope.current_user = data.info
-				if +data.status < 0
+				if +data.status <= 0
 					$window.location = './welcome.html'
 
 				$scope.able_to_comment = $scope.current_user.type == "student"
 				if($scope.comment_cbk)
 					$scope.comment_cbk()
 				if(clb = $scope.after_check_state)
-					clb()
+					console.log 'skip wechat auth'
+					#clb()
 
 		wechat_init = ->
 			unless wx then return

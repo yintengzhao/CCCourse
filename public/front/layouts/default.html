@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <% @controller = @item[:controller] %>
-<html ng-app="NKUCourse">
+<html ng-app="CCCourse">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -43,7 +43,7 @@
     <% unless ENV['NANOC_ENV'] == 'production' %>
         <%= JSPipeline.generate %>
     <% else %>
-        <link rel="stylesheet" href="css/application_all.css">
+        <script src="js/application_all.js"></script>
     <% end %>
 
 </head>

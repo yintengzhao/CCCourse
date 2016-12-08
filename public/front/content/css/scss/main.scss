@@ -7,6 +7,7 @@
 			&.md-input-focused label{
 				display: none;
 			}
+			margin-top: 4rem;
 			padding: 0;
 			width: 70%;
 			height: 1.2rem;
@@ -16,6 +17,13 @@
 			}
 			.md-icon{
 				fill: gray;
+				vertical-align: sub;
+			}
+		}
+		#course-list{
+			width: 100%;
+			.md-icon{
+				fill: rgb(255,82,82);
 				vertical-align: sub;
 			}
 		}

@@ -78,7 +78,7 @@
 						/*'COUNT(CASE WHEN advicevote.vote=1 THEN 1 ELSE NULL END)'  => 'up',*/
 					])
 					->where('type', $id)
-					->where('advice.status', '>', 0)
+					->where('advice.status', 1)
 					->group('id')
 					->order($order, true)
 					->page($page)

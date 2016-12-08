@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html ng-app="CCCourse">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="generator" content="Nanoc 4.3.7">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    
+        <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.min.css">
+    
+
+    <link rel="stylesheet" href="lib/bower_components/intl-tel-input/build/css/intlTelInput.css">
+
+    
+        <link rel="stylesheet" href="css/application_all.css">
+    
+    
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    
+        <script src="js/application_lib.js"></script>
+    
+
+    
+        <script src="js/application_all.js"></script>
+    
+
+</head>
+<body ng-controller="WelcomeCtrl" id="welcome" ng-class="go_parm" ng-cloak>
+<div id="pre-loading">
+<div id="page-container" ng-class="go_parm" ng-hide="in_forget">
+<div id="welcome-0" class="swipe-card page">
+    <div class="content">
+        <div class="title">计控评课</div>
+        <div class="description">
+            你在思源堂前明月里思忆过往，<br>
+            我在马蹄湖的日出里展望远方。<br>
+            青莲紫，学涯短，成追忆，<br>
+            文理梦，商自强，助兴邦。<br>
+            渤海之滨，白河之津，<br>
+            母校召唤，心系发展。
+        </div>
+    </div>
+    <span class="expand-arrow" ng-class="{hide:swiping||hide_arrow}">
+        <ng-md-icon class="md-icon" icon="expand_more" size="64" id="group-add-icon"></ng-md-icon>
+        <ng-md-icon class="md-icon" icon="expand_more" size="64" id="group-add-icon"></ng-md-icon>
+    </span> 
+</div>
+<div id="welcome-1" class="swipe-card page">
+    <div class="content">
+        <div class="description">
+            <p>
+            那些年，那些一起上过的公选课，<br>
+            倒影在你我的青春里：
+            </p>
+            <p>
+            天文课上我们曾一起细斟北斗，<br>
+            叹万象为宾客的天象奇观；<br>
+            象棋课上我们曾共享棋逢对手，<br>
+            悟车马炮车卒的挥斥方遒。
+            </p>
+            <p>
+            加减乘除、乐趣迭代的数学文化，<br>
+            学礼以立，张弛有度的社交礼仪。<br>
+            异彩纷呈如歌舞，宫商角徵羽，<br>
+            行云流水如书法，草隶行篆楷。
+            </p>
+            <p>
+            多年以后，暮然回首，<br>
+            母校之爱，春风化雨，<br>
+            润物无声，潜移默化，<br>
+            允公允能，日新月异。
+            </p>
+        </div>
+    </div>
+    <span class="expand-arrow" ng-class="{hide:swiping||hide_arrow}">
+        <ng-md-icon class="md-icon" icon="expand_more" size="64" id="group-add-icon"></ng-md-icon>
+        <ng-md-icon class="md-icon" icon="expand_more" size="64" id="group-add-icon"></ng-md-icon>
+    </span>
+</div>
+<div id="welcome-2" class="swipe-card page">
+    <div class="content">
+        <div class="description">
+            <div class="title">操作说明</div>
+            <div class="description">
+                <p>
+                本系统面向1987级-2015级所有南开本科生<br>
+                任课教师可凭一卡通号登录。<br>
+                精彩评论上墙，更有神秘好礼相送。<br>
+                </p>
+                <p>
+                    欢迎“拍砖”，将意见或建议发至<br>
+                    jwczlk@nankai.edu.cn
+                </p>
+            </div>
+        </div>
+    </div>
+    <span class="expand-arrow" ng-class="{hide:swiping||hide_arrow}">
+        <ng-md-icon class="md-icon" icon="expand_more" size="64" id="group-add-icon"></ng-md-icon>
+        <ng-md-icon class="md-icon" icon="expand_more" size="64" id="group-add-icon"></ng-md-icon>
+    </span>
+</div>
+
+<div id="welcome-3" class="swipe-card page">
+    <!-- <img id="logo" src="assets/Nankai_University_logo.svg" alt=""> -->
+    <div id="header-img">
+        <img src="assets/login.jpg" alt="">
+    </div>
+    <form id="form" name="login_form">
+    <div layout-gt-sm="column">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>姓名</label>
+            <input ng-model="login.name" name="name" required>
+            <nc-message subject="login_form.name"></nc-message>
+        </md-input-container>
+    </div>
+    <div layout-gt-sm="column">
+
+        <md-input-container class="md-block">
+            <label>学号</label>
+            <input  ng-model="login.number" name="number" required>
+            <nc-message subject="login_form.number"></nc-message>
+            <div class="hint" ng-hide="login_form.number.$valid">教师请点击专家评测</div>
+        </md-input-container>
+    </div>
+    
+    <md-button class="md-raised md-primary" ng-if="!submiting" ng-click="submit()">
+        学生评课
+    </md-button>
+    <md-button class="md-raised md-primary" ng-if="!submiting" ng-click="teac_submit()">
+        专家评测
+    </md-button>     
+    <md-button class="md-raised md-primary" disabled ng-if="submiting">登录中</md-button> 
+    <div>
+    <!-- <md-button id="forget-btn" class="md-warn" ng-click="toggle_forget()">
+        忘记学号?
+    </md-button> -->
+    </div>
+    </div>
+    </form> 
+</div>
+</div>
+
+
+
+
+<div id="forget_page" ng-if="in_forget">
+<h4>亲爱的校友</h4>
+<p>
+    或许您已离开太久，忘记了本科学号。
+    不要急，只要您通过微信或邮件将您的姓名、性别、专业、入学年份及毕业年份告知我们，我们会尽快帮您找回学号。
+</p>     
+<p>
+    感谢您对母校发展的关心。南开一路有你，未来携手共进。
+</p>     
+    邮箱：jwcqj@nankai.edu.cn<br><br> 
+    南开大学教务处微信公众号<br> 
+</p>
+<div>
+    <img id="jwc-qr" src="../assets/jwc_qr.jpg" alt="">
+</div>
+    <md-button class="md-raised md-primary"  ng-click="toggle_forget()">返回</md-button>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div id="ng-playground">
+    
+
+</div>
+</body>
+</html>

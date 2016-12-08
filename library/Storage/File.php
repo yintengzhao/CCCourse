@@ -1,4 +1,8 @@
 <?php
+namespace Storage;
+
+use \Config as Config;
+
 /**
  *文件存取类
  * Function list:
@@ -7,10 +11,9 @@
  * - delete()
  * - flush()
  */
-namespace Storage;
 class File
 {
-
+    protected static $umask    = false;  //文件权限过滤
     protected $_dir        = null;  //文件目录
     protected $_serialized = false; //是否序列化存取
 
@@ -22,18 +25,41 @@ class File
      * @param  mixed $expire [有效时间]
      * @author NewFuture
      */
-    public function set($name, $value)
+    public function set($name, $value, $expire=0)
     {
-        if ($this->_serialized)
-        {
+        if ($this->_serialized) {
             //序列化写入文件
-            $expire = func_num_args() == 4 ? (func_get_arg(3) + time()) : 0;
-            $cache  = array('e' => $expire, 'c' => $value);
-            $value  = serialize($cache);
+            $expire = $expire > 0 ? $_SERVER['REQUEST_TIME']+$expire : 0;
+            $value  = serialize(array($value, $expire));
         }
-
+        assert('is_scalar($value)||is_null($value)', '保存的数据应该是基本类型');
         $filename = $this->_dir . $name . '.php';
-        return file_put_contents($filename, $value);
+        return file_put_contents($filename, '<?php //'.$value) > 0;
+    }
+
+    /**
+     * 批量保存数据
+     * @method mset
+     * @param  array  $data   [数据(键值对)]
+     * @param  int $expire [有效时间]
+     * @author NewFuture
+     */
+    public function mset(array $data, $expire=0)
+    {
+        $dir=$this->_dir;
+        $result = true;
+        if ($this->_serialized) {
+            //序列化写入文件
+            $expire = $expire > 0 ? $_SERVER['REQUEST_TIME']+$expire : 0;
+            foreach ($data as $key => &$value) {
+                $result = $result && file_put_contents($dir.$key.'.php', '<?php //'.serialize(array($value, $expire)));
+            }
+        } else {
+            foreach ($data as $key => &$value) {
+                $result = $result && file_put_contents($dir.$key.'.php', '<?php //'.$value);
+            }
+        }
+        return $result;
     }
 
     /**
@@ -45,32 +71,46 @@ class File
      */
     public function get($name)
     {
-
         $filename = $this->_dir . $name . '.php';
-        if (is_file($filename))
-        {
-            $content = file_get_contents($filename);
-        }
-        else
-        {
-            return null; /*不存在返回null*/
+        if (is_file($filename)) {
+            $content = substr(file_get_contents($filename), 8);
+        } else {
+            return false; /*不存在返回null*/
         }
 
-        if ($this->_serialized)
-        {
+        if ($this->_serialized) {
             /*反序列化的文件*/
-            $cache = unserialize($content);
-            return ($cache['e'] && $_SERVER['REQUEST_TIME'] > $cache['e']) ? null : $cache['c'];
-        }
-        else
-        {
+            $content = unserialize($content);
+            if ($content[1] && $_SERVER['REQUEST_TIME'] > $content[1]) {
+                @unlink($filename);
+                return false;
+            } else {
+                return $content[0];
+            }
+        } else {
             return $content;
         }
     }
 
     /**
+     * 批量读取数据
+     * @method mget
+     * @param  array  $data   [数据(键值对)]
+     * @author NewFuture
+     */
+    public function mget(array $data)
+    {
+        $result = array();
+        foreach ($data as &$k) {
+            $result[$k] = $this->get($k);
+        }
+        unset($k);
+        return $result;
+    }
+
+    /**
      * 删除数据
-     * @method del
+     * @method delete
      * @param  [type] $name [数据名称]
      * @return [bool]       [description]
      * @author NewFuture
@@ -89,15 +129,7 @@ class File
      */
     public function flush()
     {
-        $dir = $this->_dir;
-        /*获取全部文件*/
-        $files = scandir($dir);
-        unset($files[0]);
-        unset($files[1]);
-        foreach ($files as $f)
-        {
-            @unlink($dir . $f);
-        }
+        return File::cleanDir($this->_dir);
     }
 
     /**
@@ -107,28 +139,36 @@ class File
      */
     public function __construct($dir, $serialized = false)
     {
-        $dir .= DIRECTORY_SEPARATOR;
-        if (self::mkdir($dir))
-        {
-            $this->_dir = $dir;
+        if (false===File::$umask) {
+            umask(intval(Config::get('umask', 0077), 8));
+            File::$umask=true;
         }
-        else
-        {
-            throw new \Exception('目录无法创建：' . $dir);
+        if (!is_dir($dir)) {
+            mkdir($dir, 0777, true);
         }
+        $this->_dir = $dir.DIRECTORY_SEPARATOR;
         $this->_serialized = $serialized;
     }
 
     /**
-     * 循环创建目录
-     * @method mkdir
-     * @param  [type]  $dir [目录名]
-     * @param  integer $mod [创建模式]
-     * @return [bool]       [是否创建成功]
+     * 清空目录
+     * @param  [type]  $dir [存储目录]
      * @author NewFuture
      */
-    public static function mkdir($dir, $mod = 0755)
+    public static function cleanDir($dir)
     {
-        return is_dir($dir) || (self::mkdir(dirname($dir), $mod) && mkdir($dir, $mod));
+        /*获取全部文件*/
+        if (!is_dir($dir)) {
+            return true;
+        }
+        $files = scandir($dir);
+        unset($files[0]);
+        unset($files[1]);
+        $result = 0;
+        foreach ($files as &$f) {
+            $result += @unlink($dir . $f);
+        }
+        unset($files);
+        return $result;
     }
 }

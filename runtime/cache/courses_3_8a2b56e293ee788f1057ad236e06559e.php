@@ -1,0 +1,1 @@
+<?php //a:2:{i:0;a:1:{i:0;a:6:{s:2:"id";i:58;s:6:"number";s:7:"3221705";s:7:"name_en";s:28:"Computer Networks Technology";s:6:"course";s:21:"计算机网络技术";s:8:"comments";i:0;s:5:"score";N;}}i:1;i:0;}

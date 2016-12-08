@@ -28,20 +28,17 @@ class UserController extends Rest
 
     	Input::post('type', $type);
 
-    	if( $type == 0){
+    	if( !$type ){
     		//学生登录
 
     		if( Input::post('number', $number, 'ctype_digit') && Input::post('name', $name) ){
 
     			$info = ['number' => $number, 'name' => $name];
- 			
-    			$UserModel = new Model('user');
- 
-    			if( $user = $UserModel->where($info)->field('id,type,status')->find() ){
+    			if( $user = Db::table('user')->where($info)->field('id,type,status')->find() ){
     				//用户存在
     				//$user {id:, status, type, }
 
-    				$UserModel->update(['lastlogin' => date('Y-m-d H:i:s')]);
+    				Db::table('user')->update(['lastlogin' => date('Y-m-d H:i:s')]);
 
     				if($user['status'] < 1){
     					$this->response(0, '该账号已屏蔽');
@@ -50,8 +47,8 @@ class UserController extends Rest
 
     				if($user){
 
-    					$user['token'] = $this->setUser('user', $user);
-    					$this->response(1, $user);
+                        $user['token'] = $this->setUser('user', $user);
+                        $this->response(1, $user);
 
     				}
 

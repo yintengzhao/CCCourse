@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html ng-app="CCCourse">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="generator" content="Nanoc 4.3.7">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    
+        <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.min.css">
+    
+
+    <link rel="stylesheet" href="lib/bower_components/intl-tel-input/build/css/intlTelInput.css">
+
+    
+        <link rel="stylesheet" href="css/application_all.css">
+    
+    
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    
+        <script src="js/application_lib.js"></script>
+    
+
+    
+        <script src="js/application_all.js"></script>
+    
+
+</head>
+<body ng-controller="TeacCtrl" id="teac" ng-class="" ng-cloak>
+
+
+
+<nc-nav back-handler="back_handler">选择培养方案</nc-nav>
+
+<div id="advice-list">
+	<div id="empty"></div>
+	<md-list-item class="md-4-line" ng-repeat="scheme in schemes">
+	<md-button class="md-raised md-primary course_item" ng-click="scheme_handler(scheme.id)">
+	    <h3>{{ scheme.name }}</h3>
+	</md-button>  
+	</md-list-item>
+</div>
+
+
+
+
+<div id="ng-playground">
+    
+
+</div>
+</body>
+</html>

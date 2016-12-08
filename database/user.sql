@@ -1,10 +1,12 @@
-INSERT INTO user (id,number,name,type) VALUES (1,9239402825,"Robin","student"),(2,9835158068,"Venus","student"),(3,1147428087,"Darryl","student"),(4,7843709782,"Gretchen","student"),(5,8317084683,"Noelle","student"),(6,9850575179,"Karleigh","student"),(7,1616423415,"Belle","student"),(8,3539652120,"Kiayada","student"),(9,5688309177,"Rhoda","student"),(10,5094843334,"Daphne","student");
-INSERT INTO user (id,number,name,type) VALUES (11,8255261760,"MacKenzie","student"),(12,2778431466,"Imani","student"),(13,7081090440,"Mary","student"),(14,6156200423,"Imelda","student"),(15,8869559059,"Tallulah","student"),(16,8650935454,"Lara","student"),(17,3046797978,"Illiana","student"),(18,7048606692,"Melissa","student"),(19,5136319564,"Florence","student"),(20,5487131134,"Deanna","student");
-INSERT INTO user (id,number,name,type) VALUES (21,6047839091,"Kaden","student"),(22,9804411939,"Lara","student"),(23,5778641534,"Vera","student"),(24,6781806197,"Imelda","student"),(25,1711963658,"Taylor","student"),(26,3700138438,"Brittany","student"),(27,5168857379,"Karleigh","student"),(28,5674308981,"Echo","student"),(29,3120720132,"Inez","student"),(30,4629011417,"Anika","student");
-INSERT INTO user (id,number,name,type) VALUES (31,3717006456,"Sopoline","student"),(32,4064235726,"Meghan","student"),(33,3563392058,"Simone","student"),(34,7032713225,"Signe","student"),(35,5047841032,"Frances","student"),(36,7771386308,"Heidi","student"),(37,6584899286,"Morgan","student"),(38,9960369531,"Sheila","student"),(39,4399096332,"Ivy","student"),(40,2790243504,"Kevyn","student");
-INSERT INTO user (id,number,name,type) VALUES (41,8211363222,"Claudia","student"),(42,4371807911,"Giselle","student"),(43,8548407311,"Tana","student"),(44,4490704478,"Haviva","student"),(45,1981981212,"Meghan","student"),(46,5191718965,"Cally","student"),(47,4725998917,"Renee","student"),(48,4967064736,"Cassady","student"),(49,8404331473,"Mary","student"),(50,6518071562,"Tashya","student");
-INSERT INTO user (id,number,name,type) VALUES (51,7204371392,"Melanie","student"),(52,4766350958,"Alfreda","student"),(53,3635428611,"Meredith","student"),(54,6253562997,"Whoopi","student"),(55,7986650002,"Alice","student"),(56,4731383611,"Madison","student"),(57,3662345052,"Amaya","student"),(58,8435160460,"Morgan","student"),(59,1184264440,"Scarlett","student"),(60,1126944535,"Imelda","student");
-INSERT INTO user (id,number,name,type) VALUES (61,7806447708,"Marah","student"),(62,3635921090,"Nadine","student"),(63,2660740564,"Rhona","student"),(64,7012876751,"Paula","student"),(65,2502476146,"Paula","student"),(66,2291564655,"Petra","student"),(67,8791010610,"Courtney","student"),(68,3432286625,"Dominique","student"),(69,5339631523,"Kyla","student"),(70,4523196071,"Christen","student");
-INSERT INTO user (id,number,name,type) VALUES (71,3260696368,"Fredericka","student"),(72,2613797355,"Iris","student"),(73,7791362873,"Charissa","student"),(74,5562286257,"Dominique","student"),(75,8946069704,"Inga","student"),(76,2101676704,"Germaine","student"),(77,5147872371,"Sopoline","student"),(78,2248038539,"Rhonda","student"),(79,5381671641,"Hayley","student"),(80,2413694135,"Cynthia","student");
-INSERT INTO user (id,number,name,type) VALUES (81,6179126010,"Genevieve","student"),(82,1411478410,"Candace","student"),(83,7936971715,"Adara","student"),(84,7295660719,"Ivory","student"),(85,9897859515,"Violet","student"),(86,3181994895,"Abra","student"),(87,4861756617,"Raya","student"),(88,7612353186,"Kyla","student"),(89,7984853005,"MacKensie","student"),(90,5112273280,"Melissa","student");
-INSERT INTO user (id,number,name,type) VALUES (91,6846825131,"Sage","student"),(92,7964271200,"Lacy","student"),(93,8692362881,"Rowan","student"),(94,7110990264,"Jolie","student"),(95,5952418567,"Summer","student"),(96,2448074917,"Cailin","student"),(97,7829610536,"Hayfa","student"),(98,9705045709,"Yen","student"),(99,7173672194,"Ella","student"),(100,2492300654,"Olga","student");
+INSERT INTO `user` (`name`,`number`,`type`) VALUES 
+("赵文建",1000000,"student"),
+("冯帆",1000001,"student"),
+("李宇轩",1000002,"student"),
+("马璇",1000003,"student"),
+("刘未来",1000004,"student"),
+("狗黄",1000005,"student"),
+("微信",1000006,"student"),
+("小学妹",1000007,"student"),
+("指导员",1000008,"student"),
+("周扬",1000009,"student");
+

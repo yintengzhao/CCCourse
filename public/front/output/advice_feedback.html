@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html ng-app="CCCourse">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="generator" content="Nanoc 4.3.7">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    
+        <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.min.css">
+    
+
+    <link rel="stylesheet" href="lib/bower_components/intl-tel-input/build/css/intlTelInput.css">
+
+    
+        <link rel="stylesheet" href="css/application_all.css">
+    
+    
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    
+        <script src="js/application_lib.js"></script>
+    
+
+    
+        <script src="js/application_all.js"></script>
+    
+
+</head>
+<body ng-controller="AdviceFeedbackCtrl" id="advice-feedback" ng-class="" ng-cloak>
+
+<div id="feed-back-text">
+	感谢您为学院教学工作做出的贡献！
+	<br>
+	欢迎您常来逛逛，看看大家的想法！
+</div>
+<div id="btn-group" class="submit" layout="column" layout-align="center center">
+	<md-button class="btn md-raised md-primary" ng-click="show_share_hint()">我要分享</md-button>
+	<md-button class="btn md-raised md-primary" ng-click="go_main()">返回首页</md-button>
+</div>
+<div ng-show="show_hint" ng-click="cancel_share_hint()">
+<div id="share-hint-mask" class="share-hint" ng-show="show_hint">
+</div>
+<div id="share-hint" class="share-hint">
+	<div id="shre-pointer">
+	<ng-md-icon class="nc-star-icon md-icon" icon="trending_up" size="72"></ng-md-icon>
+	</span>
+	</div>
+	<div id="hint-text">
+		请点击右上角<br>
+		分享给你的朋友<br>
+		或者晒到朋友圈吧！
+	</div>
+</div>
+</div>
+
+
+
+<div id="ng-playground">
+    
+
+</div>
+</body>
+</html>

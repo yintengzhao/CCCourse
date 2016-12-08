@@ -10,9 +10,9 @@ controller: course
 			<div  layout="column">
 				<h3>{{ course.name }}</h3>
 				<div  layout="row" flex="100">	
-					<div id="teacher" flex="40">{{ course.teacher }}</div>
+					<div class="title" flex="40">平均得分</div>
 					<nc-star ng-model="course.score" size="20"></nc-star>
-					<span id="score">{{course.score/2 | number: 1}}</span>
+					<span class="score">{{course.score/2 | number: 1}}</span>
 				</div>
 				<div id="description">
 					<p>{{course.description}}</p>
@@ -36,10 +36,10 @@ controller: course
 			<div class="comment" ng-repeat="c in comments">
 				<div>
 					<span>{{c.number}}:</span>
-					<span class="content">{{c.content}}</span>
+					<span class="content">{{c.advice}}</span>
 				</div>
 				<div class="info-bar"  layout="row">
-					<nc-star ng-model="c.score" size="20" flex="50"></nc-star>
+					<nc-star ng-model="c.averge" size="20" flex="50"></nc-star>
 					<div class="vote" flex="50">
 						<span class="vote-down" ng-class="{actived: +c.vote==-1}" ng-click="vote(c, 'down')">
 							踩({{c.down}})
@@ -64,25 +64,39 @@ controller: course
 			<div  layout="column">
 				<h3>{{ course.name }}</h3>
 				<div  layout="row" flex="100">	
-					<div id="teacher" flex="40">{{ course.teacher }}</div>
+					<div class="title" flex="40">平均得分</div>
 					<nc-star ng-model="course.score" size="20"></nc-star>
-					<span id="score">{{course.score/2 | number: 1}}</span>
+					<span class="score">{{course.score/2 | number: 1}}</span>
 					</span>
 				</div>
 			</div>
-			<h4>评分</h4>
-			<div id="take-score"  layout="column" layout-align="center center">
-				<div id="comment-stars">
-					<nc-star ng-init="comment.score=2" ng-model="comment.score" size="30" min="1" no-half></nc-star>
-				</div>
-				<div id="fake-star-slider">
-					<md-slider aria-label="star" flex min="0" max="10" ng-model="comment.score" id="star-slider" class></md-slider>
-				</div>
-			</div>
-
 		</div>
 		<div id="comment-form">
-			<div>不吐不快</div>
+
+			<div id = "comment-items">
+				<md-list>
+					<md-subheader class="md-no-sticky">
+						<div layout="row">
+							<div layout="column" flex="70">针对以下指标打个分：</div>
+						</div>
+					</md-subheader>
+					<md-list-item ng-repeat="comment_item in comment_items">
+					<div class="comment_item" flex="100" layout="column">
+						<h5>{{ comment_item.content }}</h5>
+						<div class="take-score" layout="column" layout-align="center center">
+							<div id="comment-stars">
+								<nc-star ng-init="comment_item.score=2" ng-model="comment_item.score" size="30" min="1" no-half></nc-star>
+							</div>
+							<div id="fake-star-slider">
+								<md-slider aria-label="star" flex min="0" max="10" ng-model="comment_item.score" id="star-slider" class></md-slider>
+							</div>
+						</div>
+					</div>
+					</md-list-item>
+				</md-list>
+			</div>
+
+			<div id="comment">不吐不快,留下你对该课程或者学院教学工作的宝贵建议:</div>
 			<div layout="row">
 			<span flex="10"></span>
 			<md-input-container id="comment-area" flex="70">
@@ -91,20 +105,6 @@ controller: course
 			</md-input-container>
 			<span flex="20"></span>
 			</div>
-			<div> 当初您选这门课的原因是（多选）：</div>
-			<div id="checkbox-group" layout="column">
-				<span ng-repeat="i in range(6)">
-					<md-checkbox ng-model="questions[0].anwser[i]" class="check" aria-label="Checkbox 1">
-			            {{questions[0].options[i]}}
-			        </md-checkbox>
-			        <span ng-if="i==5">
-						<md-input-container id="ques-1-input">
-						<label></label>
-						<input type="text" ng-model="questions[0].other" placeholder="请填写其他理由"/>		
-						</md-input-container>
-			        </span>
-		        </span>
-	        </div>
             <div id="error-msg">
 	        {{error_msg}} 
 		    </div>

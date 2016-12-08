@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html ng-app="CCCourse">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="generator" content="Nanoc 4.3.7">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    
+        <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.min.css">
+    
+
+    <link rel="stylesheet" href="lib/bower_components/intl-tel-input/build/css/intlTelInput.css">
+
+    
+        <link rel="stylesheet" href="css/application_all.css">
+    
+    
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    
+        <script src="js/application_lib.js"></script>
+    
+
+    
+        <script src="js/application_all.js"></script>
+    
+
+</head>
+<body ng-controller="CourseCtrl" id="course" ng-class="" ng-cloak>
+<nc-nav back-handler="back_handler"></nc-nav>
+
+<div id="course-info" ng-class="{switch: switching}" ng-hide="switching">
+	<div id="top-content">
+		
+		<div class="course" flex="100">
+			<div  layout="column">
+				<h3>{{ course.name }}</h3>
+				<div  layout="row" flex="100">	
+					<div class="title" flex="40">平均得分</div>
+					<nc-star ng-model="course.score" size="20"></nc-star>
+					<span class="score">{{course.score/2 | number: 1}}</span>
+				</div>
+				<div id="description">
+					<p>{{course.description}}</p>
+				</div>
+			</div>
+		</div>
+		<div ng-show="able_to_comment">		
+			<div  id="button" ng-switch="!course.evaluation">
+				<span ng-switch-when="true">
+				<md-button class="md-raised md-primary" ng-click="comment_handler()">我要评课</md-button>
+				</span>
+				<span ng-switch-when="false">
+				<md-button class="md-raised md-primary" disabled>您已评课</md-button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="bottom-content">
+		<div id="comments">	
+			<div class="comment" ng-repeat="c in comments">
+				<div>
+					<span>{{c.number}}:</span>
+					<span class="content">{{c.advice}}</span>
+				</div>
+				<div class="info-bar"  layout="row">
+					<nc-star ng-model="c.averge" size="20" flex="50"></nc-star>
+					<div class="vote" flex="50">
+						<span class="vote-down" ng-class="{actived: +c.vote==-1}" ng-click="vote(c, 'down')">
+							踩({{c.down}})
+							<ng-md-icon class="md-icon" icon="thumb_down" size="16" id="group-add-icon"></ng-md-icon>
+						</span>
+						<span class="vote-down" ng-class="{actived: +c.vote==1}" ng-click="vote(c, 'up')">
+							赞({{c.up}})
+							<ng-md-icon class="md-icon" icon="thumb_up" size="16" id="group-add-icon"></ng-md-icon>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div id="load-btn" ng-click="load_more()" ng-hide="no_more">
+				查看更多
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="comment-course" ng-class="{switch: switching}" ng-show="switching">
+		<div class="course" flex="100">
+			<div  layout="column">
+				<h3>{{ course.name }}</h3>
+				<div  layout="row" flex="100">	
+					<div class="title" flex="40">平均得分</div>
+					<nc-star ng-model="course.score" size="20"></nc-star>
+					<span class="score">{{course.score/2 | number: 1}}</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="comment-form">
+
+			<div id = "comment-items">
+				<md-list>
+					<md-subheader class="md-no-sticky">
+						<div layout="row">
+							<div layout="column" flex="70">针对以下指标打个分：</div>
+						</div>
+					</md-subheader>
+					<md-list-item ng-repeat="comment_item in comment_items">
+					<div class="comment_item" flex="100" layout="column">
+						<h5>{{ comment_item.content }}</h5>
+						<div class="take-score" layout="column" layout-align="center center">
+							<div id="comment-stars">
+								<nc-star ng-init="comment_item.score=2" ng-model="comment_item.score" size="30" min="1" no-half></nc-star>
+							</div>
+							<div id="fake-star-slider">
+								<md-slider aria-label="star" flex min="0" max="10" ng-model="comment_item.score" id="star-slider" class></md-slider>
+							</div>
+						</div>
+					</div>
+					</md-list-item>
+				</md-list>
+			</div>
+
+			<div id="comment">不吐不快,留下你对该课程或者学院教学工作的宝贵建议:</div>
+			<div layout="row">
+			<span flex="10"></span>
+			<md-input-container id="comment-area" flex="70">
+				<label></label>
+				<textarea ng-model="comment.content"></textarea>
+			</md-input-container>
+			<span flex="20"></span>
+			</div>
+            <div id="error-msg">
+	        {{error_msg}} 
+		    </div>
+    		<div id="comment-submit">
+				<md-button id="another-search"  class="md-raised md-primary" ng-hide="submiting" ng-click="comment_submit()">提交</md-button>
+    			<md-button class="md-raised md-primary" disabled ng-show="submiting">提交中</md-button> 
+			</div>
+		</div>
+</div>
+
+
+
+
+<div id="ng-playground">
+    
+
+</div>
+</body>
+</html>

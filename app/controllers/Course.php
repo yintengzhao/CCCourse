@@ -4,6 +4,11 @@
  */
 class CourseController extends Rest
 {
+	
+	public function init(){
+		parent::init();
+		$this->user = $this->getUser('user', true); 
+	}
 
 	/**
 	 * @method GET_indexAction
@@ -31,45 +36,39 @@ class CourseController extends Rest
 		}
 		else
 		{
-			$CouresModel = new Model('class');
-			$CouresModel
-				->belongs('teacher', 'teacher_id')
-				->belongs('course', 'course_id')
+			$courseOrm = Db::table('course');
+			$courseOrm
 				->has('evaluation')
 				->field([
-					'class.id',
-					'teacher_id',
-					'course_id',
-					'years',
+					'course.id',
+					'course.number',
+					'course.name_en',
 					'course.name'          => 'course',
-					'teacher.name'         => 'teacher',
 					'COUNT(evaluation.id)' => 'comments',
-					'AVG(evaluation.rank)' => 'score',
+					'AVG(evaluation.averge)' => 'score',
 				])
 				->group('id')
 				->page($page);
 
 			if ($keywords)
 			{
-				$CouresModel->order('score', true)->order('comments', true);
+				$courseOrm->order('score', true)->order('comments', true);
 				$key = strtok($keywords, ' ');
 				while ($key)
 				{
 					$key = '%' . $key . '%';
-					$CouresModel
-						->orwhere('course.name', 'LIKE BINARY', $key)
-						->orwhere('class.years', 'LIKE BINARY', $key)
-						->orWhere('teacher.name', 'LIKE BINARY', $key);
+					$courseOrm
+						->orwhere('course.name', 'LIKE BINARY', $key);
 					$key = strtok(' ');
 				}
 			}
 			else
 			{
 				//无关键字时评论优先
-				$CouresModel->order('comments', true)->order('score', true);
+				$courseOrm->order('comments', true)->order('score', true)->order('id', false);
 			}
 
-			$courses = $CouresModel->select();
+			$courses = $courseOrm->select();
 			if (!empty($courses))
 			{
 				Cache::set($cache_key, $courses, Config::get('cache.expire'));
@@ -92,29 +91,29 @@ class CourseController extends Rest
 	public function GET_infoAction($id)
 	{
 		$user        = $this->getUser('user', True);
-		$CouresModel = new Model('class');
-		$course      = $CouresModel
-			->belongs('teacher', 'teacher_id')
-			->belongs('course', 'course_id')
+		$courseOrm = Db::table('course');
+		$course = $courseOrm
 			->has('evaluation')
 			->field([
-				'class.id',
-				'course_id',
-				'teacher_id',
+				'course.id',
 				'course.name',
-				'teacher.name'         => 'teacher',
+				'course.name_en',
+				'course.description',
 				'COUNT(evaluation.id)' => 'comments',
-				'AVG(evaluation.rank)' => 'score',
+				'AVG(evaluation.averge)' => 'score',
 			])
-			->where('class.id',$id)
+			->where('course.id',$id)
+			->where('evaluation.status', 1)
+			->group('id')
 			->find();
 		if ($course)
 		{
 			if ($user['type'] === 'student')
 			{
 				/*学生才有自己的评论*/
-				$course['evaluation'] = (new Model('evaluation'))
-					->where(['class_id' => $id, 'user_id' => $user['id']])
+				$course['evaluation'] = (Db::table('evaluation'))
+					->where(['course_id' => $id, 'user_id' => $user['id'], 'status' => 1])
+					->field('id,course_id,user_id,advice,averge')
 					->find();
 			}
 			$this->response(1, $course);
@@ -133,21 +132,22 @@ class CourseController extends Rest
 	 */
 	public function GET_commentsAction($id)
 	{
-		$user = $this->getUser('user', True);
+		$user = $this->user;
 		Input::get('page', $page, 'int', 1);
-		$EvalModel = new Model('evaluation');
+		$evalOrm = Db::table('evaluation');
 
 		// 'COUNT(CASE WHEN advicevote.student_id=' . intval($this->user['id']) . ' THEN 1 ELSE NULL END)' => 'vote',
-		$evaluations = $EvalModel
+		$evaluations = $evalOrm
 			->has('evaluationvote')
 			->belongs('user')
-			->where('class_id', intval($id))
+			->where('course_id', intval($id))
 			->where('evaluation.status', 1)
 			->page($page)
+			->safe(false)
 			->field([
 				'evaluation.id',
-				'comment', //评论
-				'rank',
+				'evaluation.advice', //评论
+				'evaluation.averge',
 				'evaluation.time',
 				'user.number'                                   => 'number',
 				'COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END)'  => 'up',
@@ -160,14 +160,14 @@ class CourseController extends Rest
 		if (!empty($evaluations) && $user['type'] === 'student')
 		{
 			/*学生才显示自己是否可以赞踩*/
-			$VoteModel = new Model('evaluationvote');
+			$voteOrm = Db::table('evaluationvote');
 			foreach ($evaluations as &$e)
 			{
-				$e['vote'] = $VoteModel
+				$e['vote'] = $voteOrm
 					->where('evaluation_id', $e['id'])
 					->where('user_id', $user['id'])
 					->get('vote');
-				$VoteModel->clear();
+				$voteOrm->clear();
 			}
 		}
 		$this->response(1, $evaluations);

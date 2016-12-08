@@ -15,7 +15,27 @@
 	$scope.courses = []
 
 	current_page = 1
+	hotCourse_page = 1
 	current_key = null
+
+	#请求请求hotCourses数据
+	NetManager.get("/Course/").then (data)->
+		console.log data
+		if +data.status == 1
+			$scope.hotCourses = data.info
+
+	$scope.more = ->
+		hotCourse_page += 1
+		console.log hotCourse_page
+		request_parm = {page: hotCourse_page}
+		NetManager.get("/Course/", request_parm).then (data)->
+			# $scope.searching = false
+			console.log data
+			course_ar = data.info
+			if course_ar.length < 10
+				$scope.no_more = true
+				return
+			$scope.hotCourses = $scope.hotCourses.concat(data.info)
 	
 	$scope.course_handler = (cid)->
 		$window.location = "./course.html#?cid=#{cid}" 

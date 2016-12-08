@@ -1,0 +1,1440 @@
+[06-Dec-2016 10:06:35 Asia/Shanghai] (/Course/43) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":43,":1":1,":2":1,":3":0}
+  [RESULT] {"id":43,"name":"计算机科学前沿讨论班（2）","name_en":null,"description":null,"comments":1,"score":7}
+  [INFORM] 21.838903427124 ms (query)
+
+[06-Dec-2016 10:06:35 Asia/Shanghai] (/Course/43) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":43,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.95105171203613 ms (query)
+
+[06-Dec-2016 10:06:35 Asia/Shanghai] (/Course/43/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":43,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":80,"advice":"Lorem ipsum dolor sit amet, consectetuer","averge":7,"time":"2016-12-05 16:49:01","number":"1000006","up":0,"down":0}]
+  [INFORM] 8.342981338501 ms (query)
+
+[06-Dec-2016 10:06:35 Asia/Shanghai] (/Course/43/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":80,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.60892105102539 ms (column)
+
+[06-Dec-2016 10:50:59 Asia/Shanghai] (/Evaluation/5/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":5,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.80585479736328 ms (query)
+
+[06-Dec-2016 10:50:59 Asia/Shanghai] (/Evaluation/5/up) 
+  [SQL002] INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) 
+  [PARAMS] {":4":5,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 97.239971160889 ms (exec)
+
+[06-Dec-2016 10:51:04 Asia/Shanghai] (/Evaluation/5/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":5,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":5,"user_id":1,"vote":1,"time":"2016-12-06 10:50:59"}
+  [INFORM] 0.73790550231934 ms (query)
+
+[06-Dec-2016 10:51:15 Asia/Shanghai] (/Evaluation/5/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":5,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":5,"user_id":1,"vote":1,"time":"2016-12-06 10:50:59"}
+  [INFORM] 1.2640953063965 ms (query)
+
+[06-Dec-2016 10:51:44 Asia/Shanghai] (/Evaluation/600/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":600,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.78010559082031 ms (query)
+
+[06-Dec-2016 10:53:44 Asia/Shanghai] (/Evaluation/600/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":600,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 1.2950897216797 ms (query)
+
+[06-Dec-2016 10:54:16 Asia/Shanghai] (/Evaluation/6000/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":6000,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 1.2650489807129 ms (query)
+
+[06-Dec-2016 10:57:40 Asia/Shanghai] (/Evaluation/5/down) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":5,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":5,"user_id":1,"vote":1,"time":"2016-12-06 10:50:59"}
+  [INFORM] 1.0249614715576 ms (query)
+
+[06-Dec-2016 10:57:40 Asia/Shanghai] (/Evaluation/5/down) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":5,":5":1,":6":-1}
+  [RESULT] 1
+  [INFORM] 88.989019393921 ms (exec)
+
+[06-Dec-2016 10:57:51 Asia/Shanghai] (/Evaluation/5/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":5,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":5,"user_id":1,"vote":-1,"time":"2016-12-06 10:50:59"}
+  [INFORM] 1.0871887207031 ms (query)
+
+[06-Dec-2016 10:57:51 Asia/Shanghai] (/Evaluation/5/up) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":5,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 47.682046890259 ms (exec)
+
+[06-Dec-2016 10:57:56 Asia/Shanghai] (/Evaluation/2/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.8690357208252 ms (query)
+
+[06-Dec-2016 10:57:56 Asia/Shanghai] (/Evaluation/2/up) 
+  [SQL002] INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) 
+  [PARAMS] {":4":2,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 45.553922653198 ms (exec)
+
+[06-Dec-2016 10:57:59 Asia/Shanghai] (/Evaluation/5/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":5,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":5,"user_id":1,"vote":1,"time":"2016-12-06 10:50:59"}
+  [INFORM] 1.0130405426025 ms (query)
+
+[06-Dec-2016 10:58:03 Asia/Shanghai] (/Evaluation/6/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":6,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 1.0108947753906 ms (query)
+
+[06-Dec-2016 10:58:03 Asia/Shanghai] (/Evaluation/6/up) 
+  [SQL002] INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) 
+  [PARAMS] {":4":6,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 46.060085296631 ms (exec)
+
+[06-Dec-2016 10:58:10 Asia/Shanghai] (/Evaluation/6/down) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":6,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":6,"user_id":1,"vote":1,"time":"2016-12-06 10:58:03"}
+  [INFORM] 1.0600090026855 ms (query)
+
+[06-Dec-2016 10:58:10 Asia/Shanghai] (/Evaluation/6/down) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":6,":5":1,":6":-1}
+  [RESULT] 1
+  [INFORM] 48.371076583862 ms (exec)
+
+[06-Dec-2016 11:05:30 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)
+  [PARAMS] {":0":6,":1":1,":2":1}
+  [RESULT] 0
+  [INFORM] 0.74601173400879 ms (column)
+
+[06-Dec-2016 11:05:54 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)
+  [PARAMS] {":0":6,":1":1,":2":1}
+  [RESULT] 0
+  [INFORM] 0.84996223449707 ms (column)
+
+[06-Dec-2016 11:05:54 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)AND(`evaluation_id`= :3)AND(`user_id`= :4)AND(`vote`= :5)
+  [PARAMS] {":0":6,":1":1,":2":1,":3":6,":4":1,":5":-1}
+  [RESULT] 0
+  [INFORM] 0.95820426940918 ms (column)
+
+[06-Dec-2016 11:05:55 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)
+  [PARAMS] {":0":6,":1":1,":2":1}
+  [RESULT] 0
+  [INFORM] 0.91004371643066 ms (column)
+
+[06-Dec-2016 11:05:55 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)AND(`evaluation_id`= :3)AND(`user_id`= :4)AND(`vote`= :5)
+  [PARAMS] {":0":6,":1":1,":2":1,":3":6,":4":1,":5":-1}
+  [RESULT] 0
+  [INFORM] 0.84400177001953 ms (column)
+
+[06-Dec-2016 11:05:55 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)
+  [PARAMS] {":0":6,":1":1,":2":1}
+  [RESULT] 0
+  [INFORM] 1.0120868682861 ms (column)
+
+[06-Dec-2016 11:05:55 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)AND(`evaluation_id`= :3)AND(`user_id`= :4)AND(`vote`= :5)
+  [PARAMS] {":0":6,":1":1,":2":1,":3":6,":4":1,":5":-1}
+  [RESULT] 0
+  [INFORM] 0.75101852416992 ms (column)
+
+[06-Dec-2016 11:06:03 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)
+  [PARAMS] {":0":6,":1":1,":2":1}
+  [RESULT] 0
+  [INFORM] 0.73003768920898 ms (column)
+
+[06-Dec-2016 11:06:03 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1)AND(`vote`= :2)AND(`evaluation_id`= :3)AND(`user_id`= :4)AND(`vote`= :5)
+  [PARAMS] {":0":6,":1":1,":2":1,":3":6,":4":1,":5":-1}
+  [RESULT] 0
+  [INFORM] 0.59914588928223 ms (column)
+
+[06-Dec-2016 11:06:27 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 0
+  [INFORM] 1.0180473327637 ms (column)
+
+[06-Dec-2016 11:06:27 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":0":6,":1":1,":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.5180835723877 ms (column)
+
+[06-Dec-2016 11:06:29 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 0
+  [INFORM] 1.0311603546143 ms (column)
+
+[06-Dec-2016 11:06:29 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":0":6,":1":1,":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.77009201049805 ms (column)
+
+[06-Dec-2016 11:06:52 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 0
+  [INFORM] 0.7929801940918 ms (column)
+
+[06-Dec-2016 11:06:52 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":0":6,":1":1,":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.67996978759766 ms (column)
+
+[06-Dec-2016 11:06:53 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 0
+  [INFORM] 0.89907646179199 ms (column)
+
+[06-Dec-2016 11:06:53 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":0":6,":1":1,":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.65302848815918 ms (column)
+
+[06-Dec-2016 11:06:53 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 0
+  [INFORM] 1.0950565338135 ms (column)
+
+[06-Dec-2016 11:06:53 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":0":6,":1":1,":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.72693824768066 ms (column)
+
+[06-Dec-2016 11:07:00 Asia/Shanghai] (/Evaluation/5) 
+  [SQL001] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":5,":1":1}
+  [RESULT] 1
+  [INFORM] 1.0170936584473 ms (column)
+
+[06-Dec-2016 11:07:00 Asia/Shanghai] (/Evaluation/5) 
+  [SQL002] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":0":5,":1":1,":2":5,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.70405006408691 ms (column)
+
+[06-Dec-2016 11:07:58 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 0
+  [INFORM] 0.95319747924805 ms (column)
+
+[06-Dec-2016 11:07:58 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":0":6,":1":1,":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.75197219848633 ms (column)
+
+[06-Dec-2016 11:11:46 Asia/Shanghai] (/Evaluation/6/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":6,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":6,"user_id":1,"vote":-1,"time":"2016-12-06 10:58:03"}
+  [INFORM] 1.190185546875 ms (query)
+
+[06-Dec-2016 11:11:46 Asia/Shanghai] (/Evaluation/6/up) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":6,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 45.551061630249 ms (exec)
+
+[06-Dec-2016 11:11:55 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 1
+  [INFORM] 1.176118850708 ms (column)
+
+[06-Dec-2016 11:11:55 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":0":6,":1":1,":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 1.2340545654297 ms (column)
+
+[06-Dec-2016 11:12:03 Asia/Shanghai] (/Evaluation/6/down) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":6,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":6,"user_id":1,"vote":1,"time":"2016-12-06 10:58:03"}
+  [INFORM] 0.89597702026367 ms (query)
+
+[06-Dec-2016 11:12:03 Asia/Shanghai] (/Evaluation/6/down) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":6,":5":1,":6":-1}
+  [RESULT] 1
+  [INFORM] 40.017127990723 ms (exec)
+
+[06-Dec-2016 11:12:09 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 0
+  [INFORM] 0.82898139953613 ms (column)
+
+[06-Dec-2016 11:12:09 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(`vote`)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)AND(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":0":6,":1":1,":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.59080123901367 ms (column)
+
+[06-Dec-2016 11:15:18 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 0
+  [INFORM] 0.88095664978027 ms (column)
+
+[06-Dec-2016 11:15:18 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":6,":3":-1}
+  [RESULT] 1
+  [INFORM] 0.63395500183105 ms (column)
+
+[06-Dec-2016 11:15:19 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 0
+  [INFORM] 0.64611434936523 ms (column)
+
+[06-Dec-2016 11:15:19 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":6,":3":-1}
+  [RESULT] 1
+  [INFORM] 0.66709518432617 ms (column)
+
+[06-Dec-2016 11:22:42 Asia/Shanghai] (/Evaluation/6/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":6,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":6,"user_id":1,"vote":-1,"time":"2016-12-06 10:58:03"}
+  [INFORM] 1.2269020080566 ms (query)
+
+[06-Dec-2016 11:22:42 Asia/Shanghai] (/Evaluation/6/up) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":6,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 55.111885070801 ms (exec)
+
+[06-Dec-2016 11:22:48 Asia/Shanghai] (/Evaluation/6/down) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":6,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":6,"user_id":1,"vote":1,"time":"2016-12-06 10:58:03"}
+  [INFORM] 1.2929439544678 ms (query)
+
+[06-Dec-2016 11:22:48 Asia/Shanghai] (/Evaluation/6/down) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":6,":5":1,":6":-1}
+  [RESULT] 1
+  [INFORM] 44.904947280884 ms (exec)
+
+[06-Dec-2016 11:23:28 Asia/Shanghai] (/Evaluation/6/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":6,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":6,"user_id":1,"vote":-1,"time":"2016-12-06 10:58:03"}
+  [INFORM] 0.80394744873047 ms (query)
+
+[06-Dec-2016 11:23:28 Asia/Shanghai] (/Evaluation/6/up) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":6,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 43.106079101562 ms (exec)
+
+[06-Dec-2016 11:25:34 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 1
+  [INFORM] 1.2509822845459 ms (column)
+
+[06-Dec-2016 11:25:34 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.83708763122559 ms (column)
+
+[06-Dec-2016 11:25:37 Asia/Shanghai] (/Evaluation/5) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":5,":1":1}
+  [RESULT] 1
+  [INFORM] 1.0719299316406 ms (column)
+
+[06-Dec-2016 11:25:37 Asia/Shanghai] (/Evaluation/5) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":5,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.8549690246582 ms (column)
+
+[06-Dec-2016 11:25:40 Asia/Shanghai] (/Evaluation/4) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":4,":1":1}
+  [RESULT] 0
+  [INFORM] 1.6288757324219 ms (column)
+
+[06-Dec-2016 11:25:40 Asia/Shanghai] (/Evaluation/4) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":4,":3":-1}
+  [RESULT] 0
+  [INFORM] 1.0600090026855 ms (column)
+
+[06-Dec-2016 11:25:42 Asia/Shanghai] (/Evaluation/3) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":3,":1":1}
+  [RESULT] 0
+  [INFORM] 1.176118850708 ms (column)
+
+[06-Dec-2016 11:25:42 Asia/Shanghai] (/Evaluation/3) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":3,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.59390068054199 ms (column)
+
+[06-Dec-2016 11:25:44 Asia/Shanghai] (/Evaluation/2) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":2,":1":1}
+  [RESULT] 1
+  [INFORM] 0.88310241699219 ms (column)
+
+[06-Dec-2016 11:25:44 Asia/Shanghai] (/Evaluation/2) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":2,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.61988830566406 ms (column)
+
+[06-Dec-2016 11:25:46 Asia/Shanghai] (/Evaluation/1) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":1,":1":1}
+  [RESULT] 0
+  [INFORM] 0.79822540283203 ms (column)
+
+[06-Dec-2016 11:25:46 Asia/Shanghai] (/Evaluation/1) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":1,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.92697143554688 ms (column)
+
+[06-Dec-2016 11:25:54 Asia/Shanghai] (/Evaluation/1/down) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":1,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.96988677978516 ms (query)
+
+[06-Dec-2016 11:25:54 Asia/Shanghai] (/Evaluation/1/down) 
+  [SQL002] INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) 
+  [PARAMS] {":4":1,":5":1,":6":-1}
+  [RESULT] 1
+  [INFORM] 108.10518264771 ms (exec)
+
+[06-Dec-2016 11:26:02 Asia/Shanghai] (/Evaluation/2/down) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":2,"user_id":1,"vote":1,"time":"2016-12-06 10:57:56"}
+  [INFORM] 1.1420249938965 ms (query)
+
+[06-Dec-2016 11:26:02 Asia/Shanghai] (/Evaluation/2/down) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":2,":5":1,":6":-1}
+  [RESULT] 1
+  [INFORM] 62.689065933228 ms (exec)
+
+[06-Dec-2016 11:26:10 Asia/Shanghai] (/Evaluation/3/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":3,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 1.007080078125 ms (query)
+
+[06-Dec-2016 11:26:10 Asia/Shanghai] (/Evaluation/3/up) 
+  [SQL002] INSERT INTO`evaluationvote`(`evaluation_id`,`user_id`,`vote`)VALUES(:4,:5,:6) 
+  [PARAMS] {":4":3,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 58.459997177124 ms (exec)
+
+[06-Dec-2016 11:26:16 Asia/Shanghai] (/Evaluation/1) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":1,":1":1}
+  [RESULT] 0
+  [INFORM] 1.0788440704346 ms (column)
+
+[06-Dec-2016 11:26:16 Asia/Shanghai] (/Evaluation/1) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":1,":3":-1}
+  [RESULT] 1
+  [INFORM] 0.59795379638672 ms (column)
+
+[06-Dec-2016 11:26:19 Asia/Shanghai] (/Evaluation/2) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":2,":1":1}
+  [RESULT] 0
+  [INFORM] 1.2421607971191 ms (column)
+
+[06-Dec-2016 11:26:19 Asia/Shanghai] (/Evaluation/2) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":2,":3":-1}
+  [RESULT] 1
+  [INFORM] 1.0349750518799 ms (column)
+
+[06-Dec-2016 11:26:20 Asia/Shanghai] (/Evaluation/3) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":3,":1":1}
+  [RESULT] 1
+  [INFORM] 0.86092948913574 ms (column)
+
+[06-Dec-2016 11:26:20 Asia/Shanghai] (/Evaluation/3) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":3,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.94389915466309 ms (column)
+
+[06-Dec-2016 11:26:21 Asia/Shanghai] (/Evaluation/4) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":4,":1":1}
+  [RESULT] 0
+  [INFORM] 0.73790550231934 ms (column)
+
+[06-Dec-2016 11:26:21 Asia/Shanghai] (/Evaluation/4) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":4,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.97084045410156 ms (column)
+
+[06-Dec-2016 11:26:23 Asia/Shanghai] (/Evaluation/5) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":5,":1":1}
+  [RESULT] 1
+  [INFORM] 0.80704689025879 ms (column)
+
+[06-Dec-2016 11:26:23 Asia/Shanghai] (/Evaluation/5) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":5,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.94103813171387 ms (column)
+
+[06-Dec-2016 11:26:24 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 1
+  [INFORM] 0.96416473388672 ms (column)
+
+[06-Dec-2016 11:26:24 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 1.0671615600586 ms (column)
+
+[06-Dec-2016 11:29:48 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 1
+  [INFORM] 0.84710121154785 ms (column)
+
+[06-Dec-2016 11:29:48 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.78201293945312 ms (column)
+
+[06-Dec-2016 11:29:48 Asia/Shanghai] (/Evaluation/6) 
+  [SQL003] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":6,":5":1,":6":1,":7":0}
+  [RESULT] {"evaluation_id":6,"user_id":1,"vote":1,"time":"2016-12-06 10:58:03"}
+  [INFORM] 0.92005729675293 ms (query)
+
+[06-Dec-2016 11:30:00 Asia/Shanghai] (/Evaluation/5) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":5,":1":1}
+  [RESULT] 1
+  [INFORM] 1.2741088867188 ms (column)
+
+[06-Dec-2016 11:30:00 Asia/Shanghai] (/Evaluation/5) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":5,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.72884559631348 ms (column)
+
+[06-Dec-2016 11:30:00 Asia/Shanghai] (/Evaluation/5) 
+  [SQL003] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":5,":5":1,":6":1,":7":0}
+  [RESULT] {"evaluation_id":5,"user_id":1,"vote":1,"time":"2016-12-06 10:50:59"}
+  [INFORM] 0.83112716674805 ms (query)
+
+[06-Dec-2016 11:30:02 Asia/Shanghai] (/Evaluation/7) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":7,":1":1}
+  [RESULT] 0
+  [INFORM] 1.0168552398682 ms (column)
+
+[06-Dec-2016 11:30:02 Asia/Shanghai] (/Evaluation/7) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":7,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.81992149353027 ms (column)
+
+[06-Dec-2016 11:30:02 Asia/Shanghai] (/Evaluation/7) 
+  [SQL003] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":7,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.74005126953125 ms (query)
+
+[06-Dec-2016 11:31:25 Asia/Shanghai] (/Evaluation/7) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":7,":1":1}
+  [RESULT] 0
+  [INFORM] 0.9911060333252 ms (column)
+
+[06-Dec-2016 11:31:25 Asia/Shanghai] (/Evaluation/7) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":7,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.87213516235352 ms (column)
+
+[06-Dec-2016 11:31:25 Asia/Shanghai] (/Evaluation/7) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":7,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 1.2269020080566 ms (column)
+
+[06-Dec-2016 11:31:28 Asia/Shanghai] (/Evaluation/6) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":6,":1":1}
+  [RESULT] 1
+  [INFORM] 0.90289115905762 ms (column)
+
+[06-Dec-2016 11:31:28 Asia/Shanghai] (/Evaluation/6) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":6,":3":-1}
+  [RESULT] 0
+  [INFORM] 1.0120868682861 ms (column)
+
+[06-Dec-2016 11:31:28 Asia/Shanghai] (/Evaluation/6) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":6,":5":1,":6":1,":7":0}
+  [RESULT] 1
+  [INFORM] 1.0640621185303 ms (column)
+
+[06-Dec-2016 11:31:30 Asia/Shanghai] (/Evaluation/1) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":1,":1":1}
+  [RESULT] 0
+  [INFORM] 1.0008811950684 ms (column)
+
+[06-Dec-2016 11:31:30 Asia/Shanghai] (/Evaluation/1) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":1,":3":-1}
+  [RESULT] 1
+  [INFORM] 1.0931491851807 ms (column)
+
+[06-Dec-2016 11:31:30 Asia/Shanghai] (/Evaluation/1) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":1,":5":1,":6":1,":7":0}
+  [RESULT] -1
+  [INFORM] 1.0261535644531 ms (column)
+
+[06-Dec-2016 11:31:33 Asia/Shanghai] (/Evaluation/2) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":2,":1":1}
+  [RESULT] 0
+  [INFORM] 0.89788436889648 ms (column)
+
+[06-Dec-2016 11:31:33 Asia/Shanghai] (/Evaluation/2) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":2,":3":-1}
+  [RESULT] 1
+  [INFORM] 0.80394744873047 ms (column)
+
+[06-Dec-2016 11:31:33 Asia/Shanghai] (/Evaluation/2) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":2,":5":1,":6":1,":7":0}
+  [RESULT] -1
+  [INFORM] 0.76889991760254 ms (column)
+
+[06-Dec-2016 11:31:36 Asia/Shanghai] (/Evaluation/3) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":3,":1":1}
+  [RESULT] 1
+  [INFORM] 0.92601776123047 ms (column)
+
+[06-Dec-2016 11:31:36 Asia/Shanghai] (/Evaluation/3) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":3,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.92601776123047 ms (column)
+
+[06-Dec-2016 11:31:36 Asia/Shanghai] (/Evaluation/3) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":3,":5":1,":6":1,":7":0}
+  [RESULT] 1
+  [INFORM] 0.69689750671387 ms (column)
+
+[06-Dec-2016 11:31:37 Asia/Shanghai] (/Evaluation/4) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":4,":1":1}
+  [RESULT] 0
+  [INFORM] 1.2569427490234 ms (column)
+
+[06-Dec-2016 11:31:37 Asia/Shanghai] (/Evaluation/4) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":4,":3":-1}
+  [RESULT] 0
+  [INFORM] 1.2428760528564 ms (column)
+
+[06-Dec-2016 11:31:37 Asia/Shanghai] (/Evaluation/4) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":4,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 1.0769367218018 ms (column)
+
+[06-Dec-2016 11:31:51 Asia/Shanghai] (/Evaluation/4) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":4,":1":1}
+  [RESULT] 0
+  [INFORM] 0.71501731872559 ms (column)
+
+[06-Dec-2016 11:31:51 Asia/Shanghai] (/Evaluation/4) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":4,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.55909156799316 ms (column)
+
+[06-Dec-2016 11:31:51 Asia/Shanghai] (/Evaluation/4) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":4,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.59795379638672 ms (column)
+
+[06-Dec-2016 11:31:53 Asia/Shanghai] (/Evaluation/1) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":1,":1":1}
+  [RESULT] 0
+  [INFORM] 0.9911060333252 ms (column)
+
+[06-Dec-2016 11:31:53 Asia/Shanghai] (/Evaluation/1) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":1,":3":-1}
+  [RESULT] 1
+  [INFORM] 1.1811256408691 ms (column)
+
+[06-Dec-2016 11:31:53 Asia/Shanghai] (/Evaluation/1) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":1,":5":1,":6":1,":7":0}
+  [RESULT] -1
+  [INFORM] 0.77986717224121 ms (column)
+
+[06-Dec-2016 11:31:55 Asia/Shanghai] (/Evaluation/2) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":2,":1":1}
+  [RESULT] 0
+  [INFORM] 0.93984603881836 ms (column)
+
+[06-Dec-2016 11:31:55 Asia/Shanghai] (/Evaluation/2) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":2,":3":-1}
+  [RESULT] 1
+  [INFORM] 0.95510482788086 ms (column)
+
+[06-Dec-2016 11:31:55 Asia/Shanghai] (/Evaluation/2) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":2,":5":1,":6":1,":7":0}
+  [RESULT] -1
+  [INFORM] 0.80490112304688 ms (column)
+
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":1,":3":0}
+  [RESULT] {"id":72,"name":"泛函分析基础","name_en":"Introduction to Functional Analysis","description":null,"comments":4,"score":2.75}
+  [INFORM] 1.1081695556641 ms (query)
+
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":72,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.6300678253174 ms (query)
+
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":94,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.","averge":2,"time":"2016-12-05 16:49:02","number":"1000002","up":0,"down":0},{"id":93,"advice":"Lorem","averge":4,"time":"2016-12-05 16:49:02","number":"1000006","up":0,"down":0},{"id":34,"advice":"Lorem","averge":2,"time":"2016-12-05 16:49:01","number":"1000002","up":0,"down":0},{"id":19,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","averge":3,"time":"2016-12-05 16:49:01","number":"1000007","up":0,"down":0}]
+  [INFORM] 1.6500949859619 ms (query)
+
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":94,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.97107887268066 ms (column)
+
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":93,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.78296661376953 ms (column)
+
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":34,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.76103210449219 ms (column)
+
+[06-Dec-2016 12:33:49 Asia/Shanghai] (/Course/72/comments) 
+  [SQL005] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :16)AND(`user_id`= :17) LIMIT :18 OFFSET :19
+  [PARAMS] {":16":19,":17":1,":18":1,":19":0}
+  [RESULT] false
+  [INFORM] 0.90789794921875 ms (column)
+
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":1,":3":0}
+  [RESULT] {"id":72,"name":"泛函分析基础","name_en":"Introduction to Functional Analysis","description":null,"comments":4,"score":2.75}
+  [INFORM] 0.79607963562012 ms (query)
+
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":72,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.73099136352539 ms (query)
+
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":94,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.","averge":2,"time":"2016-12-05 16:49:02","number":"1000002","up":0,"down":0},{"id":93,"advice":"Lorem","averge":4,"time":"2016-12-05 16:49:02","number":"1000006","up":0,"down":0},{"id":34,"advice":"Lorem","averge":2,"time":"2016-12-05 16:49:01","number":"1000002","up":0,"down":0},{"id":19,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","averge":3,"time":"2016-12-05 16:49:01","number":"1000007","up":0,"down":0}]
+  [INFORM] 1.4398097991943 ms (query)
+
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":94,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.81110000610352 ms (column)
+
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":93,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.70381164550781 ms (column)
+
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":34,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.47492980957031 ms (column)
+
+[06-Dec-2016 12:34:38 Asia/Shanghai] (/Course/72/comments) 
+  [SQL005] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :16)AND(`user_id`= :17) LIMIT :18 OFFSET :19
+  [PARAMS] {":16":19,":17":1,":18":1,":19":0}
+  [RESULT] false
+  [INFORM] 0.45490264892578 ms (column)
+
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":1,":3":0}
+  [RESULT] {"id":72,"name":"泛函分析基础","name_en":"Introduction to Functional Analysis","description":null,"comments":4,"score":2.75}
+  [INFORM] 0.90599060058594 ms (query)
+
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":72,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.65302848815918 ms (query)
+
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":94,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.","averge":2,"time":"2016-12-05 16:49:02","number":"1000002","up":0,"down":0},{"id":93,"advice":"Lorem","averge":4,"time":"2016-12-05 16:49:02","number":"1000006","up":0,"down":0},{"id":34,"advice":"Lorem","averge":2,"time":"2016-12-05 16:49:01","number":"1000002","up":0,"down":0},{"id":19,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","averge":3,"time":"2016-12-05 16:49:01","number":"1000007","up":0,"down":0}]
+  [INFORM] 1.0850429534912 ms (query)
+
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":94,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.53501129150391 ms (column)
+
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":93,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.4880428314209 ms (column)
+
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":34,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.40602684020996 ms (column)
+
+[06-Dec-2016 12:34:50 Asia/Shanghai] (/Course/72/comments) 
+  [SQL005] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :16)AND(`user_id`= :17) LIMIT :18 OFFSET :19
+  [PARAMS] {":16":19,":17":1,":18":1,":19":0}
+  [RESULT] false
+  [INFORM] 0.39005279541016 ms (column)
+
+[06-Dec-2016 12:34:55 Asia/Shanghai] (/Course/1) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":1,":1":1,":2":1,":3":0}
+  [RESULT] {"id":1,"name":"控制科学专题研究报告（1）","name_en":"The Research Report on Control Science Special(1)","description":"\"在第二学期和第三学期开设，采用博士生撰写研究报告，集中交流与讨论的方式进行。所有博士生导师参与讨论并给出成绩评定。每人要做两个报告，下面是两个报告的基本要求：控制科学专题研究报告（1）博士生需撰写1万字以上的报告，主要包括如下内容：1）博士学位论文选题及研究目标2）研究背景综述3）参考文献4）拟开展的研究内容和研究设想控制科学专题研究报告（2）博士生需撰写1万字以上的报告，主要包括如下内容：1)一年来的研究内容及学位论文工作进展情况介绍2)一篇具体的已经完成的学术论文或研究报告3）投稿、发表论文情况4)下一步研究设想和投稿计划以上两个报告均需写成书面报告，同时作成幻灯片进行演讲，所有学生和博导参与讨论点评。\"","comments":1,"score":2}
+  [INFORM] 1.1000633239746 ms (query)
+
+[06-Dec-2016 12:34:55 Asia/Shanghai] (/Course/1) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":1,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.76198577880859 ms (query)
+
+[06-Dec-2016 12:34:55 Asia/Shanghai] (/Course/1/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":1,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":84,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam","averge":2,"time":"2016-12-05 16:49:02","number":"1000009","up":0,"down":0}]
+  [INFORM] 1.3430118560791 ms (query)
+
+[06-Dec-2016 12:34:55 Asia/Shanghai] (/Course/1/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":84,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.68807601928711 ms (column)
+
+[06-Dec-2016 12:37:06 Asia/Shanghai] (/Course/21) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":21,":1":1,":2":1,":3":0}
+  [RESULT] {"id":21,"name":"三维数据场可视化讨论班","name_en":"Simenar on Visualization of 3D Data Sets","description":"\"第1节：三维规则数据场直接体绘制技术 （4课时）第2节：空间扫描技术（4课时）第3节：频域的体绘制技术（4课时）第4节：构造三维空间规则数据场的等值面（4课时）第5节：三维空间不规则数据场可视化算法（4课时）第6节：构造三维空间不规则数据场的等值面（4课时）第7节：散乱数据可视化（3课时）第8节：三维矢量场基本概念（4课时）第9节：矢量场映射方法（4课时）第10节：三维矢量场特征可视化（4课时）第11节：两维轮廓线重构三维形体（3课时）第12节：复杂模型的简化 （3课时）第13节：复杂模型的多分辨率表示 （5课时）第14节：可视化算法并行实现的基本概念（3课时）第15节：基于PVM的并行可视化算法 （4课时）第16节：三位数据场可视化的实用系统（3课时）\"","comments":1,"score":3}
+  [INFORM] 1.1770725250244 ms (query)
+
+[06-Dec-2016 12:37:06 Asia/Shanghai] (/Course/21) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":21,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.79989433288574 ms (query)
+
+[06-Dec-2016 12:37:06 Asia/Shanghai] (/Course/21/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":21,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":1,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam","averge":3,"time":"2016-12-05 16:49:01","number":"1000006","up":0,"down":1}]
+  [INFORM] 1.1708736419678 ms (query)
+
+[06-Dec-2016 12:37:06 Asia/Shanghai] (/Course/21/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":1,":5":1,":6":1,":7":0}
+  [RESULT] -1
+  [INFORM] 0.49996376037598 ms (column)
+
+[06-Dec-2016 12:37:19 Asia/Shanghai] (/Evaluation/1/down) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":1,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":1,"user_id":1,"vote":-1,"time":"2016-12-06 11:25:54"}
+  [INFORM] 1.1100769042969 ms (query)
+
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":1,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":1,"user_id":1,"vote":-1,"time":"2016-12-06 11:25:54"}
+  [INFORM] 1.3980865478516 ms (query)
+
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1/up) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":1,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 41.099071502686 ms (exec)
+
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":1,":1":1}
+  [RESULT] 1
+  [INFORM] 0.88405609130859 ms (column)
+
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":1,":3":-1}
+  [RESULT] 0
+  [INFORM] 1.0321140289307 ms (column)
+
+[06-Dec-2016 12:37:25 Asia/Shanghai] (/Evaluation/1) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":1,":5":1,":6":1,":7":0}
+  [RESULT] 1
+  [INFORM] 1.5029907226562 ms (column)
+
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1/down) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":1,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":1,"user_id":1,"vote":1,"time":"2016-12-06 11:25:54"}
+  [INFORM] 0.94199180603027 ms (query)
+
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1/down) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":1,":5":1,":6":-1}
+  [RESULT] 1
+  [INFORM] 55.804014205933 ms (exec)
+
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":1,":1":1}
+  [RESULT] 0
+  [INFORM] 0.64396858215332 ms (column)
+
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":1,":3":-1}
+  [RESULT] 1
+  [INFORM] 0.63586235046387 ms (column)
+
+[06-Dec-2016 12:38:09 Asia/Shanghai] (/Evaluation/1) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":1,":5":1,":6":1,":7":0}
+  [RESULT] -1
+  [INFORM] 0.60606002807617 ms (column)
+
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1/up) 
+  [SQL001] SELECT *FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":1,":1":1,":2":1,":3":0}
+  [RESULT] {"evaluation_id":1,"user_id":1,"vote":-1,"time":"2016-12-06 11:25:54"}
+  [INFORM] 0.99015235900879 ms (query)
+
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1/up) 
+  [SQL002] UPDATE`evaluationvote`SET `vote`=:6 WHERE(`evaluation_id`= :4)AND(`user_id`= :5)
+  [PARAMS] {":4":1,":5":1,":6":1}
+  [RESULT] 1
+  [INFORM] 51.017999649048 ms (exec)
+
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1) 
+  [SQL001] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :0)AND(`vote`= :1)
+  [PARAMS] {":0":1,":1":1}
+  [RESULT] 1
+  [INFORM] 0.89812278747559 ms (column)
+
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1) 
+  [SQL002] SELECT COUNT(*)FROM`evaluationvote`WHERE(`evaluation_id`= :2)AND(`vote`= :3)
+  [PARAMS] {":2":1,":3":-1}
+  [RESULT] 0
+  [INFORM] 0.54597854614258 ms (column)
+
+[06-Dec-2016 12:38:17 Asia/Shanghai] (/Evaluation/1) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":1,":5":1,":6":1,":7":0}
+  [RESULT] 1
+  [INFORM] 0.70405006408691 ms (column)
+
+[06-Dec-2016 12:41:39 Asia/Shanghai] (/Course/?key=%E6%95%B0%E6%8D%AE&page=1) 
+  [SQL001] SELECT `course`.`id`,`course`.`number`,`course`.`name_en`,`course`.`name` AS`course`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`name`LIKE BINARY :2)GROUP BY `id`ORDER BY`score`DESC,`comments`DESC  LIMIT :0 OFFSET :1
+  [PARAMS] {":0":10,":1":0,":2":"%数据%"}
+  [RESULT] [{"id":94,"number":"3222708","name_en":"Database System Implementation","course":"数据库系统实现","comments":1,"score":8},{"id":149,"number":"3232411","name_en":"Introduction to Data Mining","course":"数据挖掘算法基础","comments":1,"score":7},{"id":45,"number":"3212735","name_en":null,"course":"WEB大数据挖掘 ","comments":2,"score":6},{"id":106,"number":"3222722","name_en":"Analyzing and Mining in Big Data","course":"大数据分析与挖掘","comments":1,"score":6},{"id":21,"number":"3212617","name_en":"Simenar on Visualization of 3D Data Sets","course":"三维数据场可视化讨论班","comments":1,"score":3},{"id":114,"number":"3222732","name_en":"Mining Web Massive Datasets","course":"WEB大数据挖掘","comments":1,"score":3},{"id":24,"number":"3212703","name_en":null,"course":"知识发现与数据挖掘","comments":0,"score":null},{"id":91,"number":"3222705","name_en":null,"course":"数据库系统高级技术","comments":0,"score":null},{"id":129,"number":"3231401","name_en":"Design and Principle of Database System","course":"数据库系统设计与原理","comments":0,"score":null},{"id":79,"number":"3222621","name_en":"Simenar on Visualization of 3D Data Sets","course":"三维数据场可视化讨论班","comments":0,"score":null}]
+  [INFORM] 1.0409355163574 ms (query)
+
+[06-Dec-2016 12:41:47 Asia/Shanghai] (/Course/?key=%E6%95%B0%E6%8D%AE&page=2) 
+  [SQL001] SELECT `course`.`id`,`course`.`number`,`course`.`name_en`,`course`.`name` AS`course`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`name`LIKE BINARY :2)GROUP BY `id`ORDER BY`score`DESC,`comments`DESC  LIMIT :0 OFFSET :1
+  [PARAMS] {":0":10,":1":10,":2":"%数据%"}
+  [RESULT] [{"id":91,"number":"3222705","name_en":null,"course":"数据库系统高级技术","comments":0,"score":null},{"id":129,"number":"3231401","name_en":"Design and Principle of Database System","course":"数据库系统设计与原理","comments":0,"score":null},{"id":79,"number":"3222621","name_en":"Simenar on Visualization of 3D Data Sets","course":"三维数据场可视化讨论班","comments":0,"score":null},{"id":122,"number":"3231009","name_en":null,"course":"数据科学前沿","comments":0,"score":null}]
+  [INFORM] 1.5819072723389 ms (query)
+
+[06-Dec-2016 12:42:02 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.2979507446289 ms (query)
+
+[06-Dec-2016 12:42:02 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.1351108551025 ms (query)
+
+[06-Dec-2016 12:42:02 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.36399269104 ms (query)
+
+[06-Dec-2016 12:42:02 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.90599060058594 ms (column)
+
+[06-Dec-2016 12:52:03 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.1241436004639 ms (query)
+
+[06-Dec-2016 12:52:03 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.1630058288574 ms (query)
+
+[06-Dec-2016 12:52:03 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.3477802276611 ms (query)
+
+[06-Dec-2016 12:52:03 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.68402290344238 ms (column)
+
+[06-Dec-2016 12:57:16 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.2698173522949 ms (query)
+
+[06-Dec-2016 12:57:16 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.86307525634766 ms (query)
+
+[06-Dec-2016 12:57:16 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.3749599456787 ms (query)
+
+[06-Dec-2016 12:57:16 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.63610076904297 ms (column)
+
+[06-Dec-2016 12:58:47 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.2819766998291 ms (query)
+
+[06-Dec-2016 12:58:47 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.87118148803711 ms (query)
+
+[06-Dec-2016 12:58:47 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.2149810791016 ms (query)
+
+[06-Dec-2016 12:58:47 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.85711479187012 ms (column)
+
+[06-Dec-2016 12:59:20 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.4090538024902 ms (query)
+
+[06-Dec-2016 12:59:20 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.99682807922363 ms (query)
+
+[06-Dec-2016 12:59:20 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.1389255523682 ms (query)
+
+[06-Dec-2016 12:59:20 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.80299377441406 ms (column)
+
+[06-Dec-2016 13:00:38 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.0569095611572 ms (query)
+
+[06-Dec-2016 13:00:38 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.95582008361816 ms (query)
+
+[06-Dec-2016 13:00:38 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.5299320220947 ms (query)
+
+[06-Dec-2016 13:00:38 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.85902214050293 ms (column)
+
+[06-Dec-2016 13:03:40 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 0.78010559082031 ms (query)
+
+[06-Dec-2016 13:03:40 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.0428428649902 ms (query)
+
+[06-Dec-2016 13:03:40 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.2810230255127 ms (query)
+
+[06-Dec-2016 13:03:40 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.73003768920898 ms (column)
+
+[06-Dec-2016 13:04:19 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 0.86307525634766 ms (query)
+
+[06-Dec-2016 13:04:19 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.73981285095215 ms (query)
+
+[06-Dec-2016 13:04:19 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.1470317840576 ms (query)
+
+[06-Dec-2016 13:04:19 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.71597099304199 ms (column)
+
+[06-Dec-2016 13:07:23 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 170.13001441956 ms (query)
+
+[06-Dec-2016 13:07:23 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.80299377441406 ms (query)
+
+[06-Dec-2016 13:07:23 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.1639595031738 ms (query)
+
+[06-Dec-2016 13:07:23 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.92387199401855 ms (column)
+
+[06-Dec-2016 13:07:28 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.1050701141357 ms (query)
+
+[06-Dec-2016 13:07:28 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.1539459228516 ms (query)
+
+[06-Dec-2016 13:07:28 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.1160373687744 ms (query)
+
+[06-Dec-2016 13:07:28 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.58889389038086 ms (column)
+
+[06-Dec-2016 13:07:58 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 0.9000301361084 ms (query)
+
+[06-Dec-2016 13:07:58 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.97990036010742 ms (query)
+
+[06-Dec-2016 13:07:58 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.6930103302002 ms (query)
+
+[06-Dec-2016 13:07:58 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.92601776123047 ms (column)
+
+[06-Dec-2016 13:10:39 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 0.84400177001953 ms (query)
+
+[06-Dec-2016 13:10:39 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.94079971313477 ms (query)
+
+[06-Dec-2016 13:10:39 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.1391639709473 ms (query)
+
+[06-Dec-2016 13:10:39 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.76103210449219 ms (column)
+
+[06-Dec-2016 13:11:31 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.0561943054199 ms (query)
+
+[06-Dec-2016 13:11:31 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.1849403381348 ms (query)
+
+[06-Dec-2016 13:11:31 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.4410018920898 ms (query)
+
+[06-Dec-2016 13:11:31 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.80609321594238 ms (column)
+
+[06-Dec-2016 13:13:03 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 0.89097023010254 ms (query)
+
+[06-Dec-2016 13:13:03 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.96917152404785 ms (query)
+
+[06-Dec-2016 13:13:03 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.0790824890137 ms (query)
+
+[06-Dec-2016 13:13:03 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.58197975158691 ms (column)
+
+[06-Dec-2016 13:16:28 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.1651515960693 ms (query)
+
+[06-Dec-2016 13:16:28 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.1570453643799 ms (query)
+
+[06-Dec-2016 13:16:28 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.1739730834961 ms (query)
+
+[06-Dec-2016 13:16:28 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.95582008361816 ms (column)
+
+[06-Dec-2016 16:30:53 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.0080337524414 ms (query)
+
+[06-Dec-2016 16:30:53 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.79703330993652 ms (query)
+
+[06-Dec-2016 16:30:53 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.6870498657227 ms (query)
+
+[06-Dec-2016 16:30:53 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.89478492736816 ms (column)
+

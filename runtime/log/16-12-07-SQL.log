@@ -1,0 +1,396 @@
+[07-Dec-2016 10:36:54 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.1680126190186 ms (query)
+
+[07-Dec-2016 10:36:54 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.054048538208 ms (query)
+
+[07-Dec-2016 10:36:54 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.4910697937012 ms (query)
+
+[07-Dec-2016 10:36:54 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.75483322143555 ms (column)
+
+[07-Dec-2016 10:40:32 Asia/Shanghai] (/Course/94) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":1,":3":0}
+  [RESULT] {"id":94,"name":"数据库系统实现","name_en":"Database System Implementation","description":"","comments":1,"score":8}
+  [INFORM] 1.0750293731689 ms (query)
+
+[07-Dec-2016 10:40:32 Asia/Shanghai] (/Course/94) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":94,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.84590911865234 ms (query)
+
+[07-Dec-2016 10:40:32 Asia/Shanghai] (/Course/94/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":94,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":53,"advice":"Lorem ipsum","averge":8,"time":"2016-12-05 16:49:01","number":"1000005","up":0,"down":0}]
+  [INFORM] 1.1470317840576 ms (query)
+
+[07-Dec-2016 10:40:32 Asia/Shanghai] (/Course/94/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":53,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.97799301147461 ms (column)
+
+[07-Dec-2016 11:09:20 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"94",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 1.0018348693848 ms (column)
+
+[07-Dec-2016 11:17:20 Asia/Shanghai] (/Course/72) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":1,":3":0}
+  [RESULT] {"id":72,"name":"泛函分析基础","name_en":"Introduction to Functional Analysis","description":null,"comments":4,"score":2.75}
+  [INFORM] 75.606107711792 ms (query)
+
+[07-Dec-2016 11:17:20 Asia/Shanghai] (/Course/72) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":72,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 2.8369426727295 ms (query)
+
+[07-Dec-2016 11:17:20 Asia/Shanghai] (/Course/72/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":94,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.","averge":2,"time":"2016-12-05 16:49:02","number":"1000002","up":0,"down":0},{"id":93,"advice":"Lorem","averge":4,"time":"2016-12-05 16:49:02","number":"1000006","up":0,"down":0},{"id":34,"advice":"Lorem","averge":2,"time":"2016-12-05 16:49:01","number":"1000002","up":0,"down":0},{"id":19,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","averge":3,"time":"2016-12-05 16:49:01","number":"1000007","up":0,"down":0}]
+  [INFORM] 21.559953689575 ms (query)
+
+[07-Dec-2016 11:17:20 Asia/Shanghai] (/Course/72/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":94,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.92005729675293 ms (column)
+
+[07-Dec-2016 11:17:20 Asia/Shanghai] (/Course/72/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":93,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.96893310546875 ms (column)
+
+[07-Dec-2016 11:17:20 Asia/Shanghai] (/Course/72/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":34,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.92792510986328 ms (column)
+
+[07-Dec-2016 11:17:20 Asia/Shanghai] (/Course/72/comments) 
+  [SQL005] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :16)AND(`user_id`= :17) LIMIT :18 OFFSET :19
+  [PARAMS] {":16":19,":17":1,":18":1,":19":0}
+  [RESULT] false
+  [INFORM] 0.93722343444824 ms (column)
+
+[07-Dec-2016 11:17:38 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"72",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.89287757873535 ms (column)
+
+[07-Dec-2016 11:19:47 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"72",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.75602531433105 ms (column)
+
+[07-Dec-2016 11:21:54 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"72",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.88906288146973 ms (column)
+
+[07-Dec-2016 11:21:57 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"72",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.92291831970215 ms (column)
+
+[07-Dec-2016 11:22:27 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"72",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.75602531433105 ms (column)
+
+[07-Dec-2016 11:23:24 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"72",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.78892707824707 ms (column)
+
+[07-Dec-2016 11:25:09 Asia/Shanghai] (/Course/72) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":1,":3":0}
+  [RESULT] {"id":72,"name":"泛函分析基础","name_en":"Introduction to Functional Analysis","description":null,"comments":4,"score":2.75}
+  [INFORM] 1.2450218200684 ms (query)
+
+[07-Dec-2016 11:25:09 Asia/Shanghai] (/Course/72) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":72,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.83804130554199 ms (query)
+
+[07-Dec-2016 11:25:09 Asia/Shanghai] (/Course/72/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":94,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.","averge":2,"time":"2016-12-05 16:49:02","number":"1000002","up":0,"down":0},{"id":93,"advice":"Lorem","averge":4,"time":"2016-12-05 16:49:02","number":"1000006","up":0,"down":0},{"id":34,"advice":"Lorem","averge":2,"time":"2016-12-05 16:49:01","number":"1000002","up":0,"down":0},{"id":19,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","averge":3,"time":"2016-12-05 16:49:01","number":"1000007","up":0,"down":0}]
+  [INFORM] 1.2140274047852 ms (query)
+
+[07-Dec-2016 11:25:09 Asia/Shanghai] (/Course/72/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":94,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.53596496582031 ms (column)
+
+[07-Dec-2016 11:25:09 Asia/Shanghai] (/Course/72/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":93,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.5040168762207 ms (column)
+
+[07-Dec-2016 11:25:09 Asia/Shanghai] (/Course/72/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":34,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.48708915710449 ms (column)
+
+[07-Dec-2016 11:25:09 Asia/Shanghai] (/Course/72/comments) 
+  [SQL005] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :16)AND(`user_id`= :17) LIMIT :18 OFFSET :19
+  [PARAMS] {":16":19,":17":1,":18":1,":19":0}
+  [RESULT] false
+  [INFORM] 0.42295455932617 ms (column)
+
+[07-Dec-2016 11:25:20 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"72",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.8389949798584 ms (column)
+
+[07-Dec-2016 14:54:19 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"72",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.90408325195312 ms (column)
+
+[07-Dec-2016 14:54:19 Asia/Shanghai] (/Evaluation) 
+  [SQL002] INSERT INTO`evaluation`(`advice`,`averge`,`course_id`,`score1`,`score10`,`score11`,`score12`,`score2`,`score3`,`score4`,`score5`,`score6`,`score7`,`score8`,`score9`,`user_id`)VALUES(:4,:5,:6,:7,:8,:9,:10,:11,:12,:13,:14,:15,:16,:17,:18,:19) 
+  [PARAMS] {":4":"hello",":5":3.8333333333333,":6":"72",":7":8,":8":6,":9":2,":10":2,":11":2,":12":6,":13":2,":14":6,":15":2,":16":6,":17":2,":18":2,":19":1}
+  [RESULT] 1
+  [INFORM] 51.784038543701 ms (exec)
+
+[07-Dec-2016 15:14:15 Asia/Shanghai] (/Course/72) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":1,":3":0}
+  [RESULT] {"id":72,"name":"泛函分析基础","name_en":"Introduction to Functional Analysis","description":null,"comments":5,"score":2.9666666507721}
+  [INFORM] 1.1279582977295 ms (query)
+
+[07-Dec-2016 15:14:15 Asia/Shanghai] (/Course/72) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":72,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] {"id":101,"course_id":72,"user_id":1,"advice":"hello","averge":3.83333}
+  [INFORM] 0.93817710876465 ms (query)
+
+[07-Dec-2016 15:14:15 Asia/Shanghai] (/Course/72/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":101,"advice":"hello","averge":3.83333,"time":"2016-12-07 14:54:19","number":"1000000","up":0,"down":0},{"id":94,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.","averge":2,"time":"2016-12-05 16:49:02","number":"1000002","up":0,"down":0},{"id":93,"advice":"Lorem","averge":4,"time":"2016-12-05 16:49:02","number":"1000006","up":0,"down":0},{"id":34,"advice":"Lorem","averge":2,"time":"2016-12-05 16:49:01","number":"1000002","up":0,"down":0},{"id":19,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","averge":3,"time":"2016-12-05 16:49:01","number":"1000007","up":0,"down":0}]
+  [INFORM] 1.2800693511963 ms (query)
+
+[07-Dec-2016 15:14:15 Asia/Shanghai] (/Course/72/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":101,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.63896179199219 ms (column)
+
+[07-Dec-2016 15:14:15 Asia/Shanghai] (/Course/72/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":94,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.45990943908691 ms (column)
+
+[07-Dec-2016 15:14:15 Asia/Shanghai] (/Course/72/comments) 
+  [SQL004] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :12)AND(`user_id`= :13) LIMIT :14 OFFSET :15
+  [PARAMS] {":12":93,":13":1,":14":1,":15":0}
+  [RESULT] false
+  [INFORM] 0.72908401489258 ms (column)
+
+[07-Dec-2016 15:14:15 Asia/Shanghai] (/Course/72/comments) 
+  [SQL005] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :16)AND(`user_id`= :17) LIMIT :18 OFFSET :19
+  [PARAMS] {":16":34,":17":1,":18":1,":19":0}
+  [RESULT] false
+  [INFORM] 0.89907646179199 ms (column)
+
+[07-Dec-2016 15:14:15 Asia/Shanghai] (/Course/72/comments) 
+  [SQL006] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :20)AND(`user_id`= :21) LIMIT :22 OFFSET :23
+  [PARAMS] {":20":19,":21":1,":22":1,":23":0}
+  [RESULT] false
+  [INFORM] 0.67901611328125 ms (column)
+
+[07-Dec-2016 15:14:30 Asia/Shanghai] (/Course/56) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":56,":1":1,":2":1,":3":0}
+  [RESULT] {"id":56,"name":"并行程序设计","name_en":"Parallel Computing and Application","description":"\"随着多核技术的迅猛发展，并行计算已经由实验室走进一般日常应用。而多核技术目前还难以实现（将来也很难实现）计算的自动并行化，需要并行算法设计和并行程序设计技术来发挥多核计算部件的计算能力。掌握并行程序设计能力，对计算机业者和研究人员都将是非常有帮助的。本课程介绍基本的并行算法设计方法，包括任务分配，最小化空闲时间和通信代价等技术；介绍基本的并行算法分析方法，重点为伸缩性的度量；介绍应用最为广泛的并行编程技术，包括SSE、OPENMP等共享地址空间编程模式，MPI等消息传递编程模型以及GPGPU等并行编程技术；并通过一些典型例子展示这些算法设计\/分析技术。最终希望学生通过这门课程的学习，具备一定的用并行方法解决问题的能力。\"","comments":2,"score":6}
+  [INFORM] 1.0068416595459 ms (query)
+
+[07-Dec-2016 15:14:30 Asia/Shanghai] (/Course/56) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":56,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 1.18088722229 ms (query)
+
+[07-Dec-2016 15:14:30 Asia/Shanghai] (/Course/56/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":56,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":50,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.","averge":3,"time":"2016-12-05 16:49:01","number":"1000009","up":0,"down":0},{"id":48,"advice":"Lorem ipsum dolor","averge":9,"time":"2016-12-05 16:49:01","number":"1000001","up":0,"down":0}]
+  [INFORM] 1.3108253479004 ms (query)
+
+[07-Dec-2016 15:14:30 Asia/Shanghai] (/Course/56/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":50,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.87213516235352 ms (column)
+
+[07-Dec-2016 15:14:30 Asia/Shanghai] (/Course/56/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":48,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.66018104553223 ms (column)
+
+[07-Dec-2016 15:15:54 Asia/Shanghai] (/Course/56) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":56,":1":1,":2":1,":3":0}
+  [RESULT] {"id":56,"name":"并行程序设计","name_en":"Parallel Computing and Application","description":"\"随着多核技术的迅猛发展，并行计算已经由实验室走进一般日常应用。而多核技术目前还难以实现（将来也很难实现）计算的自动并行化，需要并行算法设计和并行程序设计技术来发挥多核计算部件的计算能力。掌握并行程序设计能力，对计算机业者和研究人员都将是非常有帮助的。本课程介绍基本的并行算法设计方法，包括任务分配，最小化空闲时间和通信代价等技术；介绍基本的并行算法分析方法，重点为伸缩性的度量；介绍应用最为广泛的并行编程技术，包括SSE、OPENMP等共享地址空间编程模式，MPI等消息传递编程模型以及GPGPU等并行编程技术；并通过一些典型例子展示这些算法设计\/分析技术。最终希望学生通过这门课程的学习，具备一定的用并行方法解决问题的能力。\"","comments":2,"score":6}
+  [INFORM] 0.91290473937988 ms (query)
+
+[07-Dec-2016 15:15:54 Asia/Shanghai] (/Course/56) 
+  [SQL002] SELECT `id`,`course_id`,`user_id`,`advice`,`averge` FROM`evaluation`WHERE(`course_id`= :4)AND(`user_id`= :5)AND(`status`= :6) LIMIT :7 OFFSET :8
+  [PARAMS] {":4":56,":5":1,":6":1,":7":1,":8":0}
+  [RESULT] false
+  [INFORM] 0.79488754272461 ms (query)
+
+[07-Dec-2016 15:15:54 Asia/Shanghai] (/Course/56/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":56,":1":1,":2":10,":3":0}
+  [RESULT] [{"id":50,"advice":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.","averge":3,"time":"2016-12-05 16:49:01","number":"1000009","up":0,"down":0},{"id":48,"advice":"Lorem ipsum dolor","averge":9,"time":"2016-12-05 16:49:01","number":"1000001","up":0,"down":0}]
+  [INFORM] 1.201868057251 ms (query)
+
+[07-Dec-2016 15:15:54 Asia/Shanghai] (/Course/56/comments) 
+  [SQL002] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :4)AND(`user_id`= :5) LIMIT :6 OFFSET :7
+  [PARAMS] {":4":50,":5":1,":6":1,":7":0}
+  [RESULT] false
+  [INFORM] 0.60009956359863 ms (column)
+
+[07-Dec-2016 15:15:54 Asia/Shanghai] (/Course/56/comments) 
+  [SQL003] SELECT `vote`FROM`evaluationvote`WHERE(`evaluation_id`= :8)AND(`user_id`= :9) LIMIT :10 OFFSET :11
+  [PARAMS] {":8":48,":9":1,":10":1,":11":0}
+  [RESULT] false
+  [INFORM] 0.53906440734863 ms (column)
+
+[07-Dec-2016 15:16:23 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"56",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.69403648376465 ms (column)
+
+[07-Dec-2016 15:16:23 Asia/Shanghai] (/Evaluation) 
+  [SQL002] INSERT INTO`evaluation`(`advice`,`averge`,`course_id`,`score1`,`score10`,`score11`,`score12`,`score2`,`score3`,`score4`,`score5`,`score6`,`score7`,`score8`,`score9`,`user_id`)VALUES(:4,:5,:6,:7,:8,:9,:10,:11,:12,:13,:14,:15,:16,:17,:18,:19) 
+  [PARAMS] {":4":"test",":5":5.6666666666667,":6":"56",":7":6,":8":4,":9":8,":10":4,":11":2,":12":6,":13":8,":14":4,":15":8,":16":8,":17":4,":18":6,":19":1}
+  [RESULT] 1
+  [INFORM] 33.895969390869 ms (exec)
+
+[07-Dec-2016 15:16:24 Asia/Shanghai] (/Evaluation/count) 
+  [SQL001] SELECT COUNT(`id`)FROM`evaluation`WHERE(`user_id`= :0)
+  [PARAMS] {":0":1}
+  [RESULT] 12
+  [INFORM] 0.82182884216309 ms (column)
+
+[07-Dec-2016 15:28:34 Asia/Shanghai] (/Evaluation/count) 
+  [SQL001] SELECT COUNT(`id`)FROM`evaluation`WHERE(`user_id`= :0)
+  [PARAMS] {":0":1}
+  [RESULT] 12
+  [INFORM] 0.84495544433594 ms (column)
+
+[07-Dec-2016 15:31:44 Asia/Shanghai] (/Evaluation/count) 
+  [SQL001] SELECT COUNT(`id`)FROM`evaluation`WHERE(`user_id`= :0)
+  [PARAMS] {":0":1}
+  [RESULT] 12
+  [INFORM] 0.62084197998047 ms (column)
+
+[07-Dec-2016 15:35:26 Asia/Shanghai] (/Evaluation/count) 
+  [SQL001] SELECT COUNT(`id`)FROM`evaluation`WHERE(`user_id`= :0)
+  [PARAMS] {":0":1}
+  [RESULT] 12
+  [INFORM] 0.84400177001953 ms (column)
+
+[07-Dec-2016 15:36:58 Asia/Shanghai] (/Evaluation/count) 
+  [SQL001] SELECT COUNT(`id`)FROM`evaluation`WHERE(`user_id`= :0)
+  [PARAMS] {":0":1}
+  [RESULT] 12
+  [INFORM] 0.74315071105957 ms (column)
+
+[07-Dec-2016 22:04:29 Asia/Shanghai] (/Course/72) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 41.70298576355 ms (query)
+
+[07-Dec-2016 22:04:29 Asia/Shanghai] (/Course/72/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":72,":1":1,":2":10,":3":0}
+  [RESULT] []
+  [INFORM] 1.1880397796631 ms (query)
+
+[07-Dec-2016 22:04:47 Asia/Shanghai] (/Evaluation) 
+  [SQL001] SELECT `id`FROM`evaluation`WHERE(`course_id`= :0)AND(`user_id`= :1) LIMIT :2 OFFSET :3
+  [PARAMS] {":0":"72",":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.68902969360352 ms (column)
+
+[07-Dec-2016 22:05:33 Asia/Shanghai] (/Course/104) 
+  [SQL001] SELECT `course`.`id`,`course`.`name`,`course`.`name_en`,`course`.`description`,COUNT(`evaluation`.`id`) AS`comments`,AVG(`evaluation`.`averge`) AS`score` FROM`course`LEFT JOIN`evaluation`ON`evaluation`.`course_id`=`course`.`id`WHERE(`course`.`id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id` LIMIT :2 OFFSET :3
+  [PARAMS] {":0":104,":1":1,":2":1,":3":0}
+  [RESULT] false
+  [INFORM] 0.97012519836426 ms (query)
+
+[07-Dec-2016 22:05:33 Asia/Shanghai] (/Course/104/comments) 
+  [SQL001] SELECT `evaluation`.`id`,`evaluation`.`advice`,`evaluation`.`averge`,`evaluation`.`time`,user.number AS`number`,COUNT(CASE WHEN vote=1 THEN 1 ELSE NULL END) AS`up`,COUNT(CASE WHEN vote=-1 THEN 1 ELSE NULL END) AS`down` FROM`evaluation`LEFT JOIN`evaluationvote`ON`evaluationvote`.`evaluation_id`=`evaluation`.`id`INNER JOIN`user`ON`user`.`id`=`evaluation`.`user_id`WHERE(`course_id`= :0)AND(`evaluation`.`status`= :1)GROUP BY `id`ORDER BY`up`DESC,`id`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":104,":1":1,":2":10,":3":0}
+  [RESULT] []
+  [INFORM] 1.3389587402344 ms (query)
+
+[07-Dec-2016 22:06:51 Asia/Shanghai] (/Scheme/2) 
+  [SQL001] SELECT AVG(`advice`.`averge`) AS`score` FROM`advice`WHERE(`type`= :0) LIMIT :1 OFFSET :2
+  [PARAMS] {":0":2,":1":1,":2":0}
+  [RESULT] {"score":null}
+  [INFORM] 0.61917304992676 ms (query)
+
+[07-Dec-2016 22:06:51 Asia/Shanghai] (/Scheme/2/advices) 
+  [SQL001] SELECT `advice`.`id`,`advice`.`advice`,`advice`.`time`,`advice`.`user_id`,`advice`.`averge`,SUM(`advicevote`.`vote`) AS`hot` FROM`advice`LEFT JOIN`advicevote`ON`advicevote`.`advice_id`=`advice`.`id`WHERE(`type`= :0)AND(`advice`.`status`= :1)GROUP BY `id`ORDER BY`hot`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":10,":3":0}
+  [RESULT] []
+  [INFORM] 1.0330677032471 ms (query)
+
+[07-Dec-2016 22:07:09 Asia/Shanghai] (/Scheme/2) 
+  [SQL001] SELECT AVG(`advice`.`averge`) AS`score` FROM`advice`WHERE(`type`= :0) LIMIT :1 OFFSET :2
+  [PARAMS] {":0":2,":1":1,":2":0}
+  [RESULT] {"score":null}
+  [INFORM] 0.70786476135254 ms (query)
+
+[07-Dec-2016 22:07:09 Asia/Shanghai] (/Scheme/2/advices) 
+  [SQL001] SELECT `advice`.`id`,`advice`.`advice`,`advice`.`time`,`advice`.`user_id`,`advice`.`averge`,SUM(`advicevote`.`vote`) AS`hot` FROM`advice`LEFT JOIN`advicevote`ON`advicevote`.`advice_id`=`advice`.`id`WHERE(`type`= :0)AND(`advice`.`status`= :1)GROUP BY `id`ORDER BY`hot`DESC  LIMIT :2 OFFSET :3
+  [PARAMS] {":0":2,":1":1,":2":10,":3":0}
+  [RESULT] []
+  [INFORM] 1.2428760528564 ms (query)
+

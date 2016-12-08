@@ -61653,3 +61653,2527 @@
   最大消耗内存: 399.4609375 Kb
 
 [2016-12-01T20:16:33+08:00]  
+[2016-12-01T21:21:24+08:00]  
+[2016-12-01T21:21:24+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.282958984375 ms)
+  定位启动耗时：0.040771484375 ms
+  加载插件耗时：0.130126953125 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.10302734375 ms
+  执行总共耗时：0.2421875 ms
+[内存消耗估计] (峰值: 399.3828125 Kb)
+  启动消耗内存: 357.296875 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.3828125 Kb
+
+[2016-12-01T21:21:24+08:00]  
+[2016-12-01T21:21:24+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Scheme.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.22607421875 ms)
+  定位启动耗时：0.018798828125 ms
+  加载插件耗时：0.09326171875 ms
+  路由分发耗时：0.0087890625 ms
+  处理过程耗时: 0.105224609375 ms
+  执行总共耗时：0.207275390625 ms
+[内存消耗估计] (峰值: 399.4609375 Kb)
+  启动消耗内存: 357.34375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4609375 Kb
+
+[2016-12-01T21:21:24+08:00]  
+[2016-12-01T21:21:24+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Scheme.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.154052734375 ms)
+  定位启动耗时：0.018310546875 ms
+  加载插件耗时：0.07080078125 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.055908203125 ms
+  执行总共耗时：0.1357421875 ms
+[内存消耗估计] (峰值: 399.8515625 Kb)
+  启动消耗内存: 357.390625 Kb
+  路由消耗内存: 1.3359375 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.8515625 Kb
+
+[2016-12-01T21:21:25+08:00]  
+[2016-12-01T21:21:25+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 0.547119140625 ms)
+  定位启动耗时：0.044921875 ms
+  加载插件耗时：0.17919921875 ms
+  路由分发耗时：0.02685546875 ms
+  处理过程耗时: 0.296142578125 ms
+  执行总共耗时：0.502197265625 ms
+[内存消耗估计] (峰值: 405.2421875 Kb)
+  启动消耗内存: 357.3125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 27.8359375 Kb
+  最大消耗内存: 405.2421875 Kb
+
+[2016-12-01T21:21:25+08:00]  
+[2016-12-01T21:21:25+08:00] 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Scheme.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+  [11] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [12] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 1.657958984375 ms)
+  定位启动耗时：0.02294921875 ms
+  加载插件耗时：0.114013671875 ms
+  路由分发耗时：0.012939453125 ms
+  处理过程耗时: 1.508056640625 ms
+  执行总共耗时：1.635009765625 ms
+[内存消耗估计] (峰值: 460.3671875 Kb)
+  启动消耗内存: 357.359375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 82.8828125 Kb
+  最大消耗内存: 460.3671875 Kb
+
+[2016-12-01T21:21:25+08:00]  
+[2016-12-01T21:21:25+08:00] 资源消耗统计:
+[文件加载顺序] (总计：15)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Scheme.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+  [11] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [12] => /home/foreve_/workspace/CCCourse/library/Cache.php
+  [13] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [14] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 21.81494140625 ms)
+  定位启动耗时：0.02392578125 ms
+  加载插件耗时：0.113037109375 ms
+  路由分发耗时：0.01318359375 ms
+  处理过程耗时: 21.664794921875 ms
+  执行总共耗时：21.791015625 ms
+[内存消耗估计] (峰值: 477.96875 Kb)
+  启动消耗内存: 357.40625 Kb
+  路由消耗内存: 1.3359375 Kb
+  处理消耗内存: 100.09375 Kb
+  最大消耗内存: 477.96875 Kb
+
+[2016-12-01T21:21:25+08:00]  
+[2016-12-01T21:21:25+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.29296875 ms)
+  定位启动耗时：0.02685546875 ms
+  加载插件耗时：0.153076171875 ms
+  路由分发耗时：0.012939453125 ms
+  处理过程耗时: 0.10009765625 ms
+  执行总共耗时：0.26611328125 ms
+[内存消耗估计] (峰值: 399.4609375 Kb)
+  启动消耗内存: 357.34375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4609375 Kb
+
+[2016-12-01T21:21:25+08:00]  
+[2016-12-01T21:21:29+08:00]  
+[2016-12-01T21:21:29+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.320068359375 ms)
+  定位启动耗时：0.0400390625 ms
+  加载插件耗时：0.203125 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.06787109375 ms
+  执行总共耗时：0.280029296875 ms
+[内存消耗估计] (峰值: 399.3671875 Kb)
+  启动消耗内存: 357.28125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.3671875 Kb
+
+[2016-12-01T21:21:29+08:00]  
+[2016-12-01T21:21:29+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 0.5 ms)
+  定位启动耗时：0.031982421875 ms
+  加载插件耗时：0.1171875 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.341796875 ms
+  执行总共耗时：0.468017578125 ms
+[内存消耗估计] (峰值: 405.2265625 Kb)
+  启动消耗内存: 357.296875 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 27.8359375 Kb
+  最大消耗内存: 405.2265625 Kb
+
+[2016-12-01T21:21:29+08:00]  
+[2016-12-01T21:21:29+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.2998046875 ms)
+  定位启动耗时：0.056884765625 ms
+  加载插件耗时：0.14306640625 ms
+  路由分发耗时：0.017822265625 ms
+  处理过程耗时: 0.08203125 ms
+  执行总共耗时：0.242919921875 ms
+[内存消耗估计] (峰值: 399.4453125 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4453125 Kb
+
+[2016-12-01T21:21:29+08:00]  
+[2016-12-01T22:42:57+08:00]  
+[2016-12-01T22:42:57+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 56.453857421875 ms)
+  定位启动耗时：0.07373046875 ms
+  加载插件耗时：56.22412109375 ms
+  路由分发耗时：0.01416015625 ms
+  处理过程耗时: 0.141845703125 ms
+  执行总共耗时：56.380126953125 ms
+[内存消耗估计] (峰值: 399.0234375 Kb)
+  启动消耗内存: 356.9375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.0234375 Kb
+
+[2016-12-01T22:42:57+08:00]  
+[2016-12-01T22:42:57+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 21.9892578125 ms)
+  定位启动耗时：0.025146484375 ms
+  加载插件耗时：0.12890625 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 21.826171875 ms
+  执行总共耗时：21.964111328125 ms
+[内存消耗估计] (峰值: 404.8828125 Kb)
+  启动消耗内存: 356.953125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 27.8359375 Kb
+  最大消耗内存: 404.8828125 Kb
+
+[2016-12-01T22:42:57+08:00]  
+[2016-12-01T22:42:57+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.244140625 ms)
+  定位启动耗时：0.02392578125 ms
+  加载插件耗时：0.13720703125 ms
+  路由分发耗时：0.0078125 ms
+  处理过程耗时: 0.0751953125 ms
+  执行总共耗时：0.22021484375 ms
+[内存消耗估计] (峰值: 399.1015625 Kb)
+  启动消耗内存: 356.984375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.1015625 Kb
+
+[2016-12-01T22:42:57+08:00]  
+[2016-12-02T11:20:12+08:00]  
+[2016-12-02T11:20:12+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 66.055908203125 ms)
+  定位启动耗时：0.744873046875 ms
+  加载插件耗时：45.571044921875 ms
+  路由分发耗时：0.01806640625 ms
+  处理过程耗时: 19.721923828125 ms
+  执行总共耗时：65.31103515625 ms
+[内存消耗估计] (峰值: 554.5234375 Kb)
+  启动消耗内存: 520.1875 Kb
+  路由消耗内存: 158.0546875 Kb
+  处理消耗内存: 175.96875 Kb
+  最大消耗内存: 554.5234375 Kb
+
+[2016-12-02T11:20:12+08:00]  
+[2016-12-02T11:20:12+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 15.5439453125 ms)
+  定位启动耗时：0.038818359375 ms
+  加载插件耗时：0.1513671875 ms
+  路由分发耗时：0.010009765625 ms
+  处理过程耗时: 15.34375 ms
+  执行总共耗时：15.505126953125 ms
+[内存消耗估计] (峰值: 581.90625 Kb)
+  启动消耗内存: 356.953125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 204.859375 Kb
+  最大消耗内存: 581.90625 Kb
+
+[2016-12-02T11:20:12+08:00]  
+[2016-12-02T11:20:12+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 12.0390625 ms)
+  定位启动耗时：0.034912109375 ms
+  加载插件耗时：0.129150390625 ms
+  路由分发耗时：0.017822265625 ms
+  处理过程耗时: 11.857177734375 ms
+  执行总共耗时：12.004150390625 ms
+[内存消耗估计] (峰值: 521.6015625 Kb)
+  启动消耗内存: 356.984375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 144.4921875 Kb
+  最大消耗内存: 521.6015625 Kb
+
+[2016-12-02T11:20:12+08:00]  
+[2016-12-02T11:20:12+08:00]  
+[2016-12-02T11:20:12+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 0.76904296875 ms)
+  定位启动耗时：0.031005859375 ms
+  加载插件耗时：0.120849609375 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.609130859375 ms
+  执行总共耗时：0.738037109375 ms
+[内存消耗估计] (峰值: 404.8984375 Kb)
+  启动消耗内存: 356.96875 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 27.8359375 Kb
+  最大消耗内存: 404.8984375 Kb
+
+[2016-12-02T11:20:12+08:00]  
+[2016-12-02T11:20:36+08:00]  
+[2016-12-02T11:20:36+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.271728515625 ms)
+  定位启动耗时：0.023681640625 ms
+  加载插件耗时：0.119140625 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.120849609375 ms
+  执行总共耗时：0.248046875 ms
+[内存消耗估计] (峰值: 399.3671875 Kb)
+  启动消耗内存: 357.28125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.3671875 Kb
+
+[2016-12-02T11:20:36+08:00]  
+[2016-12-02T11:20:36+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 0.862060546875 ms)
+  定位启动耗时：0.0361328125 ms
+  加载插件耗时：0.14599609375 ms
+  路由分发耗时：0.03515625 ms
+  处理过程耗时: 0.644775390625 ms
+  执行总共耗时：0.825927734375 ms
+[内存消耗估计] (峰值: 405.2265625 Kb)
+  启动消耗内存: 357.296875 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 27.8359375 Kb
+  最大消耗内存: 405.2265625 Kb
+
+[2016-12-02T11:20:36+08:00]  
+[2016-12-02T11:20:36+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.3359375 ms)
+  定位启动耗时：0.046875 ms
+  加载插件耗时：0.14697265625 ms
+  路由分发耗时：0.01806640625 ms
+  处理过程耗时: 0.1240234375 ms
+  执行总共耗时：0.2890625 ms
+[内存消耗估计] (峰值: 399.4453125 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4453125 Kb
+
+[2016-12-02T11:20:36+08:00]  
+[2016-12-02T11:21:17+08:00]  
+[2016-12-02T11:21:17+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.27197265625 ms)
+  定位启动耗时：0.02392578125 ms
+  加载插件耗时：0.1201171875 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 0.10595703125 ms
+  执行总共耗时：0.248046875 ms
+[内存消耗估计] (峰值: 399.3671875 Kb)
+  启动消耗内存: 357.28125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.3671875 Kb
+
+[2016-12-02T11:21:18+08:00]  
+[2016-12-02T11:21:18+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 0.841064453125 ms)
+  定位启动耗时：0.027099609375 ms
+  加载插件耗时：0.136962890625 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.66796875 ms
+  执行总共耗时：0.81396484375 ms
+[内存消耗估计] (峰值: 405.0390625 Kb)
+  启动消耗内存: 357.109375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 27.8359375 Kb
+  最大消耗内存: 405.0390625 Kb
+
+[2016-12-02T11:21:18+08:00]  
+[2016-12-02T11:21:18+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.257080078125 ms)
+  定位启动耗时：0.02685546875 ms
+  加载插件耗时：0.134033203125 ms
+  路由分发耗时：0.01318359375 ms
+  处理过程耗时: 0.0830078125 ms
+  执行总共耗时：0.230224609375 ms
+[内存消耗估计] (峰值: 399.4453125 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4453125 Kb
+
+[2016-12-02T11:21:18+08:00]  
+[2016-12-02T11:21:19+08:00]  
+[2016-12-02T11:21:19+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.293212890625 ms)
+  定位启动耗时：0.025146484375 ms
+  加载插件耗时：0.13720703125 ms
+  路由分发耗时：0.02490234375 ms
+  处理过程耗时: 0.10595703125 ms
+  执行总共耗时：0.26806640625 ms
+[内存消耗估计] (峰值: 399.4609375 Kb)
+  启动消耗内存: 357.34375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4609375 Kb
+
+[2016-12-02T11:21:19+08:00]  
+[2016-12-02T11:21:38+08:00]  
+[2016-12-02T11:21:38+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.510009765625 ms)
+  定位启动耗时：0.051025390625 ms
+  加载插件耗时：0.282958984375 ms
+  路由分发耗时：0.015869140625 ms
+  处理过程耗时: 0.16015625 ms
+  执行总共耗时：0.458984375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-02T11:21:38+08:00]  
+[2016-12-02T11:21:46+08:00]  
+[2016-12-02T11:21:46+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.31005859375 ms)
+  定位启动耗时：0.029052734375 ms
+  加载插件耗时：0.154052734375 ms
+  路由分发耗时：0.01318359375 ms
+  处理过程耗时: 0.11376953125 ms
+  执行总共耗时：0.281005859375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-02T11:21:46+08:00]  
+[2016-12-02T11:22:05+08:00]  
+[2016-12-02T11:22:05+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.72314453125 ms)
+  定位启动耗时：0.072021484375 ms
+  加载插件耗时：0.401123046875 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 0.22705078125 ms
+  执行总共耗时：0.651123046875 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-02T11:22:05+08:00]  
+[2016-12-02T11:22:06+08:00]  
+[2016-12-02T11:22:06+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.305908203125 ms)
+  定位启动耗时：0.025146484375 ms
+  加载插件耗时：0.1259765625 ms
+  路由分发耗时：0.0849609375 ms
+  处理过程耗时: 0.06982421875 ms
+  执行总共耗时：0.28076171875 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-02T11:22:06+08:00]  
+[2016-12-04T19:12:03+08:00]  
+[2016-12-04T19:12:03+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.284912109375 ms)
+  定位启动耗时：0.02587890625 ms
+  加载插件耗时：0.1259765625 ms
+  路由分发耗时：0.008056640625 ms
+  处理过程耗时: 0.125 ms
+  执行总共耗时：0.259033203125 ms
+[内存消耗估计] (峰值: 399.0234375 Kb)
+  启动消耗内存: 356.9375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.0234375 Kb
+
+[2016-12-04T19:12:03+08:00]  
+[2016-12-04T19:12:03+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 0.5048828125 ms)
+  定位启动耗时：0.023193359375 ms
+  加载插件耗时：0.106689453125 ms
+  路由分发耗时：0.022216796875 ms
+  处理过程耗时: 0.352783203125 ms
+  执行总共耗时：0.481689453125 ms
+[内存消耗估计] (峰值: 404.6953125 Kb)
+  启动消耗内存: 356.765625 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 27.8359375 Kb
+  最大消耗内存: 404.6953125 Kb
+
+[2016-12-04T19:12:03+08:00]  
+[2016-12-04T19:12:03+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.432861328125 ms)
+  定位启动耗时：0.037841796875 ms
+  加载插件耗时：0.215087890625 ms
+  路由分发耗时：0.029052734375 ms
+  处理过程耗时: 0.15087890625 ms
+  执行总共耗时：0.39501953125 ms
+[内存消耗估计] (峰值: 399.1015625 Kb)
+  启动消耗内存: 356.984375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.1015625 Kb
+
+[2016-12-04T19:12:03+08:00]  
+[2016-12-04T21:07:17+08:00]  
+[2016-12-04T21:07:17+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 56.73291015625 ms)
+  定位启动耗时：0.130859375 ms
+  加载插件耗时：42.586181640625 ms
+  路由分发耗时：0.0380859375 ms
+  处理过程耗时: 13.977783203125 ms
+  执行总共耗时：56.60205078125 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:07:17+08:00]  
+[2016-12-04T21:09:39+08:00]  
+[2016-12-04T21:09:39+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 16.043212890625 ms)
+  定位启动耗时：0.035888671875 ms
+  加载插件耗时：0.18310546875 ms
+  路由分发耗时：0.010009765625 ms
+  处理过程耗时: 15.814208984375 ms
+  执行总共耗时：16.00732421875 ms
+[内存消耗估计] (峰值: 533.84375 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 156.421875 Kb
+  最大消耗内存: 533.84375 Kb
+
+[2016-12-04T21:09:39+08:00]  
+[2016-12-04T21:10:15+08:00]  
+[2016-12-04T21:10:15+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.429931640625 ms)
+  定位启动耗时：0.031982421875 ms
+  加载插件耗时：0.135009765625 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.25390625 ms
+  执行总共耗时：0.39794921875 ms
+[内存消耗估计] (峰值: 533.921875 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 156.5 Kb
+  最大消耗内存: 533.921875 Kb
+
+[2016-12-04T21:10:15+08:00]  
+[2016-12-04T21:10:17+08:00]  
+[2016-12-04T21:10:17+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.67822265625 ms)
+  定位启动耗时：0.06494140625 ms
+  加载插件耗时：0.373046875 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 0.21728515625 ms
+  执行总共耗时：0.61328125 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:10:17+08:00]  
+[2016-12-04T21:11:00+08:00]  
+[2016-12-04T21:11:00+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.426025390625 ms)
+  定位启动耗时：0.030029296875 ms
+  加载插件耗时：0.13671875 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.250244140625 ms
+  执行总共耗时：0.39599609375 ms
+[内存消耗估计] (峰值: 533.9921875 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 156.5703125 Kb
+  最大消耗内存: 533.9921875 Kb
+
+[2016-12-04T21:11:00+08:00]  
+[2016-12-04T21:11:00+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 24.77685546875 ms)
+  定位启动耗时：0.031005859375 ms
+  加载插件耗时：0.121826171875 ms
+  路由分发耗时：0.012939453125 ms
+  处理过程耗时: 24.611083984375 ms
+  执行总共耗时：24.745849609375 ms
+[内存消耗估计] (峰值: 753.6015625 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 374.984375 Kb
+  最大消耗内存: 753.6015625 Kb
+
+[2016-12-04T21:12:15+08:00]  
+[2016-12-04T21:12:15+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.623046875 ms)
+  定位启动耗时：0.049072265625 ms
+  加载插件耗时：0.25390625 ms
+  路由分发耗时：0.01318359375 ms
+  处理过程耗时: 0.306884765625 ms
+  执行总共耗时：0.573974609375 ms
+[内存消耗估计] (峰值: 428.359375 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 50.9375 Kb
+  最大消耗内存: 428.359375 Kb
+
+[2016-12-04T21:12:15+08:00]  
+[2016-12-04T21:12:16+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 126.76196289062 ms)
+  定位启动耗时：0.041015625 ms
+  加载插件耗时：0.149169921875 ms
+  路由分发耗时：0.0126953125 ms
+  处理过程耗时: 126.55908203125 ms
+  执行总共耗时：126.72094726562 ms
+[内存消耗估计] (峰值: 458.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 79.828125 Kb
+  最大消耗内存: 458.4453125 Kb
+
+[2016-12-04T21:12:52+08:00]  
+[2016-12-04T21:12:52+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 1.44189453125 ms)
+  定位启动耗时：0.0849609375 ms
+  加载插件耗时：0.39794921875 ms
+  路由分发耗时：0.02685546875 ms
+  处理过程耗时: 0.93212890625 ms
+  执行总共耗时：1.35693359375 ms
+[内存消耗估计] (峰值: 534.1953125 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 156.7734375 Kb
+  最大消耗内存: 534.1953125 Kb
+
+[2016-12-04T21:12:52+08:00]  
+[2016-12-04T21:12:52+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 12.406982421875 ms)
+  定位启动耗时：0.041015625 ms
+  加载插件耗时：0.20703125 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 12.136962890625 ms
+  执行总共耗时：12.365966796875 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:18:13+08:00]  
+[2016-12-04T21:18:13+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.77099609375 ms)
+  定位启动耗时：0.046142578125 ms
+  加载插件耗时：0.2509765625 ms
+  路由分发耗时：0.017822265625 ms
+  处理过程耗时: 0.4560546875 ms
+  执行总共耗时：0.724853515625 ms
+[内存消耗估计] (峰值: 533.9140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 156.4921875 Kb
+  最大消耗内存: 533.9140625 Kb
+
+[2016-12-04T21:18:13+08:00]  
+[2016-12-04T21:19:25+08:00]  
+[2016-12-04T21:19:25+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.510986328125 ms)
+  定位启动耗时：0.02685546875 ms
+  加载插件耗时：0.133056640625 ms
+  路由分发耗时：0.02685546875 ms
+  处理过程耗时: 0.32421875 ms
+  执行总共耗时：0.484130859375 ms
+[内存消耗估计] (峰值: 428.6953125 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 51.2734375 Kb
+  最大消耗内存: 428.6953125 Kb
+
+[2016-12-04T21:19:25+08:00]  
+[2016-12-04T21:19:25+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 33.166015625 ms)
+  定位启动耗时：0.02783203125 ms
+  加载插件耗时：0.13720703125 ms
+  路由分发耗时：0.017822265625 ms
+  处理过程耗时: 32.983154296875 ms
+  执行总共耗时：33.13818359375 ms
+[内存消耗估计] (峰值: 458.7734375 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 80.15625 Kb
+  最大消耗内存: 458.7734375 Kb
+
+[2016-12-04T21:21:18+08:00]  
+[2016-12-04T21:21:18+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 1.39501953125 ms)
+  定位启动耗时：0.083984375 ms
+  加载插件耗时：0.451904296875 ms
+  路由分发耗时：0.023193359375 ms
+  处理过程耗时: 0.8359375 ms
+  执行总共耗时：1.31103515625 ms
+[内存消耗估计] (峰值: 535.1484375 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 157.7265625 Kb
+  最大消耗内存: 535.1484375 Kb
+
+[2016-12-04T21:21:18+08:00]  
+[2016-12-04T21:21:18+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 19.64404296875 ms)
+  定位启动耗时：0.06689453125 ms
+  加载插件耗时：0.39501953125 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 19.1591796875 ms
+  执行总共耗时：19.5771484375 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:21:44+08:00]  
+[2016-12-04T21:21:44+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.688232421875 ms)
+  定位启动耗时：0.025146484375 ms
+  加载插件耗时：0.1689453125 ms
+  路由分发耗时：0.00830078125 ms
+  处理过程耗时: 0.48583984375 ms
+  执行总共耗时：0.6630859375 ms
+[内存消耗估计] (峰值: 535.2265625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 157.8046875 Kb
+  最大消耗内存: 535.2265625 Kb
+
+[2016-12-04T21:21:44+08:00]  
+[2016-12-04T21:21:44+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 1.78271484375 ms)
+  定位启动耗时：0.022705078125 ms
+  加载插件耗时：0.154052734375 ms
+  路由分发耗时：0.027099609375 ms
+  处理过程耗时: 1.578857421875 ms
+  执行总共耗时：1.760009765625 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:21:52+08:00]  
+[2016-12-04T21:21:52+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.803955078125 ms)
+  定位启动耗时：0.072998046875 ms
+  加载插件耗时：0.486083984375 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 0.222900390625 ms
+  执行总共耗时：0.73095703125 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:21:52+08:00]  
+[2016-12-04T21:21:52+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 18.89111328125 ms)
+  定位启动耗时：0.06396484375 ms
+  加载插件耗时：0.368896484375 ms
+  路由分发耗时：0.023193359375 ms
+  处理过程耗时: 18.43505859375 ms
+  执行总共耗时：18.8271484375 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:22:21+08:00]  
+[2016-12-04T21:22:21+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.529052734375 ms)
+  定位启动耗时：0.037841796875 ms
+  加载插件耗时：0.197021484375 ms
+  路由分发耗时：0.01806640625 ms
+  处理过程耗时: 0.276123046875 ms
+  执行总共耗时：0.4912109375 ms
+[内存消耗估计] (峰值: 428.8046875 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 51.3828125 Kb
+  最大消耗内存: 428.8046875 Kb
+
+[2016-12-04T21:22:21+08:00]  
+[2016-12-04T21:22:21+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 2.30078125 ms)
+  定位启动耗时：0.036865234375 ms
+  加载插件耗时：0.2099609375 ms
+  路由分发耗时：0.027099609375 ms
+  处理过程耗时: 2.02685546875 ms
+  执行总共耗时：2.263916015625 ms
+[内存消耗估计] (峰值: 458.8125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 80.1953125 Kb
+  最大消耗内存: 458.8125 Kb
+
+[2016-12-04T21:22:22+08:00]  
+[2016-12-04T21:22:22+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 1.39013671875 ms)
+  定位启动耗时：0.064208984375 ms
+  加载插件耗时：0.3818359375 ms
+  路由分发耗时：0.027099609375 ms
+  处理过程耗时: 0.9169921875 ms
+  执行总共耗时：1.325927734375 ms
+[内存消耗估计] (峰值: 535.2265625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 157.8046875 Kb
+  最大消耗内存: 535.2265625 Kb
+
+[2016-12-04T21:22:22+08:00]  
+[2016-12-04T21:22:22+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.549072265625 ms)
+  定位启动耗时：0.065185546875 ms
+  加载插件耗时：0.367919921875 ms
+  路由分发耗时：0.021728515625 ms
+  处理过程耗时: 3.09423828125 ms
+  执行总共耗时：3.48388671875 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:22:23+08:00]  
+[2016-12-04T21:22:23+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.822021484375 ms)
+  定位启动耗时：0.069091796875 ms
+  加载插件耗时：0.509033203125 ms
+  路由分发耗时：0.031005859375 ms
+  处理过程耗时: 0.212890625 ms
+  执行总共耗时：0.7529296875 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:22:23+08:00]  
+[2016-12-04T21:22:23+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.958984375 ms)
+  定位启动耗时：0.085205078125 ms
+  加载插件耗时：0.37890625 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 3.471923828125 ms
+  执行总共耗时：3.873779296875 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:22:25+08:00]  
+[2016-12-04T21:22:25+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.264892578125 ms)
+  定位启动耗时：0.024658203125 ms
+  加载插件耗时：0.123046875 ms
+  路由分发耗时：0.029052734375 ms
+  处理过程耗时: 0.088134765625 ms
+  执行总共耗时：0.240234375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:22:25+08:00]  
+[2016-12-04T21:22:25+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 1.87109375 ms)
+  定位启动耗时：0.024169921875 ms
+  加载插件耗时：0.159912109375 ms
+  路由分发耗时：0.034912109375 ms
+  处理过程耗时: 1.652099609375 ms
+  执行总共耗时：1.846923828125 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:22:27+08:00]  
+[2016-12-04T21:22:27+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.758056640625 ms)
+  定位启动耗时：0.14013671875 ms
+  加载插件耗时：0.369873046875 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 0.22509765625 ms
+  执行总共耗时：0.617919921875 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:22:27+08:00]  
+[2016-12-04T21:22:27+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.80322265625 ms)
+  定位启动耗时：0.073974609375 ms
+  加载插件耗时：0.405029296875 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 3.30126953125 ms
+  执行总共耗时：3.729248046875 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:22:29+08:00]  
+[2016-12-04T21:22:29+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.81591796875 ms)
+  定位启动耗时：0.072021484375 ms
+  加载插件耗时：0.490966796875 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 0.23095703125 ms
+  执行总共耗时：0.743896484375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:22:29+08:00]  
+[2016-12-04T21:22:29+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 2.465087890625 ms)
+  定位启动耗时：0.057861328125 ms
+  加载插件耗时：0.271240234375 ms
+  路由分发耗时：0.031005859375 ms
+  处理过程耗时: 2.10498046875 ms
+  执行总共耗时：2.4072265625 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:40:07+08:00]  
+[2016-12-04T21:40:07+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.30810546875 ms)
+  定位启动耗时：0.032958984375 ms
+  加载插件耗时：0.167236328125 ms
+  路由分发耗时：0.010009765625 ms
+  处理过程耗时: 0.097900390625 ms
+  执行总共耗时：0.275146484375 ms
+[内存消耗估计] (峰值: 399.4609375 Kb)
+  启动消耗内存: 357.34375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4609375 Kb
+
+[2016-12-04T21:40:07+08:00]  
+[2016-12-04T21:40:20+08:00]  
+[2016-12-04T21:40:20+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 1.535888671875 ms)
+  定位启动耗时：0.07177734375 ms
+  加载插件耗时：0.523193359375 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 0.9189453125 ms
+  执行总共耗时：1.464111328125 ms
+[内存消耗估计] (峰值: 535.2109375 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 157.7890625 Kb
+  最大消耗内存: 535.2109375 Kb
+
+[2016-12-04T21:40:20+08:00]  
+[2016-12-04T21:40:21+08:00] 资源消耗统计:
+[文件加载顺序] (总计：14)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+  [11] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [12] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [13] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 161.34399414062 ms)
+  定位启动耗时：0.069091796875 ms
+  加载插件耗时：0.373046875 ms
+  路由分发耗时：0.02587890625 ms
+  处理过程耗时: 160.8759765625 ms
+  执行总共耗时：161.27490234375 ms
+[内存消耗估计] (峰值: 459.4375 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 80.8203125 Kb
+  最大消耗内存: 459.4375 Kb
+
+[2016-12-04T21:40:22+08:00]  
+[2016-12-04T21:40:22+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.699951171875 ms)
+  定位启动耗时：0.031005859375 ms
+  加载插件耗时：0.147216796875 ms
+  路由分发耗时：0.017822265625 ms
+  处理过程耗时: 0.50390625 ms
+  执行总共耗时：0.6689453125 ms
+[内存消耗估计] (峰值: 399.3828125 Kb)
+  启动消耗内存: 357.296875 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.3828125 Kb
+
+[2016-12-04T21:40:22+08:00]  
+[2016-12-04T21:40:22+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 0.39306640625 ms)
+  定位启动耗时：0.025146484375 ms
+  加载插件耗时：0.1259765625 ms
+  路由分发耗时：0.01806640625 ms
+  处理过程耗时: 0.223876953125 ms
+  执行总共耗时：0.367919921875 ms
+[内存消耗估计] (峰值: 405.2421875 Kb)
+  启动消耗内存: 357.3125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 27.8359375 Kb
+  最大消耗内存: 405.2421875 Kb
+
+[2016-12-04T21:40:22+08:00]  
+[2016-12-04T21:40:22+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.3291015625 ms)
+  定位启动耗时：0.022216796875 ms
+  加载插件耗时：0.162841796875 ms
+  路由分发耗时：0.01806640625 ms
+  处理过程耗时: 0.1259765625 ms
+  执行总共耗时：0.306884765625 ms
+[内存消耗估计] (峰值: 399.4609375 Kb)
+  启动消耗内存: 357.34375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4609375 Kb
+
+[2016-12-04T21:40:22+08:00]  
+[2016-12-04T21:56:44+08:00]  
+[2016-12-04T21:56:44+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.51806640625 ms)
+  定位启动耗时：0.051025390625 ms
+  加载插件耗时：0.158935546875 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.299072265625 ms
+  执行总共耗时：0.467041015625 ms
+[内存消耗估计] (峰值: 535.1953125 Kb)
+  启动消耗内存: 357.296875 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 157.8046875 Kb
+  最大消耗内存: 535.1953125 Kb
+
+[2016-12-04T21:56:44+08:00]  
+[2016-12-04T21:56:44+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Kv.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Storage/File.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Encrypt.php
+[时间消耗统计] (总计: 0.419921875 ms)
+  定位启动耗时：0.02685546875 ms
+  加载插件耗时：0.1201171875 ms
+  路由分发耗时：0.0087890625 ms
+  处理过程耗时: 0.26416015625 ms
+  执行总共耗时：0.39306640625 ms
+[内存消耗估计] (峰值: 405.0546875 Kb)
+  启动消耗内存: 357.125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 27.8359375 Kb
+  最大消耗内存: 405.0546875 Kb
+
+[2016-12-04T21:56:44+08:00]  
+[2016-12-04T21:56:44+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.256103515625 ms)
+  定位启动耗时：0.027099609375 ms
+  加载插件耗时：0.12109375 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 0.0849609375 ms
+  执行总共耗时：0.22900390625 ms
+[内存消耗估计] (峰值: 399.4609375 Kb)
+  启动消耗内存: 357.34375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4609375 Kb
+
+[2016-12-04T21:56:44+08:00]  
+[2016-12-04T21:56:45+08:00]  
+[2016-12-04T21:56:45+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.274169921875 ms)
+  定位启动耗时：0.02099609375 ms
+  加载插件耗时：0.114990234375 ms
+  路由分发耗时：0.031005859375 ms
+  处理过程耗时: 0.107177734375 ms
+  执行总共耗时：0.253173828125 ms
+[内存消耗估计] (峰值: 399.4609375 Kb)
+  启动消耗内存: 357.34375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4609375 Kb
+
+[2016-12-04T21:56:45+08:00]  
+[2016-12-04T21:56:59+08:00]  
+[2016-12-04T21:56:59+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.35302734375 ms)
+  定位启动耗时：0.032958984375 ms
+  加载插件耗时：0.203125 ms
+  路由分发耗时：0.01171875 ms
+  处理过程耗时: 0.105224609375 ms
+  执行总共耗时：0.320068359375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:56:59+08:00]  
+[2016-12-04T21:56:59+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 9.26513671875 ms)
+  定位启动耗时：0.027099609375 ms
+  加载插件耗时：0.174072265625 ms
+  路由分发耗时：0.017822265625 ms
+  处理过程耗时: 9.046142578125 ms
+  执行总共耗时：9.238037109375 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:56:59+08:00]  
+[2016-12-04T21:56:59+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.704833984375 ms)
+  定位启动耗时：0.062744140625 ms
+  加载插件耗时：0.384033203125 ms
+  路由分发耗时：0.022216796875 ms
+  处理过程耗时: 0.23583984375 ms
+  执行总共耗时：0.64208984375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:56:59+08:00]  
+[2016-12-04T21:56:59+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 14.483154296875 ms)
+  定位启动耗时：0.066162109375 ms
+  加载插件耗时：0.376953125 ms
+  路由分发耗时：0.022216796875 ms
+  处理过程耗时: 14.017822265625 ms
+  执行总共耗时：14.4169921875 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:57:00+08:00]  
+[2016-12-04T21:57:00+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.69189453125 ms)
+  定位启动耗时：0.07080078125 ms
+  加载插件耗时：0.377197265625 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 0.220947265625 ms
+  执行总共耗时：0.62109375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:57:00+08:00]  
+[2016-12-04T21:57:00+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.7890625 ms)
+  定位启动耗时：0.06689453125 ms
+  加载插件耗时：0.365966796875 ms
+  路由分发耗时：0.022216796875 ms
+  处理过程耗时: 3.333984375 ms
+  执行总共耗时：3.72216796875 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:57:02+08:00]  
+[2016-12-04T21:57:02+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.708984375 ms)
+  定位启动耗时：0.070068359375 ms
+  加载插件耗时：0.384033203125 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 0.23291015625 ms
+  执行总共耗时：0.638916015625 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:57:02+08:00]  
+[2016-12-04T21:57:02+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.73828125 ms)
+  定位启动耗时：0.064208984375 ms
+  加载插件耗时：0.41796875 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 3.234130859375 ms
+  执行总共耗时：3.674072265625 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:57:04+08:00]  
+[2016-12-04T21:57:04+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.620849609375 ms)
+  定位启动耗时：0.058837890625 ms
+  加载插件耗时：0.341064453125 ms
+  路由分发耗时：0.02685546875 ms
+  处理过程耗时: 0.194091796875 ms
+  执行总共耗时：0.56201171875 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:57:04+08:00]  
+[2016-12-04T21:57:04+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.278076171875 ms)
+  定位启动耗时：0.05615234375 ms
+  加载插件耗时：0.324951171875 ms
+  路由分发耗时：0.02099609375 ms
+  处理过程耗时: 2.8759765625 ms
+  执行总共耗时：3.221923828125 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:57:07+08:00]  
+[2016-12-04T21:57:07+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.787109375 ms)
+  定位启动耗时：0.072021484375 ms
+  加载插件耗时：0.441162109375 ms
+  路由分发耗时：0.044677734375 ms
+  处理过程耗时: 0.229248046875 ms
+  执行总共耗时：0.715087890625 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T21:57:07+08:00]  
+[2016-12-04T21:57:07+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 32.740966796875 ms)
+  定位启动耗时：0.076904296875 ms
+  加载插件耗时：0.381103515625 ms
+  路由分发耗时：0.10791015625 ms
+  处理过程耗时: 32.175048828125 ms
+  执行总共耗时：32.6640625 ms
+[内存消耗估计] (峰值: 449.4453125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 70.828125 Kb
+  最大消耗内存: 449.4453125 Kb
+
+[2016-12-04T21:58:23+08:00]  
+[2016-12-04T21:58:23+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/Wechat.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.4208984375 ms)
+  定位启动耗时：0.029052734375 ms
+  加载插件耗时：0.157958984375 ms
+  路由分发耗时：0.027099609375 ms
+  处理过程耗时: 0.206787109375 ms
+  执行总共耗时：0.391845703125 ms
+[内存消耗估计] (峰值: 399.4609375 Kb)
+  启动消耗内存: 357.34375 Kb
+  路由消耗内存: 0.671875 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4609375 Kb
+
+[2016-12-04T21:58:23+08:00]  
+[2016-12-04T21:58:34+08:00]  
+[2016-12-04T21:58:34+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.606201171875 ms)
+  定位启动耗时：0.0341796875 ms
+  加载插件耗时：0.180908203125 ms
+  路由分发耗时：0.013916015625 ms
+  处理过程耗时: 0.377197265625 ms
+  执行总共耗时：0.572021484375 ms
+[内存消耗估计] (峰值: 535.1953125 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 157.7734375 Kb
+  最大消耗内存: 535.1953125 Kb
+
+[2016-12-04T21:58:34+08:00]  
+[2016-12-04T21:58:34+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 0.544921875 ms)
+  定位启动耗时：0.02490234375 ms
+  加载插件耗时：0.26123046875 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.249755859375 ms
+  执行总共耗时：0.52001953125 ms
+[内存消耗估计] (峰值: 434.6328125 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 56.015625 Kb
+  最大消耗内存: 434.6328125 Kb
+
+[2016-12-04T22:03:08+08:00]  
+[2016-12-04T22:03:08+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.529052734375 ms)
+  定位启动耗时：0.052978515625 ms
+  加载插件耗时：0.2890625 ms
+  路由分发耗时：0.015869140625 ms
+  处理过程耗时: 0.171142578125 ms
+  执行总共耗时：0.47607421875 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T22:03:08+08:00]  
+[2016-12-04T22:03:08+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.383056640625 ms)
+  定位启动耗时：0.029052734375 ms
+  加载插件耗时：0.2568359375 ms
+  路由分发耗时：0.01611328125 ms
+  处理过程耗时: 3.0810546875 ms
+  执行总共耗时：3.35400390625 ms
+[内存消耗估计] (峰值: 753.84375 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 375.2265625 Kb
+  最大消耗内存: 753.84375 Kb
+
+[2016-12-04T22:04:33+08:00]  
+[2016-12-04T22:04:33+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.72802734375 ms)
+  定位启动耗时：0.072021484375 ms
+  加载插件耗时：0.4091796875 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 0.224853515625 ms
+  执行总共耗时：0.656005859375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T22:04:33+08:00]  
+[2016-12-04T22:04:33+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 8.214111328125 ms)
+  定位启动耗时：0.06689453125 ms
+  加载插件耗时：0.38525390625 ms
+  路由分发耗时：0.02685546875 ms
+  处理过程耗时: 7.735107421875 ms
+  执行总共耗时：8.147216796875 ms
+[内存消耗估计] (峰值: 753.9765625 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 375.359375 Kb
+  最大消耗内存: 753.9765625 Kb
+
+[2016-12-04T22:05:07+08:00]  
+[2016-12-04T22:05:07+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.72216796875 ms)
+  定位启动耗时：0.072021484375 ms
+  加载插件耗时：0.40185546875 ms
+  路由分发耗时：0.02734375 ms
+  处理过程耗时: 0.220947265625 ms
+  执行总共耗时：0.650146484375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T22:05:07+08:00]  
+[2016-12-04T22:05:07+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 10.31201171875 ms)
+  定位启动耗时：0.066162109375 ms
+  加载插件耗时：0.390869140625 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 9.8330078125 ms
+  执行总共耗时：10.245849609375 ms
+[内存消耗估计] (峰值: 753.84375 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 375.2265625 Kb
+  最大消耗内存: 753.84375 Kb
+
+[2016-12-04T22:05:08+08:00]  
+[2016-12-04T22:05:08+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.76806640625 ms)
+  定位启动耗时：0.066162109375 ms
+  加载插件耗时：0.3828125 ms
+  路由分发耗时：0.023193359375 ms
+  处理过程耗时: 0.2958984375 ms
+  执行总共耗时：0.701904296875 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T22:05:08+08:00]  
+[2016-12-04T22:05:08+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 16.118896484375 ms)
+  定位启动耗时：0.037109375 ms
+  加载插件耗时：0.175048828125 ms
+  路由分发耗时：0.013671875 ms
+  处理过程耗时: 15.89306640625 ms
+  执行总共耗时：16.081787109375 ms
+[内存消耗估计] (峰值: 449.90625 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 71.2890625 Kb
+  最大消耗内存: 449.90625 Kb
+
+[2016-12-04T22:05:09+08:00]  
+[2016-12-04T22:05:09+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.769775390625 ms)
+  定位启动耗时：0.0849609375 ms
+  加载插件耗时：0.425048828125 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 0.23779296875 ms
+  执行总共耗时：0.684814453125 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T22:05:09+08:00]  
+[2016-12-04T22:05:09+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.668701171875 ms)
+  定位启动耗时：0.06298828125 ms
+  加载插件耗时：0.364990234375 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 3.21875 ms
+  执行总共耗时：3.605712890625 ms
+[内存消耗估计] (峰值: 449.90625 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 71.2890625 Kb
+  最大消耗内存: 449.90625 Kb
+
+[2016-12-04T22:05:10+08:00]  
+[2016-12-04T22:05:10+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.72412109375 ms)
+  定位启动耗时：0.071044921875 ms
+  加载插件耗时：0.39794921875 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 0.232177734375 ms
+  执行总共耗时：0.653076171875 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T22:05:10+08:00]  
+[2016-12-04T22:05:10+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.72509765625 ms)
+  定位启动耗时：0.070068359375 ms
+  加载插件耗时：0.380126953125 ms
+  路由分发耗时：0.02490234375 ms
+  处理过程耗时: 3.25 ms
+  执行总共耗时：3.655029296875 ms
+[内存消耗估计] (峰值: 449.90625 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 71.2890625 Kb
+  最大消耗内存: 449.90625 Kb
+
+[2016-12-04T22:05:12+08:00]  
+[2016-12-04T22:05:12+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.673828125 ms)
+  定位启动耗时：0.063720703125 ms
+  加载插件耗时：0.373291015625 ms
+  路由分发耗时：0.021728515625 ms
+  处理过程耗时: 0.215087890625 ms
+  执行总共耗时：0.610107421875 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T22:05:12+08:00]  
+[2016-12-04T22:05:12+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 3.64501953125 ms)
+  定位启动耗时：0.06396484375 ms
+  加载插件耗时：0.3759765625 ms
+  路由分发耗时：0.027099609375 ms
+  处理过程耗时: 3.177978515625 ms
+  执行总共耗时：3.5810546875 ms
+[内存消耗估计] (峰值: 449.90625 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 71.2890625 Kb
+  最大消耗内存: 449.90625 Kb
+
+[2016-12-04T22:05:15+08:00]  
+[2016-12-04T22:05:15+08:00] 资源消耗统计:
+[文件加载顺序] (总计：8)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+[时间消耗统计] (总计: 0.39697265625 ms)
+  定位启动耗时：0.043701171875 ms
+  加载插件耗时：0.213134765625 ms
+  路由分发耗时：0.01708984375 ms
+  处理过程耗时: 0.123046875 ms
+  执行总共耗时：0.353271484375 ms
+[内存消耗估计] (峰值: 399.4140625 Kb)
+  启动消耗内存: 357.328125 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 21.9921875 Kb
+  最大消耗内存: 399.4140625 Kb
+
+[2016-12-04T22:05:15+08:00]  
+[2016-12-04T22:05:15+08:00] 资源消耗统计:
+[文件加载顺序] (总计：11)
+  [0] => /home/foreve_/workspace/CCCourse/public/index.php
+  [1] => /home/foreve_/workspace/CCCourse/app/Bootstrap.dev.php
+  [2] => /home/foreve_/workspace/CCCourse/library/Config.php
+  [3] => /home/foreve_/workspace/CCCourse/library/Service/Database.php
+  [4] => /home/foreve_/workspace/CCCourse/app/plugins/Tracer.php
+  [5] => /home/foreve_/workspace/CCCourse/library/Logger.php
+  [6] => /home/foreve_/workspace/CCCourse/app/controllers/User.php
+  [7] => /home/foreve_/workspace/CCCourse/library/Rest.php
+  [8] => /home/foreve_/workspace/CCCourse/library/Input.php
+  [9] => /home/foreve_/workspace/CCCourse/library/Db.php
+  [10] => /home/foreve_/workspace/CCCourse/library/Orm.php
+[时间消耗统计] (总计: 1.84716796875 ms)
+  定位启动耗时：0.031982421875 ms
+  加载插件耗时：0.174072265625 ms
+  路由分发耗时：0.01806640625 ms
+  处理过程耗时: 1.623046875 ms
+  执行总共耗时：1.815185546875 ms
+[内存消耗估计] (峰值: 449.90625 Kb)
+  启动消耗内存: 358.8359375 Kb
+  路由消耗内存: 0.640625 Kb
+  处理消耗内存: 71.2890625 Kb
+  最大消耗内存: 449.90625 Kb
+
