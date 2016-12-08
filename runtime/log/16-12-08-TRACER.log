@@ -752,3 +752,36 @@
   处理消耗内存: 54.2734375 KB
   最大消耗内存: 483.3125 KB
 
+[08-Dec-2016 21:36:56 Asia/Shanghai] (//User) POST 资源消耗统计:
+[文件加载顺序] (总计：19)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Input.php
+  [14] => library/Db.php
+  [15] => library/Orm.php
+  [16] => library/Kv.php
+  [17] => library/Storage/File.php
+  [18] => library/Encrypt.php
+[时间消耗统计] (总计: 92.26806640625 ms)
+  定位启动耗时：0.0830078125 ms
+  加载插件耗时：0.39990234375 ms
+  路由分发耗时：0.02197265625 ms
+  处理过程耗时: 91.76318359375 ms
+  执行总共耗时：92.18505859375 ms
+[内存消耗估计] (峰值: 551.1953125 KB)
+  启动消耗内存: 359.9765625 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 120.8125 KB
+  最大消耗内存: 551.1953125 KB
+
