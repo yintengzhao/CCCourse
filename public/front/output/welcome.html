@@ -115,13 +115,23 @@
             <nc-message subject="login_form.name"></nc-message>
         </md-input-container>
     </div>
+    
     <div layout-gt-sm="column">
+        <md-input-container class="md-block">
+            <label>专业</label>
+            <input  ng-model="login.major" name="major" required>
+            <nc-message subject="login_form.major"></nc-message>
+            <div class="num_input_hint">学生姓名为必填字段，专业或者学号需至少匹配一个方可登录，专业可填写关键字（如：计算机，控制，软件，模式识别，运筹，等，，）</div>
+        </md-input-container>
+    </div>
+
+    <div layout-gt-sm="column" id = "num_input">
 
         <md-input-container class="md-block">
             <label>学号</label>
             <input  ng-model="login.number" name="number" required>
             <nc-message subject="login_form.number"></nc-message>
-            <div class="hint" ng-hide="login_form.number.$valid">教师请点击专家评测</div>
+            <div class="hint" ng-hide="login_form.number.$valid">教师请点击"专家评测"</div>
         </md-input-container>
     </div>
     

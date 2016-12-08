@@ -1,0 +1,754 @@
+[08-Dec-2016 17:08:08 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 3.912841796875 ms)
+  定位启动耗时：0.330810546875 ms
+  加载插件耗时：2.93310546875 ms
+  路由分发耗时：0.01806640625 ms
+  处理过程耗时: 0.630859375 ms
+  执行总共耗时：3.58203125 ms
+[内存消耗估计] (峰值: 609.9296875 KB)
+  启动消耗内存: 510.0625 KB
+  路由消耗内存: 166.6484375 KB
+  处理消耗内存: 178.6796875 KB
+  最大消耗内存: 609.9296875 KB
+
+[08-Dec-2016 17:08:08 Asia/Shanghai] (/Course/) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/Course.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.56396484375 ms)
+  定位启动耗时：0.02490234375 ms
+  加载插件耗时：0.09619140625 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 0.419921875 ms
+  执行总共耗时：0.5390625 ms
+[内存消耗估计] (峰值: 615.953125 KB)
+  启动消耗内存: 358.2578125 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 187.2890625 KB
+  最大消耗内存: 615.953125 KB
+
+[08-Dec-2016 17:08:08 Asia/Shanghai] (/User) GET 资源消耗统计:
+[文件加载顺序] (总计：16)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Kv.php
+  [14] => library/Storage/File.php
+  [15] => library/Encrypt.php
+[时间消耗统计] (总计: 2.225830078125 ms)
+  定位启动耗时：0.06982421875 ms
+  加载插件耗时：0.200927734375 ms
+  路由分发耗时：0.029052734375 ms
+  处理过程耗时: 1.926025390625 ms
+  执行总共耗时：2.156005859375 ms
+[内存消耗估计] (峰值: 633.3984375 KB)
+  启动消耗内存: 358.2265625 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 204.765625 KB
+  最大消耗内存: 633.3984375 KB
+
+[08-Dec-2016 17:08:08 Asia/Shanghai] (/Course/) GET 资源消耗统计:
+[文件加载顺序] (总计：18)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/Course.php
+  [12] => library/Rest.php
+  [13] => library/Kv.php
+  [14] => library/Storage/File.php
+  [15] => library/Encrypt.php
+  [16] => library/Input.php
+  [17] => library/Cache.php
+[时间消耗统计] (总计: 10.179931640625 ms)
+  定位启动耗时：0.031982421875 ms
+  加载插件耗时：0.116943359375 ms
+  路由分发耗时：0.0087890625 ms
+  处理过程耗时: 10.022216796875 ms
+  执行总共耗时：10.14794921875 ms
+[内存消耗估计] (峰值: 622.2109375 KB)
+  启动消耗内存: 358.2734375 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 193.53125 KB
+  最大消耗内存: 622.2109375 KB
+
+[08-Dec-2016 17:08:09 Asia/Shanghai] (/User) GET 资源消耗统计:
+[文件加载顺序] (总计：16)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Kv.php
+  [14] => library/Storage/File.php
+  [15] => library/Encrypt.php
+[时间消耗统计] (总计: 0.528076171875 ms)
+  定位启动耗时：0.031005859375 ms
+  加载插件耗时：0.11376953125 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.374267578125 ms
+  执行总共耗时：0.4970703125 ms
+[内存消耗估计] (峰值: 456.7421875 KB)
+  启动消耗内存: 358.2421875 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 28.09375 KB
+  最大消耗内存: 456.7421875 KB
+
+[08-Dec-2016 17:08:23 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.3359375 ms)
+  定位启动耗时：0.04931640625 ms
+  加载插件耗时：0.15380859375 ms
+  路由分发耗时：0.010009765625 ms
+  处理过程耗时: 0.122802734375 ms
+  执行总共耗时：0.28662109375 ms
+[内存消耗估计] (峰值: 435.75 KB)
+  启动消耗内存: 358.5546875 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.75 KB
+
+[08-Dec-2016 17:08:23 Asia/Shanghai] (/User) GET 资源消耗统计:
+[文件加载顺序] (总计：16)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Kv.php
+  [14] => library/Storage/File.php
+  [15] => library/Encrypt.php
+[时间消耗统计] (总计: 0.494140625 ms)
+  定位启动耗时：0.0322265625 ms
+  加载插件耗时：0.099853515625 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.35302734375 ms
+  执行总共耗时：0.4619140625 ms
+[内存消耗估计] (峰值: 456.8828125 KB)
+  启动消耗内存: 358.3828125 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 28.09375 KB
+  最大消耗内存: 456.8828125 KB
+
+[08-Dec-2016 17:08:24 Asia/Shanghai] (/Wechat/token) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/Wechat.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 5.8291015625 ms)
+  定位启动耗时：0.047119140625 ms
+  加载插件耗时：0.114013671875 ms
+  路由分发耗时：0.01025390625 ms
+  处理过程耗时: 5.65771484375 ms
+  执行总共耗时：5.781982421875 ms
+[内存消耗估计] (峰值: 573.859375 KB)
+  启动消耗内存: 358.6171875 KB
+  路由消耗内存: 0.6328125 KB
+  处理消耗内存: 144.8046875 KB
+  最大消耗内存: 573.859375 KB
+
+[08-Dec-2016 17:29:41 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.702880859375 ms)
+  定位启动耗时：0.0859375 ms
+  加载插件耗时：0.390869140625 ms
+  路由分发耗时：0.02099609375 ms
+  处理过程耗时: 0.205078125 ms
+  执行总共耗时：0.616943359375 ms
+[内存消耗估计] (峰值: 435.796875 KB)
+  启动消耗内存: 358.6015625 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.796875 KB
+
+[08-Dec-2016 17:29:41 Asia/Shanghai] (/User) POST 资源消耗统计:
+[文件加载顺序] (总计：18)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Input.php
+  [14] => library/Random.php
+  [15] => library/Kv.php
+  [16] => library/Storage/File.php
+  [17] => library/Encrypt.php
+[时间消耗统计] (总计: 21.06494140625 ms)
+  定位启动耗时：0.078857421875 ms
+  加载插件耗时：0.30322265625 ms
+  路由分发耗时：0.021728515625 ms
+  处理过程耗时: 20.6611328125 ms
+  执行总共耗时：20.986083984375 ms
+[内存消耗估计] (峰值: 584.546875 KB)
+  启动消耗内存: 360.078125 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 154.0625 KB
+  最大消耗内存: 584.546875 KB
+
+[08-Dec-2016 17:29:42 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.216064453125 ms)
+  定位启动耗时：0.02685546875 ms
+  加载插件耗时：0.098876953125 ms
+  路由分发耗时：0.022216796875 ms
+  处理过程耗时: 0.068115234375 ms
+  执行总共耗时：0.189208984375 ms
+[内存消耗估计] (峰值: 435.75 KB)
+  启动消耗内存: 358.5546875 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.75 KB
+
+[08-Dec-2016 17:29:42 Asia/Shanghai] (/User) GET 资源消耗统计:
+[文件加载顺序] (总计：16)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Kv.php
+  [14] => library/Storage/File.php
+  [15] => library/Encrypt.php
+[时间消耗统计] (总计: 0.38916015625 ms)
+  定位启动耗时：0.02685546875 ms
+  加载插件耗时：0.105224609375 ms
+  路由分发耗时：0.013916015625 ms
+  处理过程耗时: 0.2431640625 ms
+  执行总共耗时：0.3623046875 ms
+[内存消耗估计] (峰值: 457.0703125 KB)
+  启动消耗内存: 358.5703125 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 28.09375 KB
+  最大消耗内存: 457.0703125 KB
+
+[08-Dec-2016 17:32:12 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.749755859375 ms)
+  定位启动耗时：0.08984375 ms
+  加载插件耗时：0.40283203125 ms
+  路由分发耗时：0.022216796875 ms
+  处理过程耗时: 0.23486328125 ms
+  执行总共耗时：0.659912109375 ms
+[内存消耗估计] (峰值: 435.796875 KB)
+  启动消耗内存: 358.6015625 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.796875 KB
+
+[08-Dec-2016 17:32:12 Asia/Shanghai] (/User) POST 资源消耗统计:
+[文件加载顺序] (总计：18)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Input.php
+  [14] => library/Random.php
+  [15] => library/Kv.php
+  [16] => library/Storage/File.php
+  [17] => library/Encrypt.php
+[时间消耗统计] (总计: 1.19482421875 ms)
+  定位启动耗时：0.06689453125 ms
+  加载插件耗时：0.30908203125 ms
+  路由分发耗时：0.029052734375 ms
+  处理过程耗时: 0.789794921875 ms
+  执行总共耗时：1.1279296875 ms
+[内存消耗估计] (峰值: 460.609375 KB)
+  启动消耗内存: 360.265625 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 29.9375 KB
+  最大消耗内存: 460.609375 KB
+
+[08-Dec-2016 17:32:13 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.190185546875 ms)
+  定位启动耗时：0.025146484375 ms
+  加载插件耗时：0.094970703125 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.06103515625 ms
+  执行总共耗时：0.1650390625 ms
+[内存消耗估计] (峰值: 435.75 KB)
+  启动消耗内存: 358.5546875 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.75 KB
+
+[08-Dec-2016 17:32:13 Asia/Shanghai] (/User) GET 资源消耗统计:
+[文件加载顺序] (总计：16)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Kv.php
+  [14] => library/Storage/File.php
+  [15] => library/Encrypt.php
+[时间消耗统计] (总计: 0.35986328125 ms)
+  定位启动耗时：0.02685546875 ms
+  加载插件耗时：0.10107421875 ms
+  路由分发耗时：0.011962890625 ms
+  处理过程耗时: 0.219970703125 ms
+  执行总共耗时：0.3330078125 ms
+[内存消耗估计] (峰值: 457.0703125 KB)
+  启动消耗内存: 358.5703125 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 28.09375 KB
+  最大消耗内存: 457.0703125 KB
+
+[08-Dec-2016 18:36:10 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.76806640625 ms)
+  定位启动耗时：0.092041015625 ms
+  加载插件耗时：0.4111328125 ms
+  路由分发耗时：0.02685546875 ms
+  处理过程耗时: 0.238037109375 ms
+  执行总共耗时：0.676025390625 ms
+[内存消耗估计] (峰值: 435.796875 KB)
+  启动消耗内存: 358.6015625 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.796875 KB
+
+[08-Dec-2016 18:36:10 Asia/Shanghai] (/User) POST 资源消耗统计:
+[文件加载顺序] (总计：18)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Input.php
+  [14] => library/Random.php
+  [15] => library/Kv.php
+  [16] => library/Storage/File.php
+  [17] => library/Encrypt.php
+[时间消耗统计] (总计: 1.24609375 ms)
+  定位启动耗时：0.075927734375 ms
+  加载插件耗时：0.33984375 ms
+  路由分发耗时：0.026123046875 ms
+  处理过程耗时: 0.80419921875 ms
+  执行总共耗时：1.170166015625 ms
+[内存消耗估计] (峰值: 460.609375 KB)
+  启动消耗内存: 360.265625 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 29.9375 KB
+  最大消耗内存: 460.609375 KB
+
+[08-Dec-2016 18:36:11 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.23291015625 ms)
+  定位启动耗时：0.041015625 ms
+  加载插件耗时：0.10498046875 ms
+  路由分发耗时：0.009033203125 ms
+  处理过程耗时: 0.077880859375 ms
+  执行总共耗时：0.19189453125 ms
+[内存消耗估计] (峰值: 435.75 KB)
+  启动消耗内存: 358.5546875 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.75 KB
+
+[08-Dec-2016 18:36:11 Asia/Shanghai] (/User) GET 资源消耗统计:
+[文件加载顺序] (总计：16)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Kv.php
+  [14] => library/Storage/File.php
+  [15] => library/Encrypt.php
+[时间消耗统计] (总计: 0.55810546875 ms)
+  定位启动耗时：0.026123046875 ms
+  加载插件耗时：0.116943359375 ms
+  路由分发耗时：0.01416015625 ms
+  处理过程耗时: 0.40087890625 ms
+  执行总共耗时：0.531982421875 ms
+[内存消耗估计] (峰值: 457.0703125 KB)
+  启动消耗内存: 358.5703125 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 28.09375 KB
+  最大消耗内存: 457.0703125 KB
+
+[08-Dec-2016 18:44:55 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.823974609375 ms)
+  定位启动耗时：0.087890625 ms
+  加载插件耗时：0.4912109375 ms
+  路由分发耗时：0.02294921875 ms
+  处理过程耗时: 0.221923828125 ms
+  执行总共耗时：0.736083984375 ms
+[内存消耗估计] (峰值: 435.796875 KB)
+  启动消耗内存: 358.6015625 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.796875 KB
+
+[08-Dec-2016 18:44:55 Asia/Shanghai] (/User) POST 资源消耗统计:
+[文件加载顺序] (总计：19)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Input.php
+  [14] => library/Db.php
+  [15] => library/Orm.php
+  [16] => library/Kv.php
+  [17] => library/Storage/File.php
+  [18] => library/Encrypt.php
+[时间消耗统计] (总计: 273.5830078125 ms)
+  定位启动耗时：0.067138671875 ms
+  加载插件耗时：0.306640625 ms
+  路由分发耗时：0.0361328125 ms
+  处理过程耗时: 273.17309570312 ms
+  执行总共耗时：273.51586914062 ms
+[内存消耗估计] (峰值: 831.234375 KB)
+  启动消耗内存: 360.3125 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 400.515625 KB
+  最大消耗内存: 831.234375 KB
+
+[08-Dec-2016 18:44:56 Asia/Shanghai] (/User) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.22705078125 ms)
+  定位启动耗时：0.02880859375 ms
+  加载插件耗时：0.098876953125 ms
+  路由分发耗时：0.018310546875 ms
+  处理过程耗时: 0.0810546875 ms
+  执行总共耗时：0.1982421875 ms
+[内存消耗估计] (峰值: 435.765625 KB)
+  启动消耗内存: 358.5703125 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.765625 KB
+
+[08-Dec-2016 18:44:56 Asia/Shanghai] (/Course/) OPTIONS 资源消耗统计:
+[文件加载顺序] (总计：13)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/Course.php
+  [12] => library/Rest.php
+[时间消耗统计] (总计: 0.156982421875 ms)
+  定位启动耗时：0.01806640625 ms
+  加载插件耗时：0.072998046875 ms
+  路由分发耗时：0.013916015625 ms
+  处理过程耗时: 0.052001953125 ms
+  执行总共耗时：0.138916015625 ms
+[内存消耗估计] (峰值: 435.8125 KB)
+  启动消耗内存: 358.6171875 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 6.7890625 KB
+  最大消耗内存: 435.8125 KB
+
+[08-Dec-2016 18:44:56 Asia/Shanghai] (/User) GET 资源消耗统计:
+[文件加载顺序] (总计：16)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/User.php
+  [12] => library/Rest.php
+  [13] => library/Kv.php
+  [14] => library/Storage/File.php
+  [15] => library/Encrypt.php
+[时间消耗统计] (总计: 0.38818359375 ms)
+  定位启动耗时：0.027099609375 ms
+  加载插件耗时：0.1298828125 ms
+  路由分发耗时：0.01806640625 ms
+  处理过程耗时: 0.213134765625 ms
+  执行总共耗时：0.361083984375 ms
+[内存消耗估计] (峰值: 457.0859375 KB)
+  启动消耗内存: 358.5859375 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 28.09375 KB
+  最大消耗内存: 457.0859375 KB
+
+[08-Dec-2016 18:44:56 Asia/Shanghai] (/Course/) GET 资源消耗统计:
+[文件加载顺序] (总计：18)
+  [0] => public/index.php
+  [1] => library/Bootstrap/dev.php
+  [2] => library/Config.php
+  [3] => library/Debug/Assertion.php
+  [4] => library/Debug.php
+  [5] => library/Debug/Header.php
+  [6] => library/Debug/LogListener.php
+  [7] => library/Logger.php
+  [8] => library/Debug/SqlListener.php
+  [9] => library/Service/Database.php
+  [10] => library/Debug/Tracer.php
+  [11] => app/controllers/Course.php
+  [12] => library/Rest.php
+  [13] => library/Kv.php
+  [14] => library/Storage/File.php
+  [15] => library/Encrypt.php
+  [16] => library/Input.php
+  [17] => library/Cache.php
+[时间消耗统计] (总计: 0.39697265625 ms)
+  定位启动耗时：0.027099609375 ms
+  加载插件耗时：0.094970703125 ms
+  路由分发耗时：0.012939453125 ms
+  处理过程耗时: 0.261962890625 ms
+  执行总共耗时：0.369873046875 ms
+[内存消耗估计] (峰值: 483.3125 KB)
+  启动消耗内存: 358.6328125 KB
+  路由消耗内存: 0.6015625 KB
+  处理消耗内存: 54.2734375 KB
+  最大消耗内存: 483.3125 KB
+

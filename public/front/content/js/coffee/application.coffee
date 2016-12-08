@@ -71,6 +71,6 @@
 			$scope.after_check_state = wechat_init
 			check_state()
 		else
-			wechat_init()
+			#wechat_init()
 
 ]);
