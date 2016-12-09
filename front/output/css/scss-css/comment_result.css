@@ -1,0 +1,10 @@
+#comment-result #conclusion {
+  margin-top: 35%;
+  text-align: center;
+  font-size: 1.5rem; }
+#comment-result #btn-group {
+  width: 8rem;
+  margin: 6rem auto;
+  text-align: center; }
+  #comment-result #btn-group .btn {
+    margin-bottom: 1rem; }

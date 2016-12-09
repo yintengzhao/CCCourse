@@ -1,0 +1,27 @@
+{
+  "name": "nku_course",
+  "homepage": "https://github.com/NewFuture/NKUCourse",
+  "authors": [
+    "darfux <darfux@163.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "jquery": "^2.2.3",
+    "angular-material": "^1.0.8",
+    "angular-material-icons": "^0.7.0",
+    "international-phone-number": "^0.0.16",
+    "angular-resource": "^1.5.5",
+    "binnng/slip.js": "*",
+    "angular-messages": "^1.5.6"
+  }
+}

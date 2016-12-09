@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html ng-app="NKUCourse">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content=""/>
+    <meta name="generator" content="Nanoc 4.3.7">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    
+    <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.css"> 
+    
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/intl-tel-input/build/css/intlTelInput.css" />
+
+    
+     <link rel="stylesheet" type="text/css"href="css/scss-css/common.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/nc-nav.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/common_course.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/common_comment.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/welcome.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/advice_feedback.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/nc-nav_constant.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/all_comments.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/course.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/advice.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/hot_courses.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/comment_result.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/main.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/style.css"/>
+	
+    
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    
+    <script src="lib/bower_components/jquery/dist/jquery.js"></script>
+    <script src="lib/bower_components/angular/angular.js"></script>
+
+    <script src="lib/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="lib/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="lib/bower_components/angular-material/angular-material.js"></script>
+    <script src="lib/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+    <script src="lib/bower_components/intl-tel-input/build/js/intlTelInput.js"></script>
+    <script src="lib/bower_components/intl-tel-input/lib/libphonenumber/build/utils.js"></script>
+    <script src="lib/bower_components/international-phone-number/releases/international-phone-number.js"></script>
+    <script src="lib/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="lib/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="lib/bower_components/binnng/slip.js/dist/min.slip.js"></script>
+    
+    
+    <script src="js/coffee-js/ng_app.js"></script>
+	<script src="js/coffee-js/constants.js"></script>
+	<script src="js/coffee-js/net_manager.js"></script>
+	<script src="js/coffee-js/nc-nav.js"></script>
+	<script src="js/coffee-js/nc-star.js"></script>
+	<script src="js/coffee-js/nc-message.js"></script>
+	<script src="js/coffee-js/application.js"></script>
+	<script src="js/coffee-js/main.js"></script>
+	<script src="js/coffee-js/advice_feedback.js"></script>
+	<script src="js/coffee-js/advice.js"></script>
+	<script src="js/coffee-js/course.js"></script>
+	<script src="js/coffee-js/welcome.js"></script>
+	<script src="js/coffee-js/jquery_querystring.js"></script>
+	<script src="js/coffee-js/all_comments.js"></script>
+	<script src="js/coffee-js/hot_courses.js"></script>
+	<script src="js/coffee-js/comment_result.js"></script>
+	
+    
+</head>
+<body ng-controller="AdviceFeedbackCtrl" id="advice-feedback" ng-class="" ng-cloak>
+
+<div id="feed-back-text">
+	感谢您为母校献计献策
+	<br>
+	欢迎您常回来看看！
+</div>
+<div id="btn-group" class="submit" layout="column" layout-align="center center">
+	<md-button class="btn md-raised md-primary" ng-click="show_share_hint()">我要分享</md-button>
+	<md-button class="btn md-raised md-primary" ng-click="go_main()">我要再评一门</md-button>
+</div>
+<div ng-show="show_hint" ng-click="cancel_share_hint()">
+<div id="share-hint-mask" class="share-hint" ng-show="show_hint">
+</div>
+<div id="share-hint" class="share-hint">
+	<div id="shre-pointer">
+	<ng-md-icon class="nc-star-icon md-icon" icon="trending_up" size="72"></ng-md-icon>
+	</span>
+	</div>
+	<div id="hint-text">
+		请点击右上角<br>
+		分享给你的朋友<br>
+		或者晒到朋友圈吧！
+	</div>
+</div>
+</div>
+
+
+
+<div id="ng-playground">
+    
+
+</div>
+</body>
+</html>

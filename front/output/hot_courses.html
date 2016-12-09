@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html ng-app="NKUCourse">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content=""/>
+    <meta name="generator" content="Nanoc 4.3.7">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    
+    <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.css"> 
+    
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/intl-tel-input/build/css/intlTelInput.css" />
+
+    
+     <link rel="stylesheet" type="text/css"href="css/scss-css/common.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/nc-nav.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/common_course.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/common_comment.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/welcome.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/advice_feedback.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/nc-nav_constant.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/all_comments.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/course.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/advice.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/hot_courses.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/comment_result.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/main.css"/>
+	 <link rel="stylesheet" type="text/css"href="css/scss-css/style.css"/>
+	
+    
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    
+    <script src="lib/bower_components/jquery/dist/jquery.js"></script>
+    <script src="lib/bower_components/angular/angular.js"></script>
+
+    <script src="lib/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="lib/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="lib/bower_components/angular-material/angular-material.js"></script>
+    <script src="lib/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+    <script src="lib/bower_components/intl-tel-input/build/js/intlTelInput.js"></script>
+    <script src="lib/bower_components/intl-tel-input/lib/libphonenumber/build/utils.js"></script>
+    <script src="lib/bower_components/international-phone-number/releases/international-phone-number.js"></script>
+    <script src="lib/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="lib/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="lib/bower_components/binnng/slip.js/dist/min.slip.js"></script>
+    
+    
+    <script src="js/coffee-js/ng_app.js"></script>
+	<script src="js/coffee-js/constants.js"></script>
+	<script src="js/coffee-js/net_manager.js"></script>
+	<script src="js/coffee-js/nc-nav.js"></script>
+	<script src="js/coffee-js/nc-star.js"></script>
+	<script src="js/coffee-js/nc-message.js"></script>
+	<script src="js/coffee-js/application.js"></script>
+	<script src="js/coffee-js/main.js"></script>
+	<script src="js/coffee-js/advice_feedback.js"></script>
+	<script src="js/coffee-js/advice.js"></script>
+	<script src="js/coffee-js/course.js"></script>
+	<script src="js/coffee-js/welcome.js"></script>
+	<script src="js/coffee-js/jquery_querystring.js"></script>
+	<script src="js/coffee-js/all_comments.js"></script>
+	<script src="js/coffee-js/hot_courses.js"></script>
+	<script src="js/coffee-js/comment_result.js"></script>
+	
+    
+</head>
+<body ng-controller="HotCoursesCtrl" id="hot-courses" ng-class="" ng-cloak>
+
+<nc-nav back-handler="back_handler">热门课程</nc-nav>
+
+<div id="course-list">
+  <md-content>
+	<md-list>
+		<md-subheader class="md-no-sticky">找到{{courses.length}}门课程</md-subheader>
+		<md-list-item class="md-3-line" ng-repeat="course in courses">
+		<div class="md-list-item-text course" layout="column" ng-click="course_handler(course.id)">
+			<h3>{{ course.course }}</h3>
+			<h4>{{ course.teacher }}</h4>
+			<div class="info-bar">
+			<nc-star ng-model="course.score" size="24"></nc-star>
+			<span class="comments">评论（{{course.comments}}）</span>
+			</div>
+		</div>
+		</md-list-item>
+	</md-list>
+	<div id="load-btn" ng-click="load_more()" ng-hide="no_more">
+		查看更多
+	</div>
+  </md-content>
+</div>
+
+
+
+
+<div id="ng-playground">
+    
+
+</div>
+</body>
+</html>

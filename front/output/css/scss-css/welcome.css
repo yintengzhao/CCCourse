@@ -1,0 +1,145 @@
+#welcome .nc-message {
+  text-align: right; }
+#welcome #page-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  top: 0px;
+  transition: top 0.5s ease-in-out 0s; }
+  #welcome #page-container.go-1 {
+    top: -100%; }
+  #welcome #page-container.go-2 {
+    top: -200%; }
+  #welcome #page-container.go-3 {
+    top: -300%; }
+#welcome .swipe-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: white;
+  background-size: cover; }
+  #welcome .swipe-card .content {
+    position: absolute;
+    top: 37%;
+    padding-top: 1rem;
+    text-align: center;
+    width: 100%; }
+  #welcome .swipe-card .title {
+    text-align: center;
+    font-size: 3rem; }
+  #welcome .swipe-card:not(#welcome-3) {
+    background-size: 100% 37%;
+    background-repeat: no-repeat; }
+#welcome #welcome-0 {
+  background-image: url("../../assets/welcome_0.jpg"); }
+  #welcome #welcome-0 #subtitle {
+    font-size: 1.2rem;
+    color: #EEE; }
+  #welcome #welcome-0 .description {
+    padding-top: 1rem;
+    line-height: 2rem; }
+#welcome #welcome-1 {
+  background-image: url("../../assets/welcome_1.jpg"); }
+  #welcome #welcome-1 .description {
+    margin-top: -2rem;
+    line-height: 1.2rem;
+    font-size: 0.8rem; }
+#welcome #welcome-2 {
+  background-image: url("../../assets/welcome_2.jpg"); }
+  #welcome #welcome-2 .description {
+    font-weight: 800;
+    line-height: 1.5rem; }
+#welcome #welcome-3 {
+  position: absolute;
+  overflow: auto; }
+#welcome .expand-arrow {
+  position: absolute;
+  bottom: 5%;
+  width: 64px;
+  left: 50%;
+  padding-top: 100px;
+  margin-left: -32px;
+  -webkit-animation: float 1.2s linear infinite; }
+  #welcome .expand-arrow .md-icon {
+    fill: #AAA; }
+  #welcome .expand-arrow svg {
+    margin-top: -150px; }
+  #welcome .expand-arrow.hide {
+    display: none; }
+@-webkit-keyframes float {
+  0% {
+    transform: translate(0px, 0px); }
+  50% {
+    transform: translate(0px, 20px); }
+  100% {
+    transform: translate(0px, 0px); } }
+#welcome #logo {
+  margin-top: 48px;
+  width: 120px; }
+#welcome #header-img {
+  width: 100%;
+  height: auto; }
+  #welcome #header-img img {
+    width: 100%;
+    height: 200px; }
+#welcome #form {
+  position: relative;
+  background-color: transparent;
+  padding-top: 1rem;
+  width: 80%;
+  margin: 0 auto; }
+  #welcome #form label {
+    line-height: 1.8rem;
+    font-size: 1.2rem; }
+  #welcome #form .md-block {
+    margin-top: 2rem;
+    height: 3rem; }
+    #welcome #form .md-block:not(.md-input-focused) label {
+      color: #262626; }
+  #welcome #form button.md-primary {
+    font-size: 1.4rem;
+    padding: 3px 16px; }
+  #welcome #form input {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.4rem; }
+#welcome .hint {
+  /* Position the hint */
+  position: absolute;
+  left: 2px;
+  right: auto;
+  bottom: 2px;
+  /* Copy styles from ng-messages */
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  /* Set our own color */
+  color: #666666; }
+#welcome #sp-hints {
+  margin-top: -1rem; }
+  #welcome #sp-hints span {
+    font-size: 1rem;
+    color: #262626; }
+  #welcome #sp-hints input {
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: 1rem;
+    text-align: center; }
+#welcome #error-msg {
+  color: red;
+  font-size: 1rem; }
+#welcome #forget-btn {
+  color: gray; }
+#welcome #forget_page {
+  -webkit-transition: none !important;
+  transition: none !important;
+  text-align: center;
+  padding: 2rem 4rem; }
+  #welcome #forget_page p {
+    text-align: left;
+    text-indent: 2rem; }
+  #welcome #forget_page #jwc-qr {
+    width: 240px;
+    height: 240px; }

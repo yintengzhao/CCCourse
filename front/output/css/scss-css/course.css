@@ -1,0 +1,79 @@
+#course #course-info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.5s ease-in-out 0s; }
+  #course #course-info.switch {
+    transform: translateX(-100%); }
+#course #comment-course {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out 0s; }
+  #course #comment-course.switch {
+    transform: translateX(-100%); }
+#course .course {
+  padding-left: 1rem;
+  background-color: white; }
+  #course .course h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem; }
+  #course .course #teacher {
+    font-size: 1rem;
+    margin-bottom: 0; }
+  #course .course #score {
+    vertical-align: top;
+    margin-left: 1rem;
+    line-height: 1.5rem; }
+#course #top-content {
+  position: fixed;
+  top: 40px;
+  padding-top: 10px;
+  height: 190px;
+  border-bottom: solid 1px gray;
+  width: 100%;
+  background-color: white;
+  z-index: 998; }
+  #course #top-content .course {
+    min-height: 180px; }
+  #course #top-content #button {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 20px; }
+#course #bottom-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #DDD; }
+  #course #bottom-content #comments {
+    padding-top: 240px; }
+  #course #bottom-content .content {
+    color: #666; }
+#course #take-score {
+  position: relative; }
+#course #fake-star-slider {
+  opacity: 0;
+  width: 10rem;
+  margin-top: -2.5rem; }
+#course #comment-stars .md-icon {
+  fill: gray; }
+#course #comment-form {
+  padding-top: 1rem;
+  padding-left: 1rem; }
+#course #checkbox-group {
+  margin-left: 3rem;
+  margin-top: 1rem;
+  margin-right: 1rem; }
+#course #comment-submit {
+  text-align: center; }
+#course #ques-1-input {
+  margin: 0;
+  display: block;
+  vertical-align: text-bottom; }
+#course #error-msg {
+  color: red;
+  text-align: center;
+  font-size: 1rem; }

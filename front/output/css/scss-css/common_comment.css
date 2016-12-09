@@ -1,0 +1,22 @@
+#comments {
+  width: 100%; }
+  #comments .comment {
+    padding: 2rem 1rem 0rem; }
+    #comments .comment .info-bar {
+      padding-top: 0.3rem;
+      vertical-align: bottom;
+      width: 100%; }
+    #comments .comment .vote {
+      font-size: 0.8rem;
+      vertical-align: middle;
+      text-align: right;
+      color: #AAA; }
+      #comments .comment .vote .md-icon {
+        fill: #AAA;
+        vertical-align: sub; }
+        #comments .comment .vote .md-icon:nth-child(1) {
+          padding-right: 1rem; }
+      #comments .comment .vote .actived {
+        color: #cc0000; }
+        #comments .comment .vote .actived .md-icon {
+          fill: #cc0000; }

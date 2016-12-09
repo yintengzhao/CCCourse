@@ -1,0 +1,38 @@
+#advice h3 {
+  font-size: 1.2rem;
+  font-weight: 400; }
+#advice .left-align {
+  margin-left: 2rem;
+  margin-right: 2rem; }
+#advice .form {
+  padding-top: 5%; }
+#advice #advice-form .question {
+  margin-bottom: 2rem; }
+#advice #advice-form .question-title {
+  margin-bottom: 1rem; }
+#advice #advice-form .question-hint {
+  font-size: 0.75rem;
+  color: #666; }
+#advice #advice-form .check {
+  margin-left: 1rem; }
+#advice #advice-form .ques-1-input {
+  margin: 0; }
+#advice .submit {
+  width: 100%;
+  text-align: center; }
+#advice #info-inputs {
+  width: 80%;
+  margin: 0 auto; }
+  #advice #info-inputs md-input-container {
+    width: 100%; }
+#advice #info-title {
+  text-align: center;
+  margin-bottom: 2rem; }
+#advice #form-phone-number .intl-tel-input {
+  width: 100%; }
+#advice #form-phone-number .country-list {
+  position: relative;
+  width: 100% !important; }
+#advice #error-msg {
+  text-align: center;
+  color: red; }

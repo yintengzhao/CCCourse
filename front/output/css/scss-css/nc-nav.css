@@ -1,0 +1,35 @@
+#nc-nav {
+  position: fixed;
+  top: 0;
+  height: 30px;
+  line-height: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 999;
+  background-color: #383C3D;
+  width: 100%;
+  color: white; }
+  #nc-nav .md-icon {
+    fill: white; }
+  #nc-nav a {
+    text-decoration: none;
+    color: black; }
+    #nc-nav a.visted {
+      color: inherit; }
+  #nc-nav span {
+    vertical-align: top;
+    font-size: 1.2rem; }
+  #nc-nav #back-btn {
+    position: relative;
+    display: inline-block;
+    z-index: 10; }
+  #nc-nav #title {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    z-index: 1; }

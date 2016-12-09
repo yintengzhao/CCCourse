@@ -91,25 +91,26 @@ class CourseController extends Rest
 	public function GET_infoAction($id)
 	{
 		$user        = $this->getUser('user', True);
-		$courseOrm = Db::table('course');
-		$course = $courseOrm
-			->has('evaluation')
-			->field([
-				'course.id',
-				'course.name',
-				'course.name_en',
-				'course.description',
-				'COUNT(evaluation.id)' => 'comments',
-				'AVG(evaluation.averge)' => 'score',
-			])
-			->where('course.id',$id)
-			->where('evaluation.status', 1)
-			->group('id')
-			->find();
+
+		$course = Db::table('course')
+		 ->where('id', $id)->field('id, name, name_en, description')->find();
 		if ($course)
 		{
 			if ($user['type'] === 'student')
 			{
+				$data = Db::table('course')
+					->has('evaluation')
+					->field([
+						'course.id',
+						'COUNT(evaluation.id)' => 'comments',
+						'AVG(evaluation.averge)' => 'score',
+					])
+					->where('course.id',$id)
+					->where('evaluation.status', 1)
+					->group('id')
+					->find();
+				$course['comments'] = $data['comments'];
+				$course['score'] = $data['score'];
 				/*学生才有自己的评论*/
 				$course['evaluation'] = (Db::table('evaluation'))
 					->where(['course_id' => $id, 'user_id' => $user['id'], 'status' => 1])

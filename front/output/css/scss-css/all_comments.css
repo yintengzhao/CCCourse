@@ -1,0 +1,27 @@
+#all-comments #option-header {
+  padding-top: 50px;
+  height: 1.5rem;
+  text-align: right;
+  width: 100%; }
+  #all-comments #option-header span {
+    font-size: 1.2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    color: #009999; }
+#all-comments #comments {
+  padding-bottom: 5rem; }
+#all-comments .comment .time {
+  float: right;
+  color: #AAA; }
+#all-comments .comment .content {
+  margin-top: 0.5rem;
+  color: #999; }
+#all-comments .comment .vote {
+  width: 100%; }
+#all-comments #bottom-bar {
+  background-color: white;
+  height: 3rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center; }
