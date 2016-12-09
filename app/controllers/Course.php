@@ -115,8 +115,12 @@ class CourseController extends Rest
 					->where(['course_id' => $id, 'user_id' => $user['id'], 'status' => 1])
 					->field('id,course_id,user_id,advice,averge')
 					->find();
+
+				$this->response(1, $course);
+			}else{
+				$this->response(0, 'user is not stu,,');
 			}
-			$this->response(1, $course);
+			
 		}
 		else
 		{

@@ -33,41 +33,25 @@
 	<div id="top-content">
 		<span class="scheme_score">大众评分：</span>
 		<nc-star class="scheme_score" ng-model="scheme_score.score" size="20" flex="50"></nc-star>
-		<div class="scheme" flex="100">
 			
-			<div  layout="column">
-				<div layout="column">
-					<div layout="column" flex="100">
-						<div class = "scheme_course_list">
-							<md-list>
-								<md-subheader class="md-no-sticky">必修课</md-subheader>
-								<md-list-item ng-repeat="course in scheme.required">
-								<div class="course-item" flex="100" layout="column">
-									<h5>{{ course.name }}</h5>
-								</div>
-								</md-list-item>
-							</md-list>
-						</div>
-					</div>
-				</div>
+		<md-list>
+			<md-subheader class="md-no-sticky">必修课</md-subheader>
+			<md-list-item ng-repeat="course in scheme.required">
+			<div class="course-item" flex="100" layout="column">
+				<h5>{{ course.name }}</h5>
 			</div>
-			<div  layout="column">
-				<div layout="column">
-					<div layout="column" flex="100">
-						<div class = "scheme_course_list">
-							<md-list>
-								<md-subheader class="md-no-sticky">选修课</md-subheader>
-								<md-list-item ng-repeat="course in scheme.elective">
-								<div class="course-item" flex="100" layout="column">
-									<h5>{{ course.name }}</h5>
-								</div>
-								</md-list-item>
-							</md-list>
-						</div>
-					</div>
-				</div>
+			</md-list-item>
+		</md-list>
+	
+		<md-list>
+			<md-subheader class="md-no-sticky">选修课</md-subheader>
+			<md-list-item ng-repeat="course in scheme.elective">
+			<div class="course-item" flex="100" layout="column">
+				<h5>{{ course.name }}</h5>
 			</div>
-		</div>
+			</md-list-item>
+		</md-list>
+
 	</div>
 
 	<div id="bottom-content">
