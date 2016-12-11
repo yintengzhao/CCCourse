@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>南开大学校友评课后台管理</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/metisMenu/2.5.0/metisMenu.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="//cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">南开大学校友评课 后台管理</a>
+            </div>
+            <!-- /.navbar-header -->
+            
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-user">
+                        <!-- 按钮触发模态框 -->
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#myModal">
+                                <i class="fa fa-gear fa-fw"></i> 修改密码
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#addAdmin">
+                                <i class="fa fa-plus-square-o fa-fw"></i> 添加管理员账户
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a id="logout"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> 审核<span class="fa pull-right fa-caret-down"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a class="btn-tab" data-div="evalDiv"> 评价审核</a>
+                                </li>
+                                <li>
+                                    <a class="btn-tab" data-div="adviceDiv"> 建议审核</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> 已审核<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"> 评价 <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#" class="btn-tab" data-div="passedEvalDiv" data-type="passedEval"> 已通过评价</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn-tab" data-div="delEvalDiv" data-type="delEval"> 已屏蔽评价</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                                <li>
+                                    <a href="#"> 建议 <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#" class="btn-tab" data-div="passedAdviceDiv" data-type="passedAdvice"> 已通过建议</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn-tab" data-div="delAdviceDiv" data-type="delAdvice"> 已屏蔽建议</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#addClass"><i class="fa fa-file-text-o fa-fw"></i> Class(课程)</a>
+                        </li>
+                        <hr>
+                        <li>
+                            <div class="input-group custom-search-form">
+                                <input id="searchEvalIpt" class="form-control addClassIpt" placeholder="评价/建议 搜索（学号）" data-type="" name="searchEvalIpt" type="text" value="">
+                                <span class="input-group-btn">
+                                    <button id="searchEvalBt" class="btn btn-default " data-type="" type="button">
+                                        <i data-type="Teacher" class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </li>
+                        <hr>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+            <a href="#0" class="cd-top">Top</a>
+        </nav>
+        <div id="page-wrapper">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="evals" class="huge">--</div>
+                                    <div>评价待审核！</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="evaluation">
+                            <div class="panel-footer btn-tab" data-div="evalDiv">
+                                <span class="pull-left btn-tab" data-div="evalDiv">审核</span>
+                                <span class="pull-right btn-tab" data-div="evalDiv"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix btn-tab" data-div="evalDiv"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="advices" class="huge">--</div>
+                                    <div>建议待审核!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="advice">
+                            <div class="panel-footer btn-tab" data-div="adviceDiv">
+                                <span class="pull-left btn-tab" data-div="adviceDiv">审核</span>
+                                <span class="pull-right btn-tab" data-div="adviceDiv"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix btn-tab" data-div="adviceDiv"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div id="evalDiv" class="row tabContainer">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 评价审核：
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table id="evaluationTab" class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="50%">评价内容</th>
+                                                <th>评分</th>
+                                                <th width="15%">原因</th>
+                                                <th>评论时间</th>
+                                                <th width="180px">审核</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="evalTbody">
+                                        </tbody>
+                                    </table>
+                                    <button type="button" id="btn-eval" class="btn more btn-moreAdvice btn-success btn-lg " data-type="eval" style="width: 100%">
+                                        <span class="glyphicon glyphicon-chevron-down"></span> 加 载 更 多 <span class="glyphicon glyphicon-chevron-down"></span>
+                                    </button>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <!-- /.row -->
+            <div id="adviceDiv" class="row tabContainer">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 建议审核：
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table id="adviceTab" class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="45%">建议内容</th>
+                                                <th>科技类</th>
+                                                <th>艺术</th>
+                                                <th>其他</th>
+                                                <th>人文</th>
+                                                <th>社科</th>
+                                                <th>实践</th>
+                                                <th>时间</th>
+                                                <th>是否有用</th>
+                                                <th width="180px">审核</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="adviceTbody">
+                                        </tbody>
+                                    </table>
+                                    <button type="button" id="btn-advice" class="btn more btn-success btn-lg " data-type="advice" style="width: 100%">
+                                        <span class="glyphicon glyphicon-chevron-down"></span> 加 载 更 多 <span class="glyphicon glyphicon-chevron-down"></span>
+                                    </button>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.col-lg-4 (nested) -->
+                            <div class="col-lg-8">
+                                <div id="morris-bar-chart"></div>
+                            </div>
+                            <!-- /.col-lg-8 (nested) -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <!-- /.row -->
+            <div id="passedAdviceDiv" class="row tabContainer">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 已审核通过建议：
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table id="passedAdviceTab" class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="45%">建议内容</th>
+                                                <th>科技类</th>
+                                                <th>艺术</th>
+                                                <th>其他</th>
+                                                <th>人文</th>
+                                                <th>社科</th>
+                                                <th>实践</th>
+                                                <th>时间</th>
+                                                <th>是否有用</th>
+                                                <th width="180px">审核</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="passedAdviceTbody">
+                                        </tbody>
+                                    </table>
+                                    <button type="button" id="btn-passedAdvice" class="btn more btn-success btn-lg " data-type="passedAdvice" style="width: 100%">
+                                        <span class="glyphicon glyphicon-chevron-down"></span> 点 击 加 载 <span class="glyphicon glyphicon-chevron-down"></span>
+                                    </button>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <!-- /.row -->
+            <div id="delAdviceDiv" class="row tabContainer">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 已屏蔽建议：
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table id="delAdviceTab" class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="45%">建议内容</th>
+                                                <th>科技类</th>
+                                                <th>艺术</th>
+                                                <th>其他</th>
+                                                <th>人文</th>
+                                                <th>社科</th>
+                                                <th>实践</th>
+                                                <th>时间</th>
+                                                <th>是否有用</th>
+                                                <th width="180px">审核</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="delAdviceTbody">
+                                        </tbody>
+                                    </table>
+                                    <button type="button" id="btn-delAdvice" class="btn more btn-success btn-lg " data-type="delAdvice" style="width: 100%">
+                                        <span class="glyphicon glyphicon-chevron-down"></span> 点 击 加 载 <span class="glyphicon glyphicon-chevron-down"></span>
+                                    </button>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <!-- /.row -->
+            <div id="passedEvalDiv" class="row tabContainer">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 已审核通过评价：
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table id="passedEvalTab" class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="50%">评价内容</th>
+                                                <th>评分</th>
+                                                <th width="15%">原因</th>
+                                                <th>评论时间</th>
+                                                <th width="180px">审核</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="passedEvalTbody">
+                                        </tbody>
+                                    </table>
+                                    <button type="button" id="btn-passedEval" class="btn more btn-success btn-lg " data-type="passedEval" style="width: 100%">
+                                        <span class="glyphicon glyphicon-chevron-down"></span> 点 击 加 载 <span class="glyphicon glyphicon-chevron-down"></span>
+                                    </button>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <!-- /.row -->
+            <div id="delEvalDiv" class="row tabContainer">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 已屏蔽评价：
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table id="delEvalTab" class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="50%">评价内容</th>
+                                                <th>评分</th>
+                                                <th width="15%">原因</th>
+                                                <th>评论时间</th>
+                                                <th width="180px">审核</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="delEvalTbody">
+                                        </tbody>
+                                    </table>
+                                    <button type="button" id="btn-delEval" class="btn more btn-success btn-lg " data-type="delEval" style="width: 100%">
+                                        <span class="glyphicon glyphicon-chevron-down"></span> 点 击 加 载 <span class="glyphicon glyphicon-chevron-down"></span>
+                                    </button>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <!-- /.row -->
+            <div id="searchEvalDiv" class="row tabContainer">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 评论查询结果： <a class="btn-danger" id="searchEvalTip"></a>
+                    </div>
+                   
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table id="serarchEvalTab" class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>学号</th>
+                                                <th>姓名</th>
+                                                <th>课程</th>
+                                                <th>评分</th>
+                                                <th width="40%">评价内容</th>
+                                                <th>时间</th>
+                                                <th width="">审核状态</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="searchEvalTbody">
+                                        </tbody>
+                                    </table>
+                            
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+
+            <!-- /.row -->
+            <div id="searchAdviceDiv" class="row tabContainer">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 建议查询结果： <a class="btn-danger" id="searchAdviceTip"></a>
+                    </div>
+                   
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table id="serarchAdviceTab" class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>学号</th>
+                                                <th>姓名</th>
+                                                <th>建议内容</th>
+                                                <th>人文</th>
+                                                <th>社会</th>
+                                                <th>科技</th>
+                                                <th>实践</th>
+                                                <th>其他</th>
+                                                <th>useful</th>
+                                                <th>时间</th>
+                                                <th width="">审核状态</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="searchAdviceTbody">
+                                        </tbody>
+                                    </table>
+                            
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- updatePassword 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                   修改管理员密码
+                </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="password" class="form-control" placeholder="输入原始密码" name="password" type="password" value="">
+                    </div>
+                    <div class="form-group">
+                        <input id="password01" class="form-control" placeholder="输入修改密码" name="password01" type="password" value="">
+                    </div>
+                    <div class="form-group">
+                        <input id="password02" class="form-control" placeholder="再次输入确认" name="password02" type="password" value="">
+                    </div>
+                    <button id="updatePassword" type="button" class="btn btn-primary">
+                        提交更改
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <p id="tip" class="pull-left"></p>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- addAdmin 模态框（Modal） -->
+    <div class="modal fade" id="addAdmin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                    添加管理员账户
+                </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="addAdminPwd" class="form-control" placeholder="输入当前账户密码" name="addAdminPwd01" type="password" value="">
+                    </div>
+                    <div class="form-group">
+                        <input id="addAdminAccount" class="form-control" placeholder="输入添加账户名(字母和数字组成)" name="addAdminAccount" type="text" value="">
+                    </div>
+                    <div class="form-group">
+                        <input id="addAdminPwd01" class="form-control" placeholder="输入密码" name="addAdminPwd01" type="password" value="">
+                    </div>
+                    <div class="form-group">
+                        <input id="addAdminPwd02" class="form-control" placeholder="再次输入确认" name="addAdminPwd02" type="password" value="">
+                    </div>
+                    <button id="addAdminBtn" type="button" class="btn btn-primary">
+                        确认添加
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <p id="addAdminTip" class="pull-left"></p>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- addClass 模态框（Modal） -->
+    <div class="modal fade" id="addClass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                    添加Class
+                </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group col-md-6" id="addClassTecher">
+                        <div class="input-group custom-search-form">
+                            <input id="TeacherName" class="form-control addClassIpt" placeholder="输入教师名" data-type="Teacher" name="addAdminAccount" type="text" value="">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default addClassSearch" data-type="Teacher" type="button">
+                                    <i data-type="Teacher" class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        
+                        <p id="TeacherTip"></p>
+                        <table id="teacherTab" class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th width="10%"></th>
+                                    <th width="45%">姓名</th>
+                                    <th width="45%">职工号</th>
+                                </tr>
+                            </thead>
+                            <tbody id="teacherTbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="form-group col-md-6" id="addClassCourse">
+                        <div class="input-group custom-search-form">
+                            <input id="CourseName" class="form-control addClassIpt" placeholder="输入课程名" name="addAdminPwd01" type="text" data-type="Course" value="">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default addClassSearch" data-type="Course" type="button">
+                                    <i data-type="Course" class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <p id="CourseTip"></p>
+                        <table id="courseTab" class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th width="10%"></th>
+                                    <th width="45%">名称</th>
+                                    <th width="45%">编号</th>
+                                </tr>
+                            </thead>
+                            <tbody id="courseTbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <button type="button" id="btn-addClass" class="btn btn-success btn-lg " data-type="" style="width: 100%">
+                        <span class="glyphicon glyphicon-chevron-up"></span>以 上 信 息 确 认 无 误 点 击 添 加 <span class="glyphicon glyphicon-chevron-up"></span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <p id="addClassTip" class="pull-left"></p>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- jQuery -->
+    <script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdn.bootcss.com/metisMenu/2.5.0/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/admin-2.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

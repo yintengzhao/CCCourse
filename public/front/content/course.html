@@ -9,7 +9,7 @@ controller: course
 		<div class="course" flex="100">
 			<div  layout="column">
 				<h3>{{ course.name }}</h3>
-				<div  layout="row" flex="100">	
+				<div class="score_item" layout="row" flex="100">	
 					<div class="title" flex="40">平均得分</div>
 					<nc-star ng-model="course.score" size="20"></nc-star>
 					<span class="score">{{course.score/2 | number: 1}}</span>
@@ -61,9 +61,9 @@ controller: course
 
 <div id="comment-course" ng-class="{switch: switching}" ng-show="switching">
 		<div class="course" flex="100">
-			<div  layout="column">
+			<div layout="column">
 				<h3>{{ course.name }}</h3>
-				<div  layout="row" flex="100">	
+				<div class="score_item" layout="row" flex="100">	
 					<div class="title" flex="40">平均得分</div>
 					<nc-star ng-model="course.score" size="20"></nc-star>
 					<span class="score">{{course.score/2 | number: 1}}</span>

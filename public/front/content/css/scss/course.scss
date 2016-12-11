@@ -23,6 +23,9 @@
 		}
 		
 	}
+	.score_item{
+		margin-bottom: .5rem;
+	}
 	#comment-course{
 		width: 100%;
 		position: absolute;
@@ -41,7 +44,7 @@
 			fill: rgb(255,82,82);
 		}
 		#comment{
-			padding-left: 1rem;
+			padding: 0 1rem;
 		}
 	}
 	.course{

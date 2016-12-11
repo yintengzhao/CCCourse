@@ -116,7 +116,7 @@ class Input
 					elseif (method_exists('Validate', $filter))
 					{
 					/*Validate方法验证*/
-						return call_user_func_array(array('Validate', $filter), [$export]);
+						return call_user_func_array(array('Validate', $filter), [&$export]);
 					}
 					elseif ($filterid = filter_id($filter))
 					{

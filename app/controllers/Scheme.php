@@ -63,7 +63,7 @@
 				return ($order && strtolower($order) == 'new') ? 'id' : 'hot';
 			}, 'hot');//排序方式
 
-			$cache_key = 'advices_'.$order.$page;
+			$cache_key = 'advices_'.$id.$order.$page;
 			//查找缓存
 			if(!$advices = Cache::get($cache_key)){
 				$advices = Db::table('advice')

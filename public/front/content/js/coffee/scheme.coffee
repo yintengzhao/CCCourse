@@ -416,11 +416,13 @@
 
 	NetManager.get("/Scheme/#{scheme_id}/advices").then (data)->
 		console.log data
-		if data.status
+		if +data.status
 			$scope.advices = data.info
 			if $scope.advices.length < 10
 				$scope.no_more = true
-
+		else
+			$scope.no_more = true
+			
 	$scope.comment_handler = ->
 		$('body').scrollTop(0)
 		$scope.page_state = 2
@@ -459,10 +461,11 @@
 		request_param = {page: current_page}
 		NetManager.get("/Scheme/#{scheme_id}/advices", request_param).then (data)->
 			console.log data
-			advices_arr = data.info
-			$scope.advices = $scope.advices.concat(advices_arr)
-			if advices_arr.length < 10
-				$scope.no_more = true
+			if +data.status == 1
+				advices_arr = data.info
+				$scope.advices = $scope.advices.concat(advices_arr)
+				if advices_arr.length < 10
+					$scope.no_more = true
 
 	null
 ]);
